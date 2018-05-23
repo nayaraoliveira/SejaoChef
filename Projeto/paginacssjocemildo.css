@@ -1,0 +1,142 @@
+
+/*altura do head*/
+head{
+	min-height: 100%;
+	position: relative;
+}
+/*alterações no body por cada parte*/
+body{
+		background-image: url(verde2.jpg);
+		background-repeat: repeat;
+		background-size: cover;
+		margin: 0;
+		padding: 0;
+		height: 100%
+		}
+
+/*alterações no body por cada parte*/
+
+/*alterações no ul*/
+	#div1{
+		background-color: black;
+		padding-left: 3em;
+
+	}
+	#imagens{
+		background-color: black;
+		width: 50em;
+		height:13em;
+	}
+	#menu{
+		text-align: center;
+		font-size: 2em;
+	}
+/*alterações no ul*/	
+	#menu ul{
+		margin: 0;
+		background-color: black;
+		list-style: none;
+	}
+/*alterações no li*/
+	#menu ul li{
+		display: inline-block;
+		}
+/*alterações no a*/
+	#menu ul li a{
+		padding: 1em 1em;
+		display: inline-block;
+		color: white;
+		text-decoration: none;
+	}
+/*Ao passar o mouse, mudar de cor*/
+	#menu ul li a:hover{
+		color: #8B0000;
+	}
+/* Colocar imagem no plano de fundo*/
+
+	body{
+		background-image: url(verde2.jpg);
+		background-repeat: repeat;
+		background-size: cover;
+		margin: 0;
+		padding: 0;
+		height: 100%;
+		}
+
+	h5{
+		text-align: justify;
+		background-color: green;
+	}
+	div{
+		
+	}
+	p {
+		color: orange;
+		text-shadow: black 0.1em 0.2em 0.2em;
+		font-family: comic sans ms;
+    	padding-right: 5em;
+    	padding-left: 5em;
+    	font-size: 2em;
+    	text-indent: 4em;
+}
+
+	/*#imageminicial{
+		float:left;
+		display:inline-block;
+		width: 400px;
+		height: 300px;
+		margin-left: 200px;	
+		background-color: yellow;	
+	}*/
+
+/* Configurações das telas de cadastro*/
+	/*comcadastro*/
+	#cad1 {
+		width: 200px;
+		height: 100px;
+		float: left;
+		display:block;
+		color: black;
+		text-align: center;
+		background-color: #cecece; 
+		margin-left: 10px;
+		padding: 4mm;
+   		}
+   	/*novocadastro*/	
+	#cad2 {
+		width: 450px;
+		height: 200px;
+		float: left;
+		display: inline-block;
+		text-align: left;
+		color: black;
+		background-color: #cecece; 
+		margin-left: 10px;
+		padding: 4mm;
+   		}
+	/*Video pagina cadastro*/  		
+   	#cad3{
+   		width: 300px;
+		height: 200px;
+		float: left;
+		display:inline-block;
+		background-color: #cecece; 
+		margin-left: 10px;
+		padding: 4mm;
+		float:left;
+		display:block;
+   	}
+
+  	#um,#dois,#tres{
+  		background-color: red;
+  	}
+
+   	/*rodapé*/
+   /*	.footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    color: white;
+    font-size: 20px;
+    background-color: black;
+}*/
