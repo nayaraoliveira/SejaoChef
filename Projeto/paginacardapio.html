@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-			<title>Cadastro</title>
+			<title>Cardapio</title>
 			<link rel="stylesheet" type="text/css" href="paginacssjocemildo.css">
 	</head>
 	<body>
@@ -19,83 +19,92 @@
 			<li> <a href="#">Meus Pedidos</a> </li>
 			<li> <a href="#">Login</a> </li>
 		</ul>
-	</div><br>
+	</div>
 		
-	<!--video da página de cadastro-->
-		<div id="cad3" align="rigth">
-				<video width="300" height="200" controls>
-				  	<source src="sanduiche.mp4" type="video/mp4">
-				</video>
-		</div><br><br><br><br>
-
-	<!--Ja tenho cadastro-->	
-		<div id="cad1" align="left">
-		<table width="100px" class="bordasimples">
-			<caption>Já tenho cadastro</caption>
-			<tr>
-  				<td>Login</td>
- 				 <td align="left"><input type="text" name="login" size="10" maxlength="7"></td>
- 			</tr>
-			<tr>
-				<td>Senha</td>
- 				 <td align="left"><input type="text" name="senha" size="10" maxlength="7"></td> 				 
-			</tr>
-			<tr>
- 				<td></td><td></td></td></td><td align="right"><input type="submit" name="botaocomcadastrado"value="Confirmar"></td>
- 			</tr>
-		</table><br>
-		</div>
-		<!--Não tenho cadastro-->	
-		<div id="cad2">
-		<table width="100px" class="bordasimples">
-			<caption>Novo cadastro</caption>
-			<tr>
-  				<td>Nome</td>
- 				 <td align="left"><input type="text" name="nome" size="40" maxlength="20"></td>
- 			</tr>
- 			<tr>
-  				<td>CPF</td>
- 				 <td align="left"><input type="text" name="cpf" size="13" maxlength="11"></td>
- 			</tr>
-			<tr>
-				<td>E-mail</td>
- 				<td align="left"><input type="text" name="email" size="30" maxlength="20"></td>
- 			</tr>
-			<tr>
-				<td>Endereço</td>
- 				<td align="left"><input type="text" name="endereço" size="40" maxlength="40"></td>
- 				<td align="left">Nº<input type="text" name="numero" size="5" maxlength="4"></td>
- 			</tr>
- 			<tr>
-				<td>Referência</td>
- 				<td align="left"><input type="text" name="referencia" size="40" maxlength="40"></td>
- 			</tr>
-
- 			<tr>
-				<td>Celular</td>
- 				<td align="left"><input type="text" name="celular" size="15" maxlength="15"></td>
- 			</tr>
-			<tr>
-				<td>Senha</td>
- 				<td align="left"><input type="text" name="senha" size="15" maxlength="15"></td>
- 			</tr>
-			<tr>
-				<td>Confirmar Senha</td>
- 				<td align="left"><input type="text" name="senha2" size="15" maxlength="15"></td>
- 			</tr>
- 			<tr>
- 				<td></td><td></td></td><td align="right"><input type="submit" name="botaosemcadastrado"value="Confirmar"></td>
- 			</tr>
-		</table>
-
 		<!--rodapé-->
 		<!--<div class="footer" align=center>
         Contatos: (82) 99000-1111 / sejaochef@gmail.com
    		</div>-->
 
-   		<div class="footer">
-        ATIREI O PAU NO GATO TO TO
-    	</div>
+   		<!--Tabela com a lista de sanduíches-->
+   		<br>
+   		<div id="listasanduiche" align =center>
+	   		<table>
+	   			
+	   			<tr>	
+	   			<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>X-Calabresa<br>Ingredientes: Pão bola, hamburguer, alface, calabresa, queijo e presunto<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
 
-	</body>
+				<tr>
+				<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>X-Bacon<br>Ingredientes: Pão bola, hamburguer, alface, bacon, queijo e presunto<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
+
+				<tr>
+				<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>X-Frango<br>Ingredientes: Pão bola, hamburguer, alface, frango, queijo e presunto<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
+
+				<tr>
+				<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>X-Carne de sol<br>Ingredientes: Pão bola, hamburguer, alface, carne de sol, queijo e presunto<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
+
+				<tr>
+				<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>Passaporte de carne<br>Ingredientes: Pão bola, salsicha, tomate, ervilha, carne moída, milho, catchup, maionese<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
+
+				<tr>
+				<td><input type="checkbox" name="opcoes" value="html"/><td>			
+	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
+	   			<td id="textocalabresa"><h5>Passaporte de frango<br>Ingredientes: Pão bola, salsicha, tomate, ervilha, frango desfiado, milho, catchup, maionese<br>Valor: 15 reais<br><br>
+	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
+	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
+	   			<td><input type="button" name="enviar" value="Comprar"></td>
+				</tr>
+
+	   		</table>
+
+	   		<div id="valortotal">
+	   			<table align="center">
+	   			<tr>
+	   				<td>Valor Total</td>
+ 				 <td align="rigth"><input type="text" name="valortotal" size="15" maxlength="15"></td>
+	   			</tr>
+	   			<tr>
+			   		<td><input type="button" id="um" name="final" value="Finalizar a compra"></td>
+			   		<td align="center"><input type="button" id="dois" name="bebida" value="Escolher Bebida"></td>
+			   		<td><input type="button" id="tres" name="montar" value="Montar sanduíche"></td>
+	   			</tr>
+	   		</table>
+	   		</div>
+
+		</div>
+
+
+
+
+		</body>
 </html>
