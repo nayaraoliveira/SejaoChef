@@ -97,7 +97,8 @@ body{
 		display: block;
 		color: black;
 		text-align: center;
-		background-color: #cecece; 
+		background-color: #8FBC8F; 
+		box-shadow: 0 0 12px rgba(0,2,2,2);
 		margin-left: 5em;
 		margin-top: 2em;
 		padding: 4mm;
@@ -111,7 +112,8 @@ body{
 		display: block;
 		text-align: left;
 		color: black;
-		background-color: #cecece; 
+		background-color: #8FBC8F; 
+		box-shadow: 0 0 12px rgba(0,2,2,2);
 		margin-left: 5em;
 		margin-top: 2em;
 		padding: 4mm;
@@ -147,24 +149,66 @@ body{
 		
 	}
 	#montagem{
-		width: 40em;
-		height: 60em;
+		width: 34em;
+		height: 80em;
 		float: left;
 		display: block;
 		text-align: center;
 		color: black;
-		background-color: #cecece; 
+		background-color: #556B2F; 
 		margin-left: 5em;
 		margin-top: 2em;
 		padding: 4mm;
 		font-size: 1.5em;
-   		}
+   		}*/
 	}
 	.ingrediente td{
 		height: 200;
 		width: 200;
 
 	}
+	#escolhidos{
+		display: block;
+		background: #8FBC8F;
+		box-shadow: 0 0 12px rgba(0,2,2,2);
+		border: 1px solid;
+		width: 23em;
+		height: 18em;
+		position: fixed;
+		top: 20em;
+		right: 1em;
+		
+	}
+	#add{
+		float: left;
+		display: block;
+		text-align: left;
+		background: #8FBC8F;
+		box-shadow: 0 0 12px rgba(0,2,2,2);
+		border: 1px solid;
+		padding: 1em;
+		width: 26.8em;
+		height: 14.5em;
+		position: fixed;
+		top: 20em;
+		left: 2em;
+	}
+	#add2{
+		float: left;
+		display: block;
+		text-align: center;
+		background: #8FBC8F;
+		box-shadow: 0 0 12px rgba(0,2,2,2);
+		border: 1px solid;
+		padding: 1em;
+		width: 15em;
+		height: 14.5em;
+		position: fixed;
+		top: 20em;
+		left: 40em;
+	}
+
+	
    	/*rodapé*/
    /*	.footer {
     position:absolute;
