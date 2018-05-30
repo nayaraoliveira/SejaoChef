@@ -8,86 +8,179 @@
 	<body>
 		
 		<div id="div1" align="center">
-			<img id=imagens src="sejaochef.png" align="center">
+			<img id="imagens" src="img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
 		<div id="menu">
-		<ul>
-			<li> <a href="#">Inicial</a> </li>
-			<li> <a href="#">Cardápio</a> </li>
-			<li> <a href="#">Montagem</a> </li>
-			<li> <a href="#">Meus Pedidos</a> </li>
-			<li> <a href="#">Login</a> </li>
-		</ul>
-	</div>
+			<ul>
+				<li> <a href="#">Inicial</a> </li>
+				<li> <a href="#">Cardápio</a> </li>
+				<li> <a href="#">Montagem</a> </li>
+				<li> <a href="#">Meus Pedidos</a> </li>
+				<li> <a href="#">Login</a> </li>
+			</ul>
+		</div>
 		
-		<!--rodapé-->
-		<!--<div class="footer" align=center>
-        Contatos: (82) 99000-1111 / sejaochef@gmail.com
-   		</div>-->
-
-   		<!--Tabela com a lista de sanduíches-->
    		<br>
-   		<div id="listasanduiche" align =center>
+   		<div id="listasanduiche" align =left>
 	   		<table>
-	   			
 	   			<tr>	
-	   			<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>X-Calabresa<br>Ingredientes: Pão bola, hamburguer, alface, calabresa, queijo e presunto<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+		   			<td><input type="checkbox" value="html"/><td>	
 
-				<tr>
-				<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>X-Bacon<br>Ingredientes: Pão bola, hamburguer, alface, bacon, queijo e presunto<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
 
-				<tr>
-				<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>X-Frango<br>Ingredientes: Pão bola, hamburguer, alface, frango, queijo e presunto<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+		   			<td id="testando">
 
-				<tr>
-				<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>X-Carne de sol<br>Ingredientes: Pão bola, hamburguer, alface, carne de sol, queijo e presunto<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+		   				<b id="textocalabresa">X-CALABRESA</b><br><label id="ingd">Ingredientes: Pão bola, hamburguer, alface, calabresa, queijo e presunto</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
 
-				<tr>
-				<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>Passaporte de carne<br>Ingredientes: Pão bola, salsicha, tomate, ervilha, carne moída, milho, catchup, maionese<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
 
-				<tr>
-				<td><input type="checkbox" name="opcoes" value="html"/><td>			
-	   			<td id="imagemcalabresa"><img id="imagem" src="comer.jpg" width="200" height="100"></td>
-	   			<td id="textocalabresa"><h5>Passaporte de frango<br>Ingredientes: Pão bola, salsicha, tomate, ervilha, frango desfiado, milho, catchup, maionese<br>Valor: 15 reais<br><br>
-	   			<input type="radio" name="acrescenta">Acrescente ingredientes<input type="text"><br>
-	   			<input type="radio" name="retira">Retire ingredientes<input type="text"><h5>
-	   			<td><input type="button" name="enviar" value="Comprar"></td>
-				</tr>
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">X-BACON</b><br><label id="ingd">Ingredientes:Pão bola, hamburguer, alface, bacon, queijo e presunto</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">X-FRANGO</b><br><label id="ingd">Ingredientes:Pão bola, hamburguer, alface, frango, queijo e presunto</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">X-CARNE DE SOL</b><br><label id="ingd">Ingredientes:Pão bola, hamburguer, alface, carne de sol, queijo e presunto</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">X-TANAJURA (Sazonal)</b><br><label id="ingd">Ingredientes:Pão bola, hamburguer, alface, tanajura, queijo e presunto</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">PASSAPORTE DE CARNE</b><br><label id="ingd">Ingredientes:Pão seda, salsicha, tomate, ervilha, carne moída, milho, catchup, maionese</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+	   			<tr>	
+		   			<td><input type="checkbox" value="html"/><td>	
+
+		   			<td id="imagemcalabresa"><img id="imagem" src="img.comer.jpg" width="200" height="100"></td>
+
+		   			<td id="testando">
+
+		   				<b id="textocalabresa">PASSAPORTE DE FRANGO</b><br><label id="ingd">Ingredientes:Pão seda, salsicha, tomate, ervilha, frango desfiado, milho, catchup, maionese</label><br><br>
+			   			<input id="radio" type="radio">Adicione ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+			   			<input id="radio" type="radio">Retire ingredientes <input id="dist" type="text" size="40" maxlength="50"><br>
+		   			</td>
+
+		   			<td id="testando"><label><b> R$15 reais</b></label><br><input class="btn btn-yellow" type="button" value="Comprar"><br></td>
+	   			</tr>
+
+
 
 	   		</table>
+	   	</div>	
 
-	   		<div id="valortotal">
+	   	<div id="escolhidoscardapio" align="center">
+			<table  width=200 height=50 border="1">
+				<caption><b>Ingredientes Escolhidos</b></caption><br>
+
+				<tr><td>Sanduiches</td> <td width=10 height=10>Ingredientes</td> </tr>
+
+				<tr>
+	  				<td><input type="text" name="tipopao"></td>
+	  				<td width=10 height=10><input type="text"></td>
+	 			</tr>
+
+	 			<tr>
+	 				<td><input type="text" name="tiporecheio"></td>
+	 				<td width=10 height=10><input type="text"></td>
+	 			</tr>
+
+	 			<tr>
+	 				<td><input type="text" name="tipomolho"></td>
+	 				<td width=10 height=10><input type="text"></td>
+	 			</tr>
+
+	 			<tr>
+	 				<td><input type="text" name="bebida"></td>
+	 				<td width=10 height=10><input type="text"></td>
+	 			</tr>
+				
+				<table align="center">
+				<br>
+	   			<tr>
+			   		<td align="center"><input class="btn btn-yellow" type="button" value="Limpar"></td>
+			   		<td><input class="btn btn-green" type="button" value="Finalizar a compra"></td>
+			   	</tr>
+	   		</table>
+
+
+	   		</table>
+		</div>
+		
+
+
+
+		
+				
+				
+			
+	   	
+	   		<!--<div id="valortotal">
 	   			<table align="center">
 	   			<tr>
 	   				<td>Valor Total</td>
@@ -96,12 +189,12 @@
 	   			<tr>
 			   		<td><input type="button" id="um" name="final" value="Finalizar a compra"></td>
 			   		<td align="center"><input type="button" id="dois" name="bebida" value="Escolher Bebida"></td>
-			   		<td><input type="button" id="tres" name="montar" value="Montar sanduíche"></td>
+			   		<td><input class="btn" type="button" id="tres" name="montar" value="Montar sanduíche"></td>
 	   			</tr>
 	   		</table>
 	   		</div>
 
-		</div>
+		</div>-->
 
 
 
