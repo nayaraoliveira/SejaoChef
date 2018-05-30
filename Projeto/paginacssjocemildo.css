@@ -207,3 +207,74 @@ body{
 		text-align: center;
 		margin-top: 2em;
 	}
+
+	/*Configurações de botão*/
+	.btn{
+		font-family: arial;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-size: 14px;
+		border: none;
+		padding: 5px;
+		cursor: pointer;
+	}
+	/*Cor de botão verde*/
+	.btn-green{
+		background: green;
+		color: #000;
+		box-shadow:0 5px 0 #006000;
+	}
+	/*Ao passar mouse no botão*/
+	.btn-green:hover{
+		background: #006000;
+		color: #000;
+		box-shadow:0 5px 0 #003f00;
+	}
+	/*Quando botão é clicado*/
+	.btn-green:active{
+		position: relative;
+		tpo:5px ;
+		box-shadow:none;
+	}
+	/*Cor de botão amarelo*/
+
+	.btn-yellow{
+		background: yellow;
+		color: #000;
+		box-shadow: 0 5px 0 #FFCC00;
+	}
+	/*Ao passar mouse no botão*/
+	.btn-yellow:hover{
+		background: #FFCC00;
+		color: #000;
+		box-shadow:0 5px 0 #999900;
+	}
+	/*Quando botão é clicado*/
+	.btn-yellow:active{
+		position: relative;
+		tpo:5px ;
+		box-shadow:none;
+	}
+	
+	#listasanduiche{
+		padding-left: 20px;
+		width:700px;
+		height:400px;
+		font-family: arial;
+
+	}
+
+	#textocalabresa{
+		padding-left: 10px;
+		font-size: 20px;
+		font-family: arial;
+	}
+
+	#ingd{
+		padding-left: 10px;
+		font-size: 15px;
+	}
+
+	#radio{
+		padding-right: 10px;
+	}
