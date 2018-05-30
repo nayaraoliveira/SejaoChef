@@ -5,14 +5,13 @@ head{
 }
 /*alterações no body por cada parte*/
 body{
-		background-image: url(verde2.jpg);
+		background-image: url(img.verde.jpg);
 		background-repeat: repeat;
 		background-size: cover;
 		margin: 0;
 		padding: 0;
 		height: 100%
 		}
-
 /*alterações no body por cada parte*/
 
 /*alterações no ul*/
@@ -27,7 +26,8 @@ body{
 	}
 	#menu{
 		text-align: center;
-		font-size: 2em;
+		font-size: 23px;
+		font-family: arial;
 	}
 /*alterações no ul*/	
 	#menu ul{
@@ -52,21 +52,23 @@ body{
 	}
 /* Colocar imagem no plano de fundo*/
 	body{
-		background-image: url(verde2.jpg);
+		background-image: url(img.verde.jpg);
 		background-repeat: repeat;
 		background-size: cover;
 		margin: 0;
 		padding: 0;
 		height: 100%;
+		font-family: arial;
 		}
 	#textoinicial{
 		width: 75em;
-		height: 28em;
+		height: 10em;
 		float: left;
 		display:block;
 		color: black;
 		text-align: center;
 		margin-right: 0em;
+		font-family: arial;
 	}
 	p {
 		color: orange;
@@ -76,12 +78,13 @@ body{
     	padding-left: 5em;
     	font-size: 1.5em;
     	text-indent: 3em;
+    	font-family: arial;
 	}
 /* Configurações das telas de cadastro*/
 	/*comcadastro*/
 	#cad1 {
 		width: 11em;
-		height: 4.2em;
+		height: 8em;
 		float: left;
 		display: block;
 		color: black;
@@ -91,12 +94,13 @@ body{
 		margin-left: 5em;
 		margin-top: 2em;
 		padding: 4mm;
-		font-size: 1.5em;
+		font-size: 20px;
+		font-family: arial;
    		}
    	/*novocadastro*/	
 	#cad2 {
 		width: 23em;
-		height: 10.5em;
+		height: 14em;
 		float: left;
 		display: block;
 		text-align: left;
@@ -107,7 +111,14 @@ body{
 		margin-top: 2em;
 		padding: 4mm;
 		font-size: 1.5em;
+		font-family: arial;
    		}
+   	/*Esqueceu a senha?*/
+   	u{
+   		color: blue;
+   		font-size: 15px;
+   		}
+
 	/*Video pagina cadastro*/  		
    	#cad3{
    		width: 30em;
@@ -115,15 +126,13 @@ body{
 		float: left;
 		margin-left: 5em;
 		padding: 4mm;
+		font-family: arial;
 	}
   	#um,#dois,#tres{
   		background-color: red;
   		text-align: right;
+  		font-family: arial;
   	}
-  	#rodape {
-	position: absolute;
-	bottom: -784px;
-	}
 	#valortotal{
 		display: block;
 		background: gray;
@@ -134,6 +143,7 @@ body{
 		position: fixed;
 		top: 40em;
 		right: 0;
+		font-family: arial;
 	}
 	#montagem{
 		width: 34em;
@@ -147,10 +157,12 @@ body{
 		margin-top: 2em;
 		padding: 4mm;
 		font-size: 1.5em;
+		font-family: arial;
    		}
 	.ingrediente td{
 		height: 200;
 		width: 200;
+		font-family: arial;
 	}
 	#escolhidos{
 		display: block;
@@ -162,6 +174,7 @@ body{
 		position: fixed;
 		top: 20em;
 		right: 1em;
+		font-family: arial;
 	}
 	#add{
 		float: left;
@@ -176,6 +189,7 @@ body{
 		position: fixed;
 		top: 20em;
 		left: 2em;
+		font-family: arial;
 	}
 	#add2{
 		float: left;
@@ -190,7 +204,15 @@ body{
 		position: fixed;
 		top: 20em;
 		left: 40em;
+		font-family: arial;
 	}
+
+	#rodape {
+		position: absolute;
+		bottom: -784px;
+		font-family: arial;
+	}
+
 	#pagamentoPedido{
 		float: left;
 		display: block;
@@ -255,9 +277,30 @@ body{
 		tpo:5px ;
 		box-shadow:none;
 	}
+
+	.btn-red{
+		background: red;
+		color: #000;
+		box-shadow: 0 5px 0 #8A0808;
+	}
+
+	/*Ao passar mouse no botão*/
+	.btn-red:hover{
+		background: #8A0808;
+		color: #000;
+		box-shadow:0 5px 0 #DF0101;
+	}
+	/*Quando botão é clicado*/
+	.btn-red:active{
+		position: relative;
+		tpo:5px ;
+		box-shadow:none;
+	}
+
+
 	
 	#listasanduiche{
-		padding-left: 20px;
+		padding-left: 25px;
 		width:700px;
 		height:400px;
 		font-family: arial;
@@ -265,16 +308,40 @@ body{
 	}
 
 	#textocalabresa{
-		padding-left: 10px;
+		padding-left: 12px;
 		font-size: 20px;
 		font-family: arial;
 	}
 
 	#ingd{
-		padding-left: 10px;
+		padding-left: 12px;
 		font-size: 15px;
+		text-align: justify;
 	}
 
-	#radio{
-		padding-right: 10px;
+	#testando, #imagemcalabresa{
+		border-top-width: 0;
+        border-right-width: 0;
+        border-left-width: 0;
+        border-color: #BDBDBD;
+        border-style: solid;
+        text-align: left;  
+	}
+
+	#dist{
+		margin-left: 5px;
+		margin-right: 80px;	
+	}
+
+	#escolhidoscardapio{
+		display: block;
+		background: #8FBC8F;
+		box-shadow: 0 0 12px rgba(0,2,2,2);
+		border: 1px solid;
+		width: 23em;
+		height: 18em;
+		position: fixed;
+		top: 20em;
+		right: 1em;
+		font-family: arial;
 	}
