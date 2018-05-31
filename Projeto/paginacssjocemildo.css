@@ -345,3 +345,19 @@ body{
 		right: 1em;
 		font-family: arial;
 	}
+	#pagamentoPedido{
+		float: left;
+		display: block;
+		text-align: center;
+		font-size: 1.5em;
+		margin-left: 3em;
+		margin-top: 2em;
+	}
+	#formasPagamento{
+		display: block;
+		float: left;
+		font-size:1.3em;
+		text-align: center;
+		margin-top: 2em;
+		margin-left: 15em;
+	}
