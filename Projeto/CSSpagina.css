@@ -5,13 +5,14 @@ head{
 }
 /*alterações no body por cada parte*/
 body{
-		background-image: url(img.verde.jpg);
-		background-repeat: repeat;
-		background-size: cover;
-		margin: 0;
-		padding: 0;
-		height: 100%
-		}
+	background-repeat: repeat;
+	background-size: cover;
+	background-color: #AED581;
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: arial;
+	}
 /*alterações no body por cada parte*/
 
 /*alterações no ul*/
@@ -19,7 +20,7 @@ body{
 		background-color: black;
 		padding-left: 3em;
 		}
-
+	/*Logomarca*/
 	#imagens{
 		width: 50em;
 		height:10em;
@@ -50,26 +51,24 @@ body{
 	#menu ul li a:hover{
 		color: #8B0000;
 	}
-/* Colocar imagem no plano de fundo*/
-	body{
-		background-image: url(img.verde.jpg);
-		background-repeat: repeat;
-		background-size: cover;
-		margin: 0;
-		padding: 0;
-		height: 100%;
-		font-family: arial;
-		}
+
 	#textoinicial{
 		width: 75em;
 		height: 10em;
 		float: left;
 		display:block;
 		color: black;
-		text-align: center;
+		text-align: justify;
 		margin-right: 0em;
 		font-family: arial;
+		back
 	}
+
+	#videoincial{
+		float: left;
+		display:block;
+	}
+
 	p {
 		color: orange;
 		text-shadow: black 0.1em 0.2em 0.2em;
@@ -119,6 +118,13 @@ body{
    		font-size: 15px;
    		}
 
+   	#redsenha{
+   		padding-top: 60px;
+   		font-family: arial;
+   		font-size: 20px;
+
+   	}
+
 	/*Video pagina cadastro*/  		
    	#cad3{
    		width: 30em;
@@ -128,11 +134,7 @@ body{
 		padding: 4mm;
 		font-family: arial;
 	}
-  	#um,#dois,#tres{
-  		background-color: red;
-  		text-align: right;
-  		font-family: arial;
-  	}
+  	/*TELA MONTAGEM
 	#valortotal{
 		display: block;
 		background: gray;
@@ -143,9 +145,10 @@ body{
 		position: fixed;
 		top: 40em;
 		right: 0;
-		font-family: arial;
-	}
-	#montagem{
+		font-family: arial;*/
+
+/*TELA MONTAGEM*/
+	#montagem{ /*DIV*/
 		width: 34em;
 		height: 80em;
 		float: left;
@@ -153,17 +156,19 @@ body{
 		text-align: center;
 		color: black;
 		background-color: #556B2F; 
-		margin-left: 5em;
+		margin-left: 2em;
 		margin-top: 2em;
 		padding: 4mm;
 		font-size: 1.5em;
 		font-family: arial;
-   		}
-	.ingrediente td{
-		height: 200;
-		width: 200;
+   	}
+
+	/*.ingrediente td{
+		height: 200px;
+		width: 200px;
 		font-family: arial;
-	}
+	}*/
+
 	#escolhidos{
 		display: block;
 		background: #8FBC8F;
@@ -176,6 +181,12 @@ body{
 		right: 1em;
 		font-family: arial;
 	}
+
+	#imgmontar{
+		height: 200px;
+		width: 100px;
+	}
+
 	#add{
 		float: left;
 		display: block;
@@ -207,12 +218,7 @@ body{
 		font-family: arial;
 	}
 
-	#rodape {
-		position: absolute;
-		bottom: -784px;
-		font-family: arial;
-	}
-
+/*TELA DE PAGAMENTO*/
 	#pagamentoPedido{
 		float: left;
 		display: block;
@@ -299,14 +305,11 @@ body{
 		box-shadow:none;
 	}
 
-
-	
 	#listasanduiche{
 		padding-left: 25px;
 		width:700px;
 		height:400px;
 		font-family: arial;
-
 	}
 
 	#textocalabresa{
@@ -345,5 +348,12 @@ body{
 		position: fixed;
 		top: 20em;
 		right: 1em;
+		font-family: arial;
+	}
+
+/*rodape*/
+	#rodape {
+		position: absolute;
+		bottom: -784px;
 		font-family: arial;
 	}
