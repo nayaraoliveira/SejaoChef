@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8"/>
+			<title>Pagamento</title>
+			<link rel="stylesheet" type="text/css" href="CSSpagina.css">
+      <link rel="stylesheet" type="text/css" href="CSSpaginaPagamento.css">
+	</head>
+<body>
+		
+		<div id="div1" align="center">
+			<img id="imagens" src="img.sejaochef.png" align="center">
+		</div>
+		<!--menu da página inicial -->
+		<div id="menu">
+    		<ul>
+                <li> <a href="paginaInicial.html">Inicial</a> </li>
+                <li> <a href="paginaCardapio.html">Cardápio</a> </li>
+                <li> <a href="paginaMontarpedido.html">Montagem</a> </li>
+                <li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
+                <li> <a href="paginaCadastro.html">Cadastro</a> </li>
+            </ul>
+        </div>
+
+      <!-- tabela com descrição e valores -->
+     <div id="pagamentoPedido"> 
+        <table height="68" bgcolor="white" border="1" bordercolor="black" cellspacing=0>
+            <tr>
+             	<td width="300em" align="center">Descrição do Produto</td>
+                <td width="100em">Valores</td>
+             </tr>
+            <tr><td height="300em"><td></td></tr>
+            <tr>
+             	<td>Total</td>
+                <td>R$</td>
+            </tr>
+        </table>
+    </div>
+
+     <!-- formas de pagamento -->
+    <div id="formasPagamento">
+     	<h2>Formas de pagamento</h2>
+        <img src="img.visa.png" width="40" height="30" align="left" hspace="10em"/>
+        <img src="img.mastercard.png" width="40" height="30" align="left" hspace="10em"/>
+        <h3 align="left">à vista</h3>
+        <table>
+            <tr>
+        		<td align="center">Nome do Titular</td><td align="center"><input type="text" name="nomeCartao" size="18"></td>
+         	</tr>
+
+        	<tr>
+        		<td align="center">Cartão</td><td align="left"><input type="text" name="numCartao" size="18" maxlength="16"></td>
+         	</tr>
+
+            <tr>
+            	<td>Mês/Ano</td><td align="left"><input type="text" name="validade" size="8" maxlength="5"></td>
+                <td align="left">CVV</td><td align="left"><input type="text" name="cvv" size="4" maxlength="3"></td>
+            </tr>
+        </table>
+
+        <h3>Parcelas</h3>
+        <select name="Parcelas">
+ 			<option>1x</option>
+            <option>2x</option>
+            <option>3x</option>
+            <option>4x</option>
+            <option>5x</option>
+            <option>6x</option>
+        </select><br><br>
+        <tr>
+          	<td><input class="btn btn-green" type="submit" value="Confirmar"></td>
+        </tr>
+     </div>
+</body>
+</html>
