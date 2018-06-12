@@ -1,7 +1,4 @@
- 	/*
-  	TELA MONTAGEM
-  	 */
-
+ 
 	#valortotal{
 
 		display: block;
@@ -15,12 +12,14 @@
 		right: 0;
 		font-family: arial;
 
+	}
+
 
 	#montagem{ 
-		width: 34em;
-		height: 80em;
 		float: left;
 		display: block;
+		width: 34em;
+		height: 80em;
 		text-align: center;
 		color: black;
 		background-color: #556B2F; 
@@ -50,7 +49,16 @@
 		font-family: arial;
 	}
 
+	/*Configurações da imagem */
 	#imgmontar{
-		height: 200px;
-		width: 100px;
+		height: 150px;
+		width: 150px;
+		margin-bottom: 35px;
+	}
+
+	#ttmontar{
+		width: 1900px;
+		height: 2000px;
+		margin-right: 100px;
+		background-color: pink;
 	}
