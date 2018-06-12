@@ -1,19 +1,48 @@
 /*TELA DE PAGAMENTO*/
-	#pagamentoPedido{
-		float: left;
-		display: block;
-		text-align: center;
-		font-size: 1.5em;
-		margin-left: 3em;
-		margin-top: 2em;
-		font-family: arial;
+#formasPagamento{
+	display: block;
+	float: left;
+	font-size:1.3em;
+	text-align: center;
+	margin-top: 30px;
+	margin-left: 60px;
+	font-family: arial;
+	background-color: #8FBC8F;
+	width: 550px;
+	height: 350px;
 	}
-	#formasPagamento{
-		display: block;
-		float: left;
-		font-size:1.3em;
-		text-align: center;
-		margin-top: 2em;
-		margin-left: 15em;
-		font-family: arial;
+
+#pedidos{
+	display: block;
+	float: left;
+	background: #8FBC8F;
+	box-shadow: 0 0 12px rgba(0,2,2,2);
+	border: 1px solid;
+	width: 30em;
+	height: 18em;
+	top: 20em;
+	right: 1em;
+	font-family: arial;
+	margin-left: 40px;
+	margin-top: 30px;
+	padding-left: 10px;
+
 	}
+
+#ttpagamento{
+	width: 1350px;
+	height: 740px;
+	margin-right: 70px;
+  	min-height:100%;
+ 	position:relative;
+ 	margin: 0;
+  	text-align: left;
+  	background-color: yellow;
+    }
+
+   label{
+   	font-size: 20px;
+   	font-family: arial;
+   	font-style: center;
+   }
+
