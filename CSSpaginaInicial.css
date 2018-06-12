@@ -4,12 +4,14 @@ body {
 	} 
 
 #id{
-	width: 1550px ;
+	width: 1350px ;
 	height: 350px;
 }
 
+
+/* SLIDES DAS FOTOS*/
 .mySlides{
-	width: 1550px ;
+	width: 1350px ;
 	height: 350px;
 	display: none;
 }
@@ -82,9 +84,6 @@ body {
   to {opacity: 1}
 }
 
-
-
-
 #textoinicial{
 	float: left;
 	display:block;
@@ -120,9 +119,13 @@ p {
     font-family: arial;
 	}
 
-
 #ttinicial{
 	width: 1350px;
 	height: 800px;
 	margin-right: 70px;
+  min-height:100%;
+  position:relative;
+  margin: 0;
+  text-align: left;
+    
 }
