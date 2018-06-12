@@ -2,11 +2,45 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-			<title>Inicial</title>
+			<title>SejaChef</title>
 			<link rel="stylesheet" type="text/css" href="CSSpagina.css">
 			<link rel="stylesheet" type="text/css" href="CSSpaginaInicial.css">
+
+			<script type="text/javascript">
+					function slide1(){
+						document.getElementById('id').src="ko1.jpg";
+						setTimeout("slide2()", 1000)
+						}
+						  
+					function slide2(){
+						document.getElementById('id').src="ko2.jpg";
+						setTimeout("slide3()", 1000)
+						}
+						  
+					function slide3(){
+						document.getElementById('id').src="ko3.jpg";
+						setTimeout("slide4()", 1000)
+						}
+
+					function slide4(){
+						document.getElementById('id').src="ko4.jpg";
+						setTimeout("slide5()", 1000)
+						}
+						  
+					function slide5(){
+						document.getElementById('id').src="ko5.jpg";
+						setTimeout("slide6()", 1000)
+						}
+						  
+					function slide6(){
+						document.getElementById('id').src="ko6.jpg";
+						setTimeout("slide1()", 1000)
+						}	
+			</script>
+	</div>	
+			
 	</head>
-	<body>
+	<body onLoad="slide1()">
 		
 		<div id="div1" align="center">
 			<img id="imagens" src="img.sejaochef.png" align="center">
@@ -22,6 +56,13 @@
 			</ul>
 		</div>
 
+		<div>
+			<div>
+		<img id="id">
+			</div>
+		</div>
+
+		
 		<div id="ttinicial" aling="center">
 		<!--texto página inicial -->
 			<div id="textoinicial" align ="left" margin="100px">
@@ -36,11 +77,11 @@
 			<!--video da página inicial -->
 			<div id="videoinicial" align="left">
 				<video width="600px" height="400px" controls>
-				 <source src="video.comida.mp4" type="video/mp4"> 
+				 <source src="video.sanduiche.mp4" type="video/mp4"> 
 				</video>
 			</div>	
 
-			<div id="rodape"><b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b></div>
+			<!--<div id="rodape"><b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b></div>-->
 
 		</div>
 
