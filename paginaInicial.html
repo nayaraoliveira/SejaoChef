@@ -1,19 +1,50 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0"/>
-			<title>Seja Chef</title>
+		<meta charset="UTF-8"/>
+			<title>SejaChef</title>
 			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
 			<link rel="stylesheet" type="text/css" href="css/CSSpaginaInicial.css">
 			<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+			
+			<script type="text/javascript">
+					function slide1(){
+						document.getElementById('id').src="ko1.jpg";
+						setTimeout("slide2()", 1000)
+						}
+						  
+					function slide2(){
+						document.getElementById('id').src="ko2.jpg";
+						setTimeout("slide3()", 1000)
+						}
+						  
+					function slide3(){
+						document.getElementById('id').src="ko3.jpg";
+						setTimeout("slide4()", 1000)
+						}
 
+					function slide4(){
+						document.getElementById('id').src="ko4.jpg";
+						setTimeout("slide5()", 1000)
+						}
+						  
+					function slide5(){
+						document.getElementById('id').src="ko5.jpg";
+						setTimeout("slide6()", 1000)
+						}
+						  
+					function slide6(){
+						document.getElementById('id').src="ko6.jpg";
+						setTimeout("slide1()", 1000)
+						}	
+			</script>
+	</div>	
+			
 	</head>
-	<body>
-
-	<div id="ttinicial">
+	<body onLoad="slide1()">
 		
 		<div id="div1" align="center">
-			<img id="imagens" src="img.sejaochef.png" align="center">
+			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
 		<div id="menu">
@@ -26,74 +57,14 @@
 			</ul>
 		</div>
 
-
-		<!-- Slideshow container -->
-		<div class="slideshow-container" align="left">
-
-		  <!-- Full-width images -->
-		  <div class="mySlides fade">
-		    <img id="id" src="img.teste.jpg">
-		  </div>
-
-		  <div class="mySlides fade">
-		    <img id="id" src="ko2.jpg">
-		  </div>
-
-		  <div class="mySlides fade">
-		    <img id="id" src="ko3.jpg">
-		  </div>
-
-		  <div class="mySlides fade">
-		    <img id="id" src="ko4.jpg">
-		  </div>
-
-		  <div class="mySlides fade">
-		    <img id="id" src="ko5.jpg">
-		  </div>
-
-		  <div class="mySlides fade">
-		    <img id="id" src="ko6.jpg">
-		  </div>
-
-		</div>
-		<br>
-
-		<!-- The dots/circles -->
-		<div style="text-align:center">
-		  <span class="dot" onclick="currentSlide(1)"></span> 
-		  <span class="dot" onclick="currentSlide(2)"></span> 
-		  <span class="dot" onclick="currentSlide(3)"></span> 
-		  <span class="dot" onclick="currentSlide(4)"></span> 
-		  <span class="dot" onclick="currentSlide(5)"></span> 
-		  <span class="dot" onclick="currentSlide(6)"></span> 
+		<div>
+			<div>
+		<img id="id">
+			</div>
 		</div>
 
-
-		<script type="text/javascript">
-			
-		var slideIndex = 0;
-		showSlides();
-
-		function showSlides() {
-		    var i;
-		    var slides = document.getElementsByClassName("mySlides");
-		    var dots = document.getElementsByClassName("dot");
-		    for (i = 0; i < slides.length; i++) {
-		       slides[i].style.display = "none";  
-		    }
-		    slideIndex++;
-		    if (slideIndex > slides.length) {slideIndex = 1}    
-		    for (i = 0; i < dots.length; i++) {
-		        dots[i].className = dots[i].className.replace(" active", "");
-		    }
-		    slides[slideIndex-1].style.display = "block";  
-		    dots[slideIndex-1].className += " active";
-		    setTimeout(showSlides, 5000); // Change image every 2 seconds
-		}
-		</script>
-
-			<div id="ttinicial">
 		
+		<div id="ttinicial" aling="center">
 		<!--texto página inicial -->
 			<div id="textoinicial" align ="left" margin="100px">
 			<p><b>Nossa missão é fornecer sanduíches personalizados com sabor, qualidade e higiene. Aqui, 
@@ -101,7 +72,7 @@
 		   		sanduíches exóticos e deliciosos.<br><br>
 		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crie seu cardápio personalizado dando nome às suas obras de arte gastronômicas ou selecione uma de nossas sugestões, incrementando-a como quiser para proporcionar uma melhor experiência de sabor.<br><br>
 		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Não está achando o ingrediente certo para inebriar seu paladar? Mande sugestões de itens para abastecermos nossa despensa e aumentar o seu deleite criativo e suas opções de degustação.<br><br>
-		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satisfaça seu desejo de criar e (Por quê não?) comer bem, lembrando sempre que aqui, em nossa cozinha, nós queremos que você <i>Seja o Chef!</i></b></p>
+		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satisfaça seu desejo de criar e (Porque não?) comer bem, lembrando sempre que aqui, em nossa cozinha, nós queremos que você <i>Seja o Chef!</i></b></p>
 	   		</div>
 
 			<!--video da página inicial -->
@@ -109,17 +80,11 @@
 				<video width="600px" height="400px" controls>
 				 <source src="video.sanduiche.mp4" type="video/mp4"> 
 				</video>
-			</div>	<br><br>
+			</div>	
 
-
-			<div id="rodape">
-
-				<img id="imgrodape" src="img.sejaochef.png" align="center">
-
-				<b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b></div>
+			<!--<div id="rodape"><b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b></div>-->
 
 		</div>
-		
-	</div>
+
 		</body>
 </html>
