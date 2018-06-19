@@ -6,6 +6,7 @@
 			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
 			<link rel="stylesheet" type="text/css" href="css/CSSpaginaCadastro.css">
 			<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+			<form id="formulario" name="entrar" action="paginaCadastro.php" method="GET">
 	</head>
 	<body>
 		
@@ -33,12 +34,12 @@
 				<caption align="center">Já tenho cadastro</caption>
 				<tr>
 	  				<td>CPF</td>
-	 				<td align="left"><input type="text"size="15" maxlength="15"></td>
+	 				<td align="left"><input type="text"size="15" maxlength="15" name="cpf2"></td>
 	 			</tr>
 
 				<tr>
 					<td>Senha</td>
-	 				<td align="left"><input type="passaword" size="15" maxlength="15"></td>
+	 				<td align="left"><input type="passaword" size="15" maxlength="15" name="senha2"></td>
 	 			</tr>
 
 	 		</table>
@@ -46,7 +47,7 @@
  			<a href="paginaRedefinirSenha.html"><u>Esqueceu a senha?</u></a>
 
  			<div id="botaosentra" align="right"><br>
-	 			<button class="btn btn-green">Entrar</button>
+	 			<button href="paginaCadastro.php" class="btn btn-green" name="entrar" value="1">Entrar</button>
 	 		</div><br>
 
 		</div>
@@ -58,49 +59,49 @@
 
 				<tr>
 	  				<td>Nome</td>
-	 				 <td ><input type="text" size="40" maxlength="30"></td>
+	 				 <td ><input type="text" size="40" maxlength="30" name="nome"></td>
 	 			</tr>
 
 	 			<tr>
 	  				<td>CPF</td>
-	 				<td ><input type="text" size="13" maxlength="11"></td>
+	 				<td ><input type="text" size="13" maxlength="11" name="cpf"></td>
 	 			</tr>
 
 				<tr>
 					<td>E-mail</td>
-	 				<td><input type="email" size="30" maxlength="35"></td>
+	 				<td><input type="email" size="30" maxlength="35" name="email"></td>
 	 			</tr>
 
 				<tr>
 					<td>Endereço</td>
-	 				<td><input type="text"  size="30" maxlength="30"> 
-	 				 	Nº<input type="text"  size="4" maxlength="5"></td>
+	 				<td><input type="text"  size="30" maxlength="30" name="endereco"> 
+	 				 	Nº<input type="text"  size="4" maxlength="5" name="numero"></td>
 	 			</tr>
 
 	 			<tr>
 					<td>Referencia</td>
-	 				<td><input type="text"size="30" maxlength="30"></td>
+	 				<td><input type="text"size="30" maxlength="30" name="referencia"></td>
 	 			</tr>
 
 	 			<tr>
 					<td>Celular</td>
-	 				<td><input type="text" size="15" maxlength="15"></td>
+	 				<td><input type="text" size="15" maxlength="15" name="celular"></td>
 	 			</tr>
 
 				<tr>
 					<td>Senha</td>
-	 				<td><input type="text"size="15" maxlength="15"></td>
+	 				<td><input type="text"size="15" maxlength="15" name="senha"></td>
 	 			</tr>
 
 				<tr>
 					<td>Confirmar Senha</td>
-	 				<td align="left"><input type="text" size="15" maxlength="15"></td>
+	 				<td align="left"><input type="text" size="15" maxlength="15" name="senhaok"></td>
 	 			</tr>
 
 	 		</table>
 
 	 		<div id="botoescadastrar" align="right">
-	 			<button class="btn btn-green">Cadastrar</button> <button class="btn btn-yellow">Limpar</button>
+	 			<button class="btn btn-green" value="1" name="cadastrar">Cadastrar</button> <button class="btn btn-yellow" type= "reset">Limpar</button>
 	 		</div>
 		</div>
 
