@@ -1,90 +1,130 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8"/>
-			<title>SejaChef</title>
-			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
-			<link rel="stylesheet" type="text/css" href="css/CSSpaginaInicial.css">
-			<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
-			
-			<script type="text/javascript">
-					function slide1(){
-						document.getElementById('id').src="ko1.jpg";
-						setTimeout("slide2()", 1000)
-						}
-						  
-					function slide2(){
-						document.getElementById('id').src="ko2.jpg";
-						setTimeout("slide3()", 1000)
-						}
-						  
-					function slide3(){
-						document.getElementById('id').src="ko3.jpg";
-						setTimeout("slide4()", 1000)
-						}
 
-					function slide4(){
-						document.getElementById('id').src="ko4.jpg";
-						setTimeout("slide5()", 1000)
-						}
-						  
-					function slide5(){
-						document.getElementById('id').src="ko5.jpg";
-						setTimeout("slide6()", 1000)
-						}
-						  
-					function slide6(){
-						document.getElementById('id').src="ko6.jpg";
-						setTimeout("slide1()", 1000)
-						}	
-			</script>
-	</div>	
-			
-	</head>
-	<body onLoad="slide1()">
-		
-		<div id="div1" align="center">
-			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
-		</div>
-		<!--menu da página inicial -->
-		<div id="menu">
-			<ul>
-				<li> <a href="paginaInicial.html">Inicial</a> </li>
-				<li> <a href="paginaCardapio.html">Cardápio</a> </li>
-				<li> <a href="paginaMontarpedido.html">Montagem</a> </li>
-				<li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
-				<li> <a href="paginaCadastro.html">Cadastro</a> </li>
-			</ul>
-		</div>
+body {
+	margin: 0px;
+	} 
 
-		<div>
-			<div>
-		<img id="id">
-			</div>
-		</div>
+#id{
+	width: 1350px ;
+	height: 350px;
+}
 
-		
-		<div id="ttinicial" aling="center">
-		<!--texto página inicial -->
-			<div id="textoinicial" align ="left" margin="100px">
-			<p><b>Nossa missão é fornecer sanduíches personalizados com sabor, qualidade e higiene. Aqui, 
-		   		você escolhe os ingredientes de sua preferência, selecionados cuidadosamente para montar 
-		   		sanduíches exóticos e deliciosos.<br><br>
-		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Crie seu cardápio personalizado dando nome às suas obras de arte gastronômicas ou selecione uma de nossas sugestões, incrementando-a como quiser para proporcionar uma melhor experiência de sabor.<br><br>
-		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Não está achando o ingrediente certo para inebriar seu paladar? Mande sugestões de itens para abastecermos nossa despensa e aumentar o seu deleite criativo e suas opções de degustação.<br><br>
-		   		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Satisfaça seu desejo de criar e (Porque não?) comer bem, lembrando sempre que aqui, em nossa cozinha, nós queremos que você <i>Seja o Chef!</i></b></p>
-	   		</div>
+.mySlides{
+	width: 1550px ;
+	height: 350px;
+	display: none;
+}
 
-			<!--video da página inicial -->
-			<div id="videoinicial" align="left">
-				<video width="600px" height="400px" controls>
-				 <source src="video.sanduiche.mp4" type="video/mp4"> 
-				</video>
-			</div>	
+* {box-sizing:border-box}
 
-			<!--<div id="rodape"><b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b></div>-->
+/* Slideshow container */
+.slideshow-container {
+  /*max-width: 1000px;*/
+  position: relative;
+  margin: auto;}
 
-		</div>
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: yellow;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
 
-		</body>
-</html>
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: orange;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+#textoinicial{
+	float: left;
+	display:block;
+
+	color: black;
+	text-align: justify;
+	font-family: arial;
+	background-color: #0B3B0B;
+	width: 550px;
+	height: 550px;
+	margin-right: 70px;
+	margin-left: 80px;
+	margin-top: 30px;
+	}
+
+#videoincial{
+	float: left;
+	display:block;
+	background-color: red;
+	width: 2000px;
+	height: 2000px;
+	margin-top: 50px;
+	}
+
+p {
+	color: orange;
+	text-shadow: black 0.1em 0.2em 0.2em;
+	padding-right: 2em;
+    padding-left: 2em;
+    font-size: 1.2em;
+    text-indent: 3em;
+    font-family: arial;
+	}
+
+
+#ttinicial{
+  width: 1350px;
+  height: 1100px;
+  margin-right: 70px;
+  min-height:100%;
+  position:relative;
+  margin: 0;
+  text-align: left;
+  background-color: yellow;
+}
+
