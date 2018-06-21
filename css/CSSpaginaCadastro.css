@@ -61,8 +61,11 @@
 	}
 
 	#ttcadastro{
-		background-color: red;
 		width: 1350px;
-		height: 800px;
-		margin-right: 70px;
+	  	height: 500px;
+	 	margin-right: 70px;
+	  	min-height:100%;
+	  	position:relative;
+	  	margin: 0;
+	  	text-align: left;
 	}
