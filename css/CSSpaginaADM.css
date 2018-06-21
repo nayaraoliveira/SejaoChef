@@ -9,7 +9,7 @@
 		width: 26.8em;
 		height: 14.5em;
 		position: fixed;
-		top: 20em;
+		top: 15em;
 		left: 2em;
 		font-family: arial;
 	}
@@ -24,7 +24,18 @@
 		width: 15em;
 		height: 14.5em;
 		position: fixed;
-		top: 20em;
+		top: 15em;
 		left: 40em;
 		font-family: arial;
+	}
+
+
+	#ttadm{
+	  width: 1350px;
+	  height: 450px;
+	  margin-right: 70px;
+	  min-height:100%;
+	  position:relative;
+	  margin: 0;
+	  text-align: left;
 	}
