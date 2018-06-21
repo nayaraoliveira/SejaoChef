@@ -3,7 +3,7 @@
 <html>
 	<head>
 		<meta charset="UTF-8"/>
-			<title>Cardapio</title>
+			<title>Seja Chef</title>
 			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
 			<link rel="stylesheet" type="text/css" href="css/CSSpaginaCardapio.css">
 	</head>
@@ -16,7 +16,7 @@
 		<div id="menu">
 			<ul>
 			<li> <a href="paginaInicial.html">Inicial</a> </li>
-			<li> <a href="paginaCardapio.html">Cardápio</a> </li>
+			<li> <a href="paginaCardapio2.php">Cardápio</a> </li>
 			<li> <a href="paginaMontarpedido.html">Montagem</a> </li>
 			<li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
 			<li> <a href="paginaCadastro.html">Cadastro</a> </li>
@@ -25,6 +25,8 @@
 		</div>
 		
    		<br>
+
+   		<div id="ttcardapio">
    		<div id="listasanduiche" align =left>
 	   		<table>
 	   			<tr>	
@@ -174,6 +176,14 @@
 	   		</table>
 
 		</div>
+
+		<div id="rodape">
+			<img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+			<b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
+		</div>
+
+		</div>
+
 
 	</body>
 </html>
