@@ -1,51 +1,66 @@
 
-	#montagem{ 
-		float: left;
-		display: block;
-		width: 55.7em;
-		height: 231em;
-		text-align: center;
-		color: black;
-		margin-left: 1em;
-		margin-top: 2em;
-		padding: 4mm;
-		font-size: 0.9em;
-		font-family: arial;
-		color: black;
-   	}
+#imgcard{
+    height: 150px;
+    width: 150px;
+}
 
-	#escolhidos{
-		display: block;
-		background: #8FBC8F;
-		box-shadow: 0 0 12px rgba(0,2,2,2);
-		border: 1px solid;
-		width: 23em;
-		height: 18em;
-		position: fixed;
-		top: 20em;
-		right: 2em;
-		font-family: arial;
-	}
+#montagem {
+    float: left;
+    display: block;
+    width: 55.7em;
+    height: 231em;
+    text-align: center;
+    color: black;
+    margin-left: 1em;
+    margin-top: 2em;
+    padding: 4mm;
+    font-size: 0.9em;
+    font-family: arial;
+    color: black;
+}
 
-	/*Configurações da imagem */
-	#imgmontar{
-		height: 150px;
-		width: 150px;
-		margin-bottom: 35px;
-	}
+#escolhidos {
+    display: block;
+    background: #8FBC8F;
+    box-shadow: 0 0 12px rgba(0, 2, 2, 2);
+    border: 1px solid;
+    width: 23em;
+    height: 18em;
+    position: fixed;
+    top: 20em;
+    right: 2em;
+    font-family: arial;
+}
 
-	#ttmontar{
-		width: 1350px;
-	  	height: 3500px;
-	  	margin-right: 70px;
-	 	min-height:100%;
-	  	position:relative;
-	  	margin: 0;
-	  	text-align: left;
-	}
+/*Configurações da imagem */
+#imgmontar {
+    height: 150px;
+    width: 150px;
+    margin-bottom: 35px;
+}
 
-	#ing{
-		background-color: rgba(0,100,0,0.3);
-		width: 150px;
-		height: 160px;
-	}
+#ttmontar {
+    width: 1350px;
+    height: 3500px;
+    margin-right: 70px;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    text-align: left;
+}
+
+#ing {
+    background-color: rgba(0, 100, 0, 0.3);
+    width: 150px;
+    height: 160px;
+}
+
+.color {
+    background: #8FBC8F;
+    font-family: arial;
+}
+
+caption{
+    font-family: Arial;
+    font-size: 20px;
+}
