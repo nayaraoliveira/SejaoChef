@@ -107,7 +107,7 @@ if ($cadastra==TRUE){
 }
 }else{echo"Linha 3 não preenchida corretamente!";}
 
-
+header("Location:http://localhost/SejaoChef-master/paginaADM_test.php");
 mysqli_close($link);
 }
 
