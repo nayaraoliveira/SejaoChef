@@ -1,194 +1,608 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8"/>
-			<title>SejaChef</title>
-			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
-			<link rel="stylesheet" type="text/css" href="css/CSSpaginaMontar.css">
-			<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
-	</head>
-	<body>
-		
-		<div id="div1" align="center">
-			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
-		</div>
-		<!--menu da página inicial -->
-		<div id="menu">
-			<ul>
-				<li> <a href="paginaInicial.html">Inicial</a> </li>
-				<li> <a href="paginaCardapio.html">Cardápio</a> </li>
-				<li> <a href="paginaMontarpedido.html">Montagem</a> </li>
-				<li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
-				<li> <a href="paginaCadastro.html">Cadastro</a> </li>
-			</ul>
-		</div>
+<head>
+    <meta charset="UTF-8"/>
+    <title>SejaChef</title>
+    <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
+    <link rel="stylesheet" type="text/css" href="css/CSSpaginaMontar.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+</head>
+<body>
 
-		<div id="ttmontar">
+<div id="div1" align="center">
+    <img id="imagens" src="imagens/img.sejaochef.png" align="center">
+</div>
+<!--menu da página inicial -->
+<div id="menu">
+    <ul>
+        <li><a href="paginaInicial.html">Inicial</a></li>
+        <li><a href="paginaCardapio.html">Cardápio</a></li>
+        <li><a href="paginaMontarpedido.html">Montagem</a></li>
+        <li><a href="paginaMeusPedidos.html">Meus Pedidos</a></li>
+        <li><a href="paginaCadastro.html">Login</a></li>
+    </ul>
+</div>
 
-	<div id="montagem" align="left" background-color: "rgba(0,100,0,0.3)";>
-		<h3>Escolha seu Ingredientes!</h3>
-		<br>
+<div id="ttmontar">
 
-		<table id="ing" width=800 height=150 border="1">
-			<caption><b>Tipos de Pães</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.paotrigo.jpg" align="center">Pão de Trigo<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.paoseda.jpg" align="center">Pão de Seda<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.paoaveia.jpg" align="center">Pão de Aveia<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.paoburguer.jpg" align="center">Pão de Bola<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.paodeforma.jpg" align="center">Pão de Fôrma<br>Valor: R$ 1,00</td>
-			</tr>
-        </table><br>
+    <div id="montagem" align="left" background-color:
+    "rgba(0,100,0,0.3)";>
+    <h3>Escolha seus Ingredientes!</h3>
+    <br>
 
-		<table id="ing" width=800 height=200 border="1">
-			<caption><b>Tipos de Recheios</b></caption>
-			<tr>
-  				<td width=150 height=160><img id="imgmontar" src="imagens/img.alcatra.jpg" align="center">Alcatra<br>Valor: R$ 1,00</td>
- 				<td width=150 height=160><img id="imgmontar" src="imagens/img.calabresa.png" align="center">Calabresa<br>Valor: R$ 1,00</td>
- 				<td width=150 height=160><img id="imgmontar" src="imagens/img.frango.jpg" align="center">Frango<br>Valor: R$ 1,00</td>
- 				<td width=150 height=160><img id="imgmontar" src="imagens/img.bacon.jpg" align="center">Bacon<br>Valor: R$ 1,00</td>
- 				<td width=150 height=160><img id="imgmontar" src="imagens/img.ovo.jpg" align="center">Ovos<br>Valor: R$ 1,00</td>
- 			</tr>
- 				
- 				<tr>
-                    <td><img id="imgmontar" src="imagens/img.carnemoida.jpg" align="center">Carne Moída<br>Valor: R$ 1,00</td>
-                    <td><img id="imgmontar" src="imagens/img.salsicha.jpg" align="center">Salsicha<br>Valor: R$ 1,00</td>
-                    <td><img id="imgmontar" src="imagens/img.salsichamolho.jpg" align="center">Salsicha c/ molho<br>Valor: R$ 1,00</td>
-                    <td><img id="imgmontar" src="imagens/img.atum.jpg" align="center">Atum<br>Valor: R$ 1,00</td>
-              		<td><img id="imgmontar" src="imagens/img.camarao.jpg" align="center">Camarão<br>Valor: R$ 1,00</td>
+    <table width=800 height=150>
+
+        <caption><b>Tipos de pães</b></caption>
+        <tr>
+            <td><img id="imgcard" src="imagens/img.paotrigo.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.paoseda.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.paoaveia.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.paoburguer.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.paodeforma.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Pão de trigo</b></label></td>
+
+            <td><label><b>Pão de seda</b></label></td>
+
+            <td><label><b>Pão de aveia</b></label></td>
+
+            <td><label><b>Pão de burguer</b></label></td>
+
+            <td><label><b>Pão de forma</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+        </tr>
+    </table>
+    <br><br>
+
+
+    <table width=800 height=150>
+
+        <caption><b>Tipos de recheio</b></caption>
+        <!-- Fila 1-->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.carnemoida.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.salsicha.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.salsichamolho.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.atum.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.camarao.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Carne moída</b></label></td>
+
+            <td><label><b>Salsicha</b></label></td>
+
+            <td><label><b>Salsicha c/ molho</b></label></td>
+
+            <td><label><b>Atum</b></label></td>
+
+            <td><label><b>Camarão</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+        </tr>
+        <br><br>
+        <!-- Fila 2-->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.alcatra.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.calabresa.png" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.frango.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.bacon.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.ovo.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Alcatra</b></label></td>
+
+            <td><label><b>Calabresa</b></label></td>
+
+            <td><label><b>Frango</b></label></td>
+
+            <td><label><b>Bacon</b></label></td>
+
+            <td><label><b>Ovo</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+        </tr>
+        <!-- Fila 3-->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.tanajura.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.sol.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.coracao.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.peru.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.charque.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Tanajura*</b></label></td>
+
+            <td><label><b>Carne de Sol</b></label></td>
+
+            <td><label><b>Coração</b></label></td>
+
+            <td><label><b>Peru</b></label></td>
+
+            <td><label><b>Charque</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 2,00    "></td>
+        </tr>
+    </table>
+    <br><br>
+
+    <table width=800 height=150>
+
+        <caption><b>Tipos de molhos</b></caption>
+        <!--Fila 1 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.maionese.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.cenoura.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.alho.png" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.barbecue.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.azeitona1.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Maionese</b></label></td>
+
+            <td><label><b>Maionese de cenoura</b></label></td>
+
+            <td><label><b>Alho</b></label></td>
+
+            <td><label><b>Barbecue</b></label></td>
+
+            <td><label><b>Azeitona</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+        </tr>
+
+        <!--Fila 2 -->
+
+        <tr>
+            <td><img id="imgcard" src="imagens/img.catchup.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.mostarda.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.pimenta.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.parmesao.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.agridoce.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Catchup</b></label></td>
+
+            <td><label><b>Mostarda</b></label></td>
+
+            <td><label><b>Pimenta</b></label></td>
+
+            <td><label><b>Parmesão</b></label></td>
+
+            <td><label><b>Cebola agridoce</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+        </tr>
+    </table>
+    <br><br>
+
+    <table width=800 height=150>
+
+        <caption><b>Frios</b></caption>
+        <!--Fila 1 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.mussarela.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.cheddar.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.coalho.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.prato.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.gorgonzola.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Mussarela</b></label></td>
+
+            <td><label><b>Cheddar</b></label></td>
+
+            <td><label><b>Coalho</b></label></td>
+
+            <td><label><b>Prato</b></label></td>
+
+            <td><label><b>Gorgonzola</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+        </tr>
+
+        <!--Fila 2 -->
+
+        <tr>
+            <td><img id="imgcard" src="imagens/img.catupiry.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.presunto.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.salaminho.jpg" align="center"></td>
+
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Catupiry</b></label></td>
+
+            <td><label><b>Presunto</b></label></td>
+
+            <td><label><b>Salaminho</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+
+
+        </tr>
+    </table>
+    <br><br>
+
+    <table width=800 height=150>
+
+        <caption><b>Hamburguer</b></caption>
+        <!--Fila 1 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.hcarne.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.hsoja.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.hfrango.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.hcaseiro.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.hmisto.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Carne</b></label></td>
+
+            <td><label><b>Soja</b></label></td>
+
+            <td><label><b>Frango</b></label></td>
+
+            <td><label><b>Caseiro</b></label></td>
+
+            <td><label><b>Misto</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+        </tr>
+
+    </table>
+    <br><br>
+
+    <table width=800 height=150>
+
+        <caption><b>Salada</b></caption>
+        <!--Fila 1 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.tomate.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.tomateseco.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.alface.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.cebolacaramelo.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.cebola.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Tomate</b></label></td>
+
+            <td><label><b>Tomate seco</b></label></td>
+
+            <td><label><b>Alface</b></label></td>
+
+            <td><label><b>Cebola caramelizada</b></label></td>
+
+            <td><label><b>Cebola</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+        </tr>
+<!-- Fila 2 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.cenourar.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.pepino.png" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.gergelim.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.rucula.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.alhoporo.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Cenoura ralada</b></label></td>
+
+            <td><label><b>Pepino</b></label></td>
+
+            <td><label><b>Gergilim</b></label></td>
+
+            <td><label><b>Rúcula</b></label></td>
+
+            <td><label><b>Alho poró</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+        </tr>
+
+    </table><br><br>
+
+    <table width=800 height=150>
+
+        <caption><b>Outros</b></caption>
+        <!--Fila 1 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.milho1.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.ervilha1.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.palha.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.azeitona1.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.queijoralado.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Milho</b></label></td>
+
+            <td><label><b>Ervilha</b></label></td>
+
+            <td><label><b>Batata palha</b></label></td>
+
+            <td><label><b>Azeitona</b></label></td>
+
+            <td><label><b>Queijo ralado</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+        </tr>
+        <!-- Fila 2 -->
+        <tr>
+            <td><img id="imgcard" src="imagens/img.amendoim.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.requeijao.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.gergelim.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.rucula.jpg" align="center"></td>
+
+            <td><img id="imgcard" src="imagens/img.batatafrita.jpg" align="center"></td>
+        </tr>
+
+        <tr class="color">
+            <td><label><b>Amendoim torrado</b></label></td>
+
+            <td><label><b>Requeijão</b></label></td>
+
+            <td><label><b>Pimenta de cheiro</b></label></td>
+
+            <td><label><b>Manjericão</b></label></td>
+
+            <td><label><b>Batata Frita</b></label></td>
+
+        </tr>
+
+        <tr>
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+
+            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+        </tr>
+
+    </table>
+
+    <!--
+     </div> -->
+
+    <div id="escolhidos" align="center">
+
+        <table width=200 height=50 border="1">
+            <caption><b>Ingredientes Escolhidos</b></caption>
+            <br>
+            <tr>
+                <td>Ingrediente</td>
+                <td width=10 height=10>Quantidade</td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td width=10 height=10><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td width=10 height=10><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td width=10 height=10><input type="text"></td>
+            </tr>
+            <tr>
+                <td><input type="text"></td>
+                <td width=10 height=10><input type="text"></td>
+            </tr>
+
+            <table align="center">
+                <br>
+                <tr>
+                    <td>Valor Total</td>
+                    <td align="rigth"><input type="text" size="15" maxlength="15"></td>
                 </tr>
-           <tr>
-               	<td><img id="imgmontar" src="imagens/img.tanajura.jpg" align="center">Tanajura<br>Valor: R$ 1,00</td>
-               	<td><img id="imgmontar" src="imagens/img.sol.jpg" align="center">Carne de Sol<br>Valor: R$ 1,00</td>
-           		<td><img id="imgmontar" src="imagens/img.coracao.jpg" align="center">Coração<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.peru.jpg" align="center">Peito de Peru<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.charque.jpg" align="center">Charque<br>Valor: R$ 1,00</td>
-            </tr>
-            
- 		</table><br>
+                <tr>
+                    <td align="center"><input class="btn btn-red" type="button" value="Cancelar"></td>
+                    <td><input class="btn btn-green" type="button"
+                               onclick="window.location.href  = 'paginaPagamento.html'"
+                               value="Finalizar a compra"></td>
+                </tr>
+            </table>
 
- 		<table id="ing" width=800 height=200 border="1">
-			<caption><b>Tipos de Molhos</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.maionese.jpg" align="center">Maionese<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.cenoura.jpg" align="center">Maionese de Cenoura<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.catchup.jpg" align="center">Catchup<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.alho.png" align="center">Alho<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.barbecue.jpg" align="center">Barbecue<br>Valor: R$ 1,00</td>
- 			</tr>
-            <tr>
- 				<td><img id="imgmontar" src="imagens/img.mazeitona.jpg" align="center">Azeitona<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.mostarda.jpg" align="center">Mostarda<br>Valor: R$ 1,00</td>
- 			</tr>
- 		</table><br>
+        </table>
 
- 		<table id="ing" width=800 height=200 border="1">
-			<caption><b>Frios</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.mussarela.jpg" align="center">Queijo Mussarela<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.cheddar.jpg" align="center">Queijo Cheddar<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.coalho.jpg" align="center">Queijo Coalho<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.prato.jpg" align="center">Queijo Prato<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.gorgonzola.jpg" align="center">Queijo Gorgonzola<br>Valor: R$ 1,00</td>
- 			</tr>
+    </div>
 
- 			<tr>
- 				<td><img id="imgmontar" src="imagens/img.queijocatupiry.jpg" align="center">Queijo Catupiry<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.presunto.jpg" align="center">Presunto<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.salaminho.jpg" align="center">Salaminho<br>Valor: R$ 1,00</td>
- 			</tr>	
- 			          
-		</table><br>
-        
-        <table id="ing" width=800 height=200 border="1">
-			<caption><b>Hambúrguer</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.hcarne.jpg" align="center">Carne<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.hsoja.jpg" align="center">Soja<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.hfrango.jpg" align="center">Frango<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.hcaseiro.jpg" align="center">Caseiro<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.hmisto.jpg" align="center">Misto<br>Valor: R$ 1,00</td>
- 			</tr>
-		</table>
- 		<br>
- 		
-        <table id="ing" width=800 height=200 border="1">
-			<caption><b>Saladas</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.cenourar.jpg" align="center">Cenoura ralada<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.tomate.jpg" align="center">Tomate<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.pepino.png" align="center">Pepino<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.tomateseco.jpg" align="center">Tomate Seco<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.gergelim.jpg" align="center">Gergelim<br>Valor: R$ 1,00</td>
- 			</tr>
-            <tr>
-                <td><img id="imgmontar" src="imagens/img.alface.jpg" align="center">Alface<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.rucula.jpg" align="center">Rúcula<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.cebolacaramelo.jpg" align="center">Cebola Caramelizada<br>Valor: R$ 1,00</td>
-            </tr>
-		</table><br>
-        
- 		<table id="ing" width=800 height=200 border="1">
-			<caption><b>Outros</b></caption>
-			<tr>
-  				<td><img id="imgmontar" src="imagens/img.palha.jpg" align="center">Batata Palha<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.queijoralado.jpg" align="center">Queijo Ralado<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.azeitona1.jpg" align="center">Azeitona<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.ervilha1.jpg" align="center">Ervilha<br>Valor: R$ 1,00</td>
- 				<td><img id="imgmontar" src="imagens/img.amendoim.jpg" align="center">Amendoim Torrado<br>Valor: R$ 1,00</td>
-            </tr>
-            <tr>
- 				<td><img id="imgmontar" src="imagens/img.requeijao.jpg" align="center">Requeijão<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.pimenta.jpg" align="center">Pimenta de Cheiro<br>Valor: R$ 1,00</td>
-                <td><img id="imgmontar" src="imagens/img.manjericao.jpg" align="center">Manjericão<br>Valor: R$ 1,00</td>
- 			</tr>
- 		</table>
-	</div>
+    <div id="rodape">
+        <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+        <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
+    </div>
+</div>
 
-		<div id="escolhidos" align="center">
 
-			<table width=200 height=50 border="1">
-				<caption><b>Ingredientes Escolhidos</b></caption><br>
-				<tr><td>Ingrediente</td> <td width=10 height=10>Quantidade</td> </tr>
-				<tr>
-	  				<td><input type="text"></td>
-	  				<td width=10 height=10><input type="text"></td>
-	 			</tr>
-	 			<tr>
-	 				<td><input type="text"></td>
-	 				<td width=10 height=10><input type="text"></td>
-	 			</tr>
-	 			<tr>
-	 				<td><input type="text"></td>
-	 				<td width=10 height=10><input type="text"></td>
-	 			</tr>
-	 			<tr>
-	 				<td><input type="text"></td>
-	 				<td width=10 height=10><input type="text"></td>
-	 			</tr>
-			
-				<table align="center">
-					<br>
-		   			<tr>
-			   			<td>Valor Total</td>
-		 				<td align="rigth"><input type="text" size="15" maxlength="15"></td>
-		   			</tr>
-		   			<tr>
-				   		<td align="center"><input class="btn btn-red" type="button" value="Cancelar"></td>
-				   		<td><input class="btn btn-green" type="button" onclick="window.location.href  = 'paginaPagamento.html'" value="Finalizar a compra" ></td>
-				   	</tr>
-		   		</table>
-
-	   		</table>
-
-		</div>
-		
-			<div id="rodape">
-			<img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
-				<b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
-			</div>
-	</div>
-	
-		
 </body>
 </html>
