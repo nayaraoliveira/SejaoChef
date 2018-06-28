@@ -14,6 +14,7 @@ body{
 	font-family: arial;
 	}
 
+
 /*alterações no body por cada parte*/
 
 /*alterações no ul*/
@@ -26,30 +27,66 @@ body{
 		width: 50em;
 		height:10em;
 	}
-	#menu{
-		text-align: center;
-		font-size: 23px;
-		font-family: arial;
-	}
-/*alterações no ul*/	
-	#menu ul{
+
+/*alterações no ul*/
+	.menu ul{
 		margin: 0;
 		background-color: #2F4F4F;
 		list-style: none;
-	}
-/*alterações no li*/
-	#menu ul li{
+		text-align: left;
+		font-size: 23px;
+		font-family: arial;
+		width: 1350px;
 		display: inline-block;
-		}
+	}
+
 /*alterações no a*/
-	#menu ul li a{
+	.menu ul li a{
 		padding: 0.2em 0.2em;
 		display: inline-block;
 		color: white;
 		text-decoration: none;
+		float: left;
+		width: 180px;
+		height: 30px;
+		line-height: 30px;
 	}
+
+	.menu ul li label{
+		display: inline-block;
+		color: white;
+		text-decoration: none;
+		float: right;
+		width: 400px;
+		height: 30px;
+		line-height: 35px;
+		text-align: left;
+		padding-right: 80px;
+	}
+
+.menu ul ul{
+	display: none;
+}
+
+.menu ul li:hover > ul{
+	display: block;
+}
+
+.menu ul li label ul li{
+	color: red;
+}
+
+
 /*Ao passar o mouse, mudar de cor*/
-	#menu ul li a:hover{
+	.menu ul li a:hover{
+		color: #8B0000;
+	}
+
+	.menu ul li label:hover{
+		color: #8B0000;
+	}
+
+	.menu ul li label ul li:hover{
 		color: #8B0000;
 	}
 
@@ -118,6 +155,22 @@ body{
 		position: relative;
 		top:5px;
 		box-shadow:none;
+	}
+
+	.btn-orange{
+		background: orange;
+		color: #FFF;
+		/*box-shadow: 0 5px 0 #8A0808;*/
+	}
+
+	.btn-orange:hover{
+		background: green;
+		color: #FFF;
+	}
+	/*Quando botão é clicado*/
+	.btn-orange:active{
+		position: relative;
+		top:5px;
 	}
 
 	#rodape {

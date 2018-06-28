@@ -29,6 +29,11 @@
 		font-family: arial;
 	}
 
+	#add3{
+		float: left;
+		display: block;
+	}
+
 
 	#ttadm{
 	  width: 1350px;

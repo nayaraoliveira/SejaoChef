@@ -8,6 +8,7 @@
 		margin-top: 2em;
 		font-family: arial;
 	}
+
 	#formasPagamento{
 		display: block;
 		float: left;
@@ -16,12 +17,14 @@
 		margin-top: 2.3em;
 		margin-left: 5em;
 		font-family: arial;
+		width: 310px;
+		height: 235px;
 	}
 
 
 	#ttpagamento{
 	  width: 1350px;
-	  height: 500px;
+	  height: 460px;
 	  margin-right: 70px;
 	  min-height:100%;
 	  position:relative;
