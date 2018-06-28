@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
     <meta charset="UTF-8"/>
     <title>SejaChef</title>
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
@@ -13,20 +14,22 @@
     <img id="imagens" src="imagens/img.sejaochef.png" align="center">
 </div>
 <!--menu da página inicial -->
-<div id="menu">
+    <nav class="menu">
     <ul>
-        <li><a href="paginaInicial.html">Inicial</a></li>
-        <li><a href="paginaCardapio.html">Cardápio</a></li>
-        <li><a href="paginaMontarpedido.html">Montagem</a></li>
-        <li><a href="paginaMeusPedidos.html">Meus Pedidos</a></li>
-        <li><a href="paginaCadastro.html">Login</a></li>
-    </ul>
-</div>
-
+            <li> <a href="paginaInicial.html">Inicial</a></li>
+            <li> <a href="paginaCardapio.html">Cardápio</a> </li>
+            <li> <a href="paginaMontarpedido.html">Montagem</a>
+            <li> <a href="paginaCadastro.html">Login</a> </li>
+            <li>
+              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+              <label id="tec"><i>Nome da Pessoa<a><?php echo $_GET['nome']?></a></i></label>
+            </li>
+     </ul>
+          
+      </nav>
 <div id="ttmontar">
 
-    <div id="montagem" align="left" background-color:
-    "rgba(0,100,0,0.3)";>
+    <div id="montagem" align="left" background-color: "rgba(0,100,0,0.3)";>
     <h3>Escolha seus Ingredientes!</h3>
     <br>
 
@@ -555,35 +558,40 @@
 
     <div id="escolhidos" align="center">
 
-        <table width=200 height=50 border="1">
+        <table width=130 height=50 >
             <caption><b>Ingredientes Escolhidos</b></caption>
             <br>
             <tr>
-                <td>Ingrediente</td>
-                <td width=10 height=10>Quantidade</td>
+                <td><b>Ingrediente</b></td>
+                <td><b>Quantidade</b></td>
+                <td></td>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><button class=" btn btn-red">    X   </button></td>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><button class=" btn btn-red">    X   </button></td>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><button class="btn btn-red">    X   </button></td>
             </tr>
             <tr>
                 <td><input type="text"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" size="5"></td>
+                <td><button class=" btn btn-red">    X   </button></td>
             </tr>
 
             <table align="center">
                 <br>
                 <tr>
                     <td>Valor Total</td>
-                    <td align="rigth"><input type="text" size="15" maxlength="15"></td>
+                    <td align="rigth"><input type="text" size="7" maxlength="8"></td>
                 </tr>
                 <tr>
                     <td align="center"><input class="btn btn-red" type="button" value="Cancelar"></td>

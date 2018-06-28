@@ -26,15 +26,19 @@ $con      = $link->query($consulta) or die($link->error);
 			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
-		<div id="menu">
-		<ul>
-            <li> <a href="paginaInicial.html">Inicial</a> </li>
+		  <nav class="menu">
+    <ul>
+            <li> <a href="paginaInicial.html">Inicial</a></li>
             <li> <a href="paginaCardapio.html">Cardápio</a> </li>
-            <li> <a href="paginaMontarpedido.html">Montagem</a> </li>
-            <li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
-            <li> <a href="paginaCadastro.html">Cadastro</a> </li>
-		</ul>
-	</div>
+            <li> <a href="paginaMontarpedido.html">Montagem</a>
+            <li> <a href="paginaCadastro.html">Login</a> </li>
+            <li>
+              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+              <label id="tec"><i>Nome da Pessoa<a><?php echo $_GET['nome']?></a></i></label>
+            </li>
+     </ul>
+          
+      </nav>
 
   <div id="ttadm">
 		
@@ -164,7 +168,7 @@ $con      = $link->query($consulta) or die($link->error);
   <!--DIV da tabela Gerenciar Ingredientes -->
   
  	
-	<div>
+	<div id="add3">
 			<table border="1">
 			<caption>Gerenciamento dos Ingredientes</caption>
 				<tr>

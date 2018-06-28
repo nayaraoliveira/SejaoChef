@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
 		<meta charset="UTF-8"/>
 			<title>SejaChef</title>
 			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
@@ -14,46 +16,45 @@
   			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
   		</div>
   		<!--menu da página inicial -->
-  		<div id="menu">
-      		<ul>
-            <li> <a href="paginaInicial.html">Inicial</a> </li>
+  		<nav class="menu">
+    <ul>
+            <li> <a href="paginaInicial.html">Inicial</a></li>
             <li> <a href="paginaCardapio.html">Cardápio</a> </li>
-            <li> <a href="paginaMontarpedido.html">Montagem</a> </li>
-            <li> <a href="paginaMeusPedidos.html">Meus Pedidos</a> </li>
-            <li> <a href="paginaCadastro.html">Cadastro</a> </li>
-          </ul>
-      </div>
+            <li> <a href="paginaMontarpedido.html">Montagem</a>
+            <li> <a href="paginaCadastro.html">Login</a> </li>
+            <li>
+              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+              <label id="tec"><i>Nome da Pessoa<a><?php echo $_GET['nome']?></a></i></label>
+            </li>
+     </ul>
+          
+      </nav> <br><br>
 
-      <div id="ttpagamento">
-
+    <div id="ttpagamento">
+      
       <div id="pedidos" align="left">
 
-        <table  width=200 height=50 border="1">
-        <br><br>
+        <table  width=200 height=50>
           <tr>
               <th>Pedido</th>
-              <th width=10 height=10>Quantidade</th>
-              <th width=10 height=10>Valor</th>
+              
+              <th>Valor</th>
           </tr>
           <tr>
               <td><input type="text"></td>
-              <td width=10 height=10><input type="text"></td>
-              <td width=10 height=10><input type="text"></td>
+              <td><input type="text" size="5"></td>
           </tr>
           <tr>
             <td><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
+            <td><input type="text" size="5"></td>
           </tr>
           <tr>
             <td><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
+            <td><input type="text" size="5"></td>
           </tr>
           <tr>
             <td><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
-            <td width=10 height=10><input type="text"></td>
+            <td><input type="text" size="5"></td>
           </tr>
           
           <table align="left">
@@ -68,48 +69,21 @@
       </div>
 
        <!-- formas de pagamento -->
-      <div id="formasPagamento">
+      <div id="formasPagamento" align="center">
 
-          <table align="center">
-            <label><b>Formas de Pagamento</b></label><br>
-            <tr>
-              <td><input type="radio" name="pagar"></td>
-              <td><img src="imagens/img.visa.png" width="50" height="30" align="left" hspace="10em"/></td>
-              <td><input type="radio" name="pagar"></td>
-              <td><img src="imagens/img.master.png" width="50" height="30" align="left" hspace="10em"/></td>
-              <td><input type="radio" name="pagar"></td>
-              <td><label>à vista</label></td>
-            </tr>
-          </table><br>
+            <label> Escolha a forma de pagamento:</label><br><br>
 
-          <table border ="1">
-            <tr>
-          		<td align="center">Número do cartão</td>
-              <td align="center"><input type="text" name="numcartao" size="18" maxlength="16"></td>
-           	</tr>
 
-          	<tr>
-          		<td align="center">Nome do títular</td>
-              <td align="left"><input type="text" name="nomecartao" size="18"></td>
-           	</tr>
-
-            <tr>
-              <td>Mês/Ano</td><td align="left"><input type="text" name="validade" size="8" maxlength="5"></td>
-              <td align="left">CVV</td><td align="left"><input type="text" name="cvv" size="4" maxlength="3"></td>
-            </tr>
-
-            <tr>
-            <td>Parcelas
-             <select name="Parcelas" align="left">
-                <option>1x</option>
-                <option>2x</option>
-                <option>3x</option>
-                <option>4x</option>
-                <option>5x</option>
-                <option>6x</option>
-              </select></td>
-            </tr>
-        </table>
+            <table align="center">
+              <tr>
+                <td>
+                  <input type="radio" name="pag"><label>Cartão</label>
+                </td>
+                <td>
+                  <input type="radio" name="pag"><label>À vista</label>
+                </td> 
+              </tr>
+            </table>        <br>
             <button class="btn btn-green">Confirmar</button>
             
        </div>
