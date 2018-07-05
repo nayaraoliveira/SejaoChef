@@ -50,8 +50,8 @@ session_start();
 			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
-			<nav class="menu">
-	    		<ul>
+					<nav class="menu">
+    <ul>
             <li> <a href="paginaInicial.php">Inicial</a></li>
             <li> <a href="paginaCardapio.php">Cardápio</a> </li>
             <li> <a href="paginaMontarpedido.php">Montagem</a>
@@ -63,9 +63,15 @@ session_start();
 			  }else{$nome=$_SESSION['nome'];}
 			  ?>
               <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+              <ul>
+              	<li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+              	<li>Deslogar</li>
+              </ul>
+
             </li>
-     </ul>
-            </nav>
+    </ul>	
+          
+      </nav><br>
 
 	<div id="ttinicial">
 		<div>

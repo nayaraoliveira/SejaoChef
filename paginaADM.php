@@ -29,10 +29,10 @@ $con      = $link->query($consulta) or die($link->error);
 			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
-		  <nav class="menu">
+		  		<nav class="menu">
     <ul>
             <li> <a href="paginaInicial.php">Inicial</a></li>
-            <li> <a href="paginaCardapio2.php">Cardápio</a> </li>
+            <li> <a href="paginaCardapio.php">Cardápio</a> </li>
             <li> <a href="paginaMontarpedido.php">Montagem</a>
             <li> <a href="paginaLogin.php">Login</a> </li>
             <li>
@@ -41,11 +41,16 @@ $con      = $link->query($consulta) or die($link->error);
 				  $nome='Faça seu login!';
 			  }else{$nome=$_SESSION['nome'];}
 			  ?>
-              <label id="tec"><i><a href="paginaCadastro.html"><?php echo $nome?></a></i></label>
+              <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+              <ul>
+              	<li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+              	<li>Deslogar</li>
+              </ul>
+
             </li>
-     </ul>
+    </ul>	
           
-      </nav>
+      </nav><br>
 
   <div id="ttadm">
 		

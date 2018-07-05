@@ -18,7 +18,7 @@ session_start();
     <img id="imagens" src="imagens/img.sejaochef.png" align="center">
 </div>
 <!--menu da página inicial -->
-    <nav class="menu">
+        <nav class="menu">
     <ul>
             <li> <a href="paginaInicial.php">Inicial</a></li>
             <li> <a href="paginaCardapio.php">Cardápio</a> </li>
@@ -26,15 +26,21 @@ session_start();
             <li> <a href="paginaLogin.php">Login</a> </li>
             <li>
               <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
-			  <?php if ($_SESSION['nome']==null){
-				  $nome='Faça seu login!';
-			  }else{$nome=$_SESSION['nome'];}
-			  ?>
+              <?php if ($_SESSION['nome']==null){
+                  $nome='Faça seu login!';
+              }else{$nome=$_SESSION['nome'];}
+              ?>
               <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+              <ul>
+                <li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+                <li>Deslogar</li>
+              </ul>
+
             </li>
-     </ul>
+    </ul>   
           
-      </nav>
+      </nav><br>
+      
 <div id="ttmontar">
 
     <div id="montagem" align="left" background-color: "rgba(0,100,0,0.3)";>

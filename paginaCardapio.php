@@ -16,23 +16,28 @@ session_start();
     <img id="imagens" src="imagens/img.sejaochef.png" align="center">
 </div>
         <!--menu da página inicial -->
-            <nav class="menu">
-                <ul>
+                    <nav class="menu">
+    <ul>
             <li> <a href="paginaInicial.php">Inicial</a></li>
             <li> <a href="paginaCardapio.php">Cardápio</a> </li>
             <li> <a href="paginaMontarpedido.php">Montagem</a>
             <li> <a href="paginaLogin.php">Login</a> </li>
             <li>
               <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
-			  <?php if ($_SESSION['nome']==null){
-				  $nome='Faça seu login!';
-			  }else{$nome=$_SESSION['nome'];}
-			  ?>
+              <?php if ($_SESSION['nome']==null){
+                  $nome='Faça seu login!';
+              }else{$nome=$_SESSION['nome'];}
+              ?>
               <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+              <ul>
+                <li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+                <li>Deslogar</li>
+              </ul>
+
             </li>
-     </ul>
-            </nav>
-<br><br><br>
+    </ul>   
+          
+      </nav><br><br><br>
 
 <br><br><br>
 <div id="ttcardapio">
@@ -50,6 +55,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -68,6 +74,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -86,6 +93,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -105,6 +113,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -123,6 +132,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -143,6 +153,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -162,6 +173,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
@@ -181,6 +193,7 @@ session_start();
                 </td>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
+                    <input type="text" size="4"><br>
                     <input class="btn btn-yellow" type="button" value="  +  ">
                     <input class="btn btn-red" type="button" value="  -  ">
                 </td>
