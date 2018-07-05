@@ -4,31 +4,25 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
-		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">-->
-		<meta charset="UTF-8"/>
-	<!--	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-		<link href="css/bootstrap.min.css" rel="stylesheet">
-		<script src="js/jquery.js"></script>
-		<script src="js/bootstrap.min.js"></script>-->
-
-
+		<meta charset="UTF-8"/>	
+		<script src="js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 		<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
 		<link rel="stylesheet" type="text/css" href="css/CSSpaginaCadastro.css">
 		<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 
 		<title>SejaChef</title>
-
-			<form id="formulario" name="entrar" action="paginaCadastro.php" method="GET">
 	</head>
 	<body>
+
+		<form id="formulario" name="entrar" action="paginaCadastro.php" method="GET">
 		
 		<div id="div1" align="center">
 			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 
-		<!--menu da página inicial -->
+		<!--menu da página inicial-->
 			<nav class="menu">
     <ul>
             <li> <a href="paginaInicial.php">Inicial</a></li>
@@ -36,7 +30,7 @@ session_start();
             <li> <a href="paginaMontarpedido.php">Montagem</a>
             <li> <a href="paginaLogin.php">Login</a> </li>
             <li>
-              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+              <!--<img src="imagens/img.usuario.png" width="30" height="30"-->
 			  <?php if ($_SESSION['nome']==null){
 				  $nome='Faça seu login!';
 			  }else{$nome=$_SESSION['nome'];}
@@ -54,11 +48,12 @@ session_start();
 
 <div id="ttcadastro">		
 
-		<!--Div da tela que já possui cadastro -->
+		<!--Div da tela que já possui cadastro-->
 		<div id="cad1" align="left">
 
+			<label>Já tenho cadastro</label>
+
 			<table width="100px" class="bordasimples">
-				<caption align="center">Já tenho cadastro</caption>
 				<tr>
 	  				<td>CPF</td>
 	 				<td align="left"><input type="text"size="15" maxlength="15" name="cpf2"></td>
@@ -82,8 +77,8 @@ session_start();
 		<div id="cad2">
 
 			<table class="bordasimples" align="left">
-				<caption>Novo cadastro</caption>
 
+				<label> <b>Novo Usuário </b></label>
 				<tr>
 	  				<td>Nome</td>
 	 				 <td ><input type="text" size="40" maxlength="30" name="nome"></td>
@@ -106,7 +101,7 @@ session_start();
 	 			</tr>
 
 	 			<tr>
-					<td>Referencia</td>
+					<td>Referência</td>
 	 				<td><input type="text"size="30" maxlength="30" name="referencia"></td>
 	 			</tr>
 
@@ -138,8 +133,8 @@ session_start();
 			</div>
 	</div>
 		
-	<!--	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
- 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 	</body>
 </html>
