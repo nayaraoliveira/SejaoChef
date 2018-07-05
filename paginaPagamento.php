@@ -91,11 +91,8 @@
                 <td>
                   <input type="radio" name="pag"><label>À vista</label>
                 </td> 
-		<td>
-                  <input type="radio" name="pag"><label>Retirar</label>
-                </td> 
-              </tr>
-            </table>        <br>
+		          </tr>
+            </table><br>
             <button class="btn btn-green">Confirmar</button>
             
        </div>

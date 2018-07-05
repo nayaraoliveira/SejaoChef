@@ -19,9 +19,9 @@ $con      = $link->query($consulta) or die($link->error);
 		<meta charset="UTF-8"/>
 			<title>SejaChef</title>
 			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
-      <link rel="stylesheet" type="text/css" href="css/CSSpaginaADM.css">
-      <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
-	  <form id="formulario" name="ingredientes" action="paginaCadastro.php" method="GET">
+        <link rel="stylesheet" type="text/css" href="css/CSSpaginaADM.css">
+        <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+	    <form id="formulario" name="ingredientes" action="paginaCadastro.php" method="GET">
 	</head>
 	<body>
 		
@@ -98,85 +98,14 @@ $con      = $link->query($consulta) or die($link->error);
  						<option>Bebidas</option>
  					</select></td>
   				<td><input type="text" name="valor3" size="6"></td>
- 			</tr>
- 			
- 			
+ 			</tr>		
+	
  			 			
  		</table>
 
  		<tr><p><button href="paginaCadastro.php" class="btn btn-green" name="ingrediente" value="1">Cadastrar</button></p></tr>	
  		</div>			
 		
-
-
- 		<div id="add2">
-			<table  height=50 border="1">
-			    <caption>Gerenciamento dos Pedidos</caption>
-			<tr><td>Nº do pedido</td> <td>Status do Pedido</td></tr>
-
-			<tr>
-  				<td><input type="stylesheet" name="pedido1" size="6"></td>
-  				<td><select>
-  						<option></option>
- 						<option>Pedido recebido</option>
- 						<option>Pedido em produção</option>
- 						<option>Pedido a caminho</option>
- 						<option>Pedido entregue</option>
- 						<option>Pedido cancelado</option>
- 					</select></td>
- 			</tr>
- 			<tr>
-  				<td><input type="stylesheet" name="pedido2" size="6"></td>
-  				<td><select>
-  						<option></option>
- 						<option>Pedido recebido</option>
- 						<option>Pedido em produção</option>
- 						<option>Pedido a caminho</option>
- 						<option>Pedido entregue</option>
- 						<option>Pedido cancelado</option>
- 					</select></td>
- 			</tr>
- 			<tr>
-  				<td><input type="stylesheet" name="pedido3" size="6"></td>
-  				<td><select>
-  						<option></option>
- 						<option>Pedido recebido</option>
- 						<option>Pedido em produção</option>
- 						<option>Pedido a caminho</option>
- 						<option>Pedido entregue</option>
- 						<option>Pedido cancelado</option>
- 					</select></td>
- 			</tr>
- 			<tr>
-  				<td><input type="stylesheet" name="pedido4" size="6"></td>
-  				<td><select>
-  						<option></option>
- 						<option>Pedido recebido</option>
- 						<option>Pedido em produção</option>
- 						<option>Pedido a caminho</option>
- 						<option>Pedido entregue</option>
- 						<option>Pedido cancelado</option>
- 					</select></td>
- 			</tr>
- 			<tr>
-  				<td><input type="stylesheet" name="pedido5" size="6"></td>
-  				<td><select>
-  						<option></option>
- 						<option>Pedido recebido</option>
- 						<option>Pedido em produção</option>
- 						<option>Pedido a caminho</option>
- 						<option>Pedido entregue</option>
- 						<option>Pedido cancelado</option>
- 					</select></td>
- 			</tr>
-
- 		</table><br>
-
- 		<tr>
-      <td><input class="btn btn-green" type="button"value="Atualizar"></td>
-    </tr>
-
-  </div>
   <!--DIV da tabela Gerenciar Ingredientes -->
   
  	
@@ -206,14 +135,7 @@ $con      = $link->query($consulta) or die($link->error);
 			  </table>
  		</div>
 		
-		
-		
-		
-		
-		
-		
-		
-        <div id="rodape">
+		<div id="rodape">
           <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
           <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
         </div>
