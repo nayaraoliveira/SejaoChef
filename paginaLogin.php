@@ -4,13 +4,22 @@ session_start();
 <!DOCTYPE html>
 <html>
 	<head>
+		<!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.css">-->
 		<meta charset="UTF-8"/>
+	<!--	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-		
-			<title>SejaChef</title>
-			<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
-			<link rel="stylesheet" type="text/css" href="css/CSSpaginaCadastro.css">
-			<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<script src="js/jquery.js"></script>
+		<script src="js/bootstrap.min.js"></script>-->
+
+
+		<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
+		<link rel="stylesheet" type="text/css" href="css/CSSpaginaCadastro.css">
+		<link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+
+		<title>SejaChef</title>
+
 			<form id="formulario" name="entrar" action="paginaCadastro.php" method="GET">
 	</head>
 	<body>
@@ -33,8 +42,13 @@ session_start();
 			  }else{$nome=$_SESSION['nome'];}
 			  ?>
               <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+              <ul>
+              	<li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+              	<li>Deslogar</li>
+              </ul>
+
             </li>
-     </ul>	
+    </ul>	
           
       </nav><br>
 
@@ -124,5 +138,8 @@ session_start();
 			</div>
 	</div>
 		
+	<!--	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+ 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.js"></script>-->
 	</body>
 </html>

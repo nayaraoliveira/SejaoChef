@@ -50,8 +50,13 @@ if($dado['cpf']==$cpf2 and $dado['senha']==$senha2 and $senha2!=null and $cpf2!=
 	echo "Login ok!";
 	echo "Usuário: ".$dado['nome'];
 	$_SESSION['nome'] = $dado['nome'];
-	header("Location:http://localhost/sejachef-master/paginaInicial.php");
-}else{echo "Login Falied!";}
+	//header("Location:http://localhost/sejachef-master/paginaLogin.php");
+}//else{echo "Login Falied!";}
+
+  else{ echo '<script language="javascript" type="text/javascript"> 
+                alert("Login falhou!");
+                window.location = "paginaLogin.php";
+        </script>';}
 	
 //$seu_link="paginaCardapio.html";
 //echo "<a href=".$seu_link.">".$seu_link."</a>";
