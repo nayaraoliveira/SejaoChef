@@ -50,28 +50,27 @@ session_start();
 			<img id="imagens" src="imagens/img.sejaochef.png" align="center">
 		</div>
 		<!--menu da página inicial -->
-					<nav class="menu">
-    <ul>
-            <li> <a href="paginaInicial.php">Inicial</a></li>
-            <li> <a href="paginaCardapio.php">Cardápio</a> </li>
-            <li> <a href="paginaMontarpedido.php">Montagem</a>
-            <li> <a href="paginaLogin.php">Login</a> </li>
-            <li>
-              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
-			  <?php if ($_SESSION['nome']==null){
-				  $nome='Faça seu login!';
-			  }else{$nome=$_SESSION['nome'];}
-			  ?>
-              <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
-              <ul>
-              	<li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
-              	<li>Deslogar</li>
-              </ul>
+		<nav class="menu">
+    		<ul>
+	            <li> <a href="paginaInicial.php">Inicial</a></li>
+	            <li> <a href="paginaCardapio.php">Cardápio</a> </li>
+	            <li> <a href="paginaMontarpedido.php">Montagem</a>
+	            <li> <a href="paginaLogin.php">Login</a> </li>
+	            <li>
+	              <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+				  <?php if ($_SESSION['nome']==null){
+					  $nome='Faça seu login!';
+				  }else{$nome=$_SESSION['nome'];}
+				  ?>
+	              <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
+	              <ul>
+	              	<li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
+	              	<li>Deslogar</li>
+	              </ul>
 
-            </li>
-    </ul>	
-          
-      </nav><br>
+	            </li>
+    		</ul>	          
+      </nav>
 
 	<div id="ttinicial">
 		<div>
@@ -79,7 +78,6 @@ session_start();
 		<img id="id">
 			</div>
 		</div>
-
 		
 		<!--texto página inicial -->
 			<div id="textoinicial" align ="left" margin="100px">
