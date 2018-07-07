@@ -1,68 +1,69 @@
 /* Configurações das telas de cadastro*/
-	/*comcadastro*/
-	#cad1 {
-		width: 15em;
-		height: 12em;
-		float: left;
-		display: block;
-		color: black;
-		text-align: center;
-		background-color: #8FBC8F; 
-		box-shadow: 0 0 12px rgba(0,2,2,2);
-		margin-left: 60px;
-		margin-right: 100px;
-		margin-top: 2em;
-		padding: 4mm;
-		font-size: 20px;
-		font-family: arial;
-   		}
-   	/*novocadastro*/	
-	#cad2 {
-		width: 730px;
-		height: 500px;
-		float: left;
-		display: block;
-		text-align: left;
-		color: black;
-		background-color: #8FBC8F; 
-		box-shadow: 0 0 12px rgba(0,2,2,2);		
-		margin-right: 60px;
-		margin-top: 40px;
-		padding: 4mm;
-		font-size: 1.5em;
-		font-family: arial;
-   		}
-   	/*Esqueceu a senha?*/
-   
-   u{
-   	color: blue;
-   	font-size: 15px;
-   }
+/*comcadastro*/
+#cad1 {
+    width: 15em;
+    height: 12em;
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    background-color: #8FBC8F;
+    box-shadow: 0 0 12px rgba(0, 2, 2, 2);
+    margin-left: 60px;
+    margin-right: 100px;
+    margin-top: 2em;
+    padding: 4mm;
+    font-size: 20px;
+    font-family: arial;
+}
 
+/*novocadastro*/
+#cad2 {
+    width: 780px;
+    height: 480px;
+    float: left;
+    display: block;
+    text-align: left;
+    color: black;
+    background-color: #8FBC8F;
+    box-shadow: 0 0 12px rgba(0, 2, 2, 2);
+    margin-right: 60px;
+    margin-top: 40px;
+    padding: 4mm;
+    font-size: 1.5em;
+    font-family: arial;
+}
 
-   	#redsenha{
-   		padding-top: 60px;
-   		font-family: arial;
-   		font-size: 20px;
-   	}
+/*Esqueceu a senha?*/
 
-	/*Video pagina cadastro*/  		
-   	#cad3{
-   		width: 30em;
-		height: 20em;
-		float: left;
-		display: block;
-		margin-left: 5em;
-		padding: 4mm;
-		font-family: arial;
-	}
+u {
+    color: blue;
+    font-size: 15px;
+}
 
-	#ttcadastro{
-		width: 1350px;
-	  	height: 500px;
-	 	margin-right: 70px;
-	  	min-height:100%;
-	  	position:relative;
-	  	margin: 0;
-	  	text-align: left;
-	}
+#redsenha {
+    padding-top: 60px;
+    font-family: arial;
+    font-size: 20px;
+}
+
+/*Video pagina cadastro*/
+#cad3 {
+    width: 30em;
+    height: 20em;
+    float: left;
+    display: block;
+    margin-left: 5em;
+    padding: 4mm;
+    font-family: arial;
+}
+
+#ttcadastro {
+    width: 1350px;
+    height: 700px;
+    margin-right: 70px;
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    text-align: left;
+}
