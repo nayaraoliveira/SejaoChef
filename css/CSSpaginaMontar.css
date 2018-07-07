@@ -21,13 +21,14 @@
 
 #escolhidos {
     display: block;
+    float: left;
     background: #8FBC8F;
     box-shadow: 0 0 12px rgba(0, 2, 2, 2);
     border: 1px solid;
     width: 30em;
     height: 40em;
-    position: fixed;
-    top: 0.5em;
+    position: absolute;
+   top: 10em;
     right: 1em;
     font-family: arial;
 }
