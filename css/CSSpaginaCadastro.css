@@ -1,17 +1,16 @@
 /* Configurações das telas de cadastro*/
 	/*comcadastro*/
 	#cad1 {
-		width: 11em;
-		height: 8em;
+		width: 15em;
+		height: 12em;
 		float: left;
 		display: block;
 		color: black;
 		text-align: center;
 		background-color: #8FBC8F; 
 		box-shadow: 0 0 12px rgba(0,2,2,2);
-
-		margin-left: 40px;
-		margin-right: 40px;
+		margin-left: 60px;
+		margin-right: 100px;
 		margin-top: 2em;
 		padding: 4mm;
 		font-size: 20px;
@@ -19,16 +18,15 @@
    		}
    	/*novocadastro*/	
 	#cad2 {
-		width: 500px;
-		height: 350px;
+		width: 730px;
+		height: 500px;
 		float: left;
 		display: block;
 		text-align: left;
 		color: black;
 		background-color: #8FBC8F; 
-		box-shadow: 0 0 12px rgba(0,2,2,2);
-		
-		margin-right: 40px;
+		box-shadow: 0 0 12px rgba(0,2,2,2);		
+		margin-right: 60px;
 		margin-top: 40px;
 		padding: 4mm;
 		font-size: 1.5em;
@@ -46,7 +44,6 @@
    		padding-top: 60px;
    		font-family: arial;
    		font-size: 20px;
-
    	}
 
 	/*Video pagina cadastro*/  		

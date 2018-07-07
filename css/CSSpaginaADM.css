@@ -1,3 +1,4 @@
+/*paginaADM*/
 #add{
 		float: left;
 		display: block;
@@ -6,14 +7,15 @@
 		box-shadow: 0 0 12px rgba(0,2,2,2);
 		border: 1px solid;
 		padding: 1em;
-		width: 26.8em;
-		height: 14.5em;
-		position: fixed;
+		width: 500px;
+		height: 500px;
 		top: 15em;
 		left: 2em;
 		font-family: arial;
+		margin-left: 40px;
 	}
-	#add2{
+
+	#add3{
 		float: left;
 		display: block;
 		text-align: center;
@@ -21,23 +23,32 @@
 		box-shadow: 0 0 12px rgba(0,2,2,2);
 		border: 1px solid;
 		padding: 1em;
+		width: 600px;
+		height: 500px;
+		top: 15em;
+		left: 2em;
+		font-family: arial;
+		margin-left: 70px;
+	
+	}
+
+/*paginaADMpedidos*/
+	#add2{
+		text-align: center;
+		background: #8FBC8F;
+		box-shadow: 0 0 12px rgba(0,2,2,2);
+		border: 1px solid;
+		padding: 1em;
 		width: 15em;
 		height: 14.5em;
-		position: fixed;
 		top: 15em;
 		left: 40em;
 		font-family: arial;
 	}
 
-	#add3{
-		float: left;
-		display: block;
-	}
-
-
 	#ttadm{
 	  width: 1350px;
-	  height: 450px;
+	  height: 1050px;
 	  margin-right: 70px;
 	  min-height:100%;
 	  position:relative;
