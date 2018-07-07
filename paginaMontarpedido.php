@@ -26,20 +26,27 @@ session_start();
             <li> <a href="paginaLogin.php">Login</a> </li>
             <li>
               <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
-              <?php if ($_SESSION['nome']==null){
+             <?php
+              
+              if(isset($_GET['deslogar'])){
+                 $_SESSION['nome']=NULL;
+              }
+            
+		if (@$_SESSION['nome']==NULL){
                   $nome='Faça seu login!';
               }else{$nome=$_SESSION['nome'];}
               ?>
               <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome?></a></i></label>
               <ul>
                 <li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
-                <li>Deslogar</li>
+                <li><button class="btn btn-orange" type="submit" name="deslogar">     Sair    </button></li>
+                
               </ul>
 
             </li>
     </ul>   
           
-      </nav><br>
+      </nav>
       
 <div id="ttmontar">
 
@@ -80,39 +87,55 @@ session_start();
 			<td><button class="btn btn-orange"  name="paoceda">     Valor: R$ 1,00    </button></td>
 			<td><button class="btn btn-orange"  name="paoaveia">     Valor: R$ 1,00    </button></td>
 			<td><button class="btn btn-orange"  name="paoburguer">     Valor: R$ 1,00    </button></td>
-			<td><button class="btn btn-orange" type=" submit" value="1" name="paoforma">     Valor: R$ 1,00    </button></td>
+			<td><button class="btn btn-orange"  name="paoforma">     Valor: R$ 1,00    </button></td>
 
     </table>
     
 
 	<?php
-			$pao_escolhido='';
-			$quant_pao='0';
+			
+			if (@$_SESSION['pao']==NULL){
+				$pao_escolhido=NULL;
+			}
+			else{
+				$pao_escolhido=$_SESSION['pao'];
+			}
+			
 			
 			if(isset($_GET['paotrigo'])){
 			$pao_escolhido='Pão Trigo';
-			$quant_pao=1;
+			$valor_pao=1;
 			}
 			if(isset($_GET['paoceda'])){
-			$pao_escolhido='Pão Ceda';
-			$quant_pao=1;
+			$pao_escolhido='Pão Seda';
+			//$valor_pao=1;
 			}
 			if(isset($_GET['paoaveia'])){
 			$pao_escolhido='Pão Aveia';
-			$quant_pao=1;
+			//$valor_pao=1;
 			}
 			if(isset($_GET['paoburguer'])){
 			$pao_escolhido='Pão Burguer';
-			$quant_pao=1;
+			//$valor_pao=1;
 			}
 			if(isset($_GET['paoforma'])){
 			$pao_escolhido='Pão Forma';
-			$quant_pao=1;
+			//$valor_pao=1.00;
 			}
 			
-		
+			$_SESSION['pao']=$pao_escolhido;
+			
+            
+            @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+
+
+            @$query = "SELECT valor FROM ingredientes WHERE ingredientes.nome='$pao_escolhido'";
+            @$busca = mysqli_query(@$link,@$query);
+            @$dado = mysqli_fetch_array(@$busca);
+            
+            $_SESSION['valor_pao'] = $dado['valor'];
+    			
 	?>
-	
 	
     <table width=800 height=150>
 
@@ -144,37 +167,30 @@ session_start();
         </tr>
 
         <tr>
-            <td><button class="btn btn-orange" value="1" name="carnemoida">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="salsicha">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="salsichamolho">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="atum">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="camarao">     Valor: R$ 2,00    </button></td>
+            <td><button class="btn btn-orange" name="carnemoida">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="salsicha">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="salsichamolho">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="atum">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="camarao">     Valor: R$ 2,00    </button></td>
 
         </tr>
         <br><br>
 		<?php
 			
-			$recheio1='';
-			$quant1=0;
 			if(isset($_GET['carnemoida'])){
-			$recheio1='Carne Moida';
-			$quant1+=1;
+			$recheio='Carne Moida';
 			}
 			if(isset($_GET['salsicha'])){
-			$recheio1='Salsicha';
-			$quant1+=1;
+			$recheio='Salsicha';
 			}
 			if(isset($_GET['salsichamolho'])){
-			$recheio1='Salsicha ao Molho';
-			$quant1+=1;
+			$recheio='Salsicha ao Molho';
 			}
 			if(isset($_GET['atum'])){
-			$recheio1='Atum';
-			$quant1+=1;
+			$recheio='Atum';
 			}
 			if(isset($_GET['camarao'])){
-			$recheio1='Camarão';
-			$quant1+=1;
+			$recheio='Camarão';
 			}
 			
 		
@@ -206,38 +222,33 @@ session_start();
         </tr>
 
         <tr>
-			<td><button class="btn btn-orange" value="1" name="alcatra">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="calabresa">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="frango">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="bacon">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-orange" value="1" name="ovo">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="alcatra">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="calabresa">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="frango">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="bacon">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-orange" name="ovo">     Valor: R$ 2,00    </button></td>
 
         </tr>
 		<?php
-			$recheio2='';
-			$quant2=0;
+			
 			if(isset($_GET['alcatra'])){
-			$recheio2='alcatra';
-			$quant2+=1;
+			$recheio='Alcatra';
 			}
 			if(isset($_GET['calabresa'])){
-			$recheio2='calabresa';
-			$quant2+=1;
+			$recheio='Calabresa';
 			}
 			if(isset($_GET['frango'])){
-			$recheio2='frango';
-			$quant2+=1;
+			$recheio='Frango';
 			}
 			if(isset($_GET['bacon'])){
-			$recheio2='bacon';
-			$quant2+=1;
+			$recheio='Bacon';
 			}
 			if(isset($_GET['ovo'])){
-			$recheio2='ovo';
-			$quant2+=1;
+			$recheio='Ovo';
 			}
+											
 		?>
-        <!-- Fila 3
+        <!-- Fila 3-->
         <tr>
             <td><img id="imgcard" src="imagens/img.tanajura.jpg" align="center"></td>
 
@@ -264,13 +275,32 @@ session_start();
         </tr>
 
         <tr>
-			<td><button class="btn btn-green" value="1" name="tanajura">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-green" value="1" name="carnedesol">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-green" value="1" name="coracao">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-green" value="1" name="peru">     Valor: R$ 2,00    </button></td>
-			<td><button class="btn btn-green" value="1" name="charque">     Valor: R$ 2,00    </button></td>
-        </tr>-->
+			<td><button class="btn btn-green" type="submit" name="tanajura">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-green" type="submit" name="carnedesol">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-green" type="submit" name="coracao">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-green" type="submit" name="peru">     Valor: R$ 2,00    </button></td>
+			<td><button class="btn btn-green" type="submit" name="charque">     Valor: R$ 2,00    </button></td>
+        </tr>
     </table>
+    <?php
+            
+            if(isset($_GET['tanajura'])){
+            $recheio='Tanajura';
+            }
+            if(isset($_GET['carnedesol'])){
+            $recheio='Carne de Sol';
+            }
+            if(isset($_GET['coracao'])){
+            $recheio='Coração';
+            }
+            if(isset($_GET['peru'])){
+            $recheio='Peru';
+            }
+            if(isset($_GET['charque'])){
+            $recheio='Charque';
+            }
+                                            
+        ?>
     <br><br>
 
     <table width=800 height=150>
@@ -303,42 +333,37 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="submit" name="maionese" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_maionese" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" name="maionese_cenoura" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_maionese_cenoura" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" name="maionese_alho" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_maionese_alho" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" name="barbecue" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_barbecue" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" name="azeitona" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_azeitona" value="     Valor: R$ 1,00    "></td>
 		</tr>
 		
 		<?php
-			$molho='';
-			$quant_molho=0;
-			if(isset($_GET['maionese'])){
-			$molho='maionese';
-			$quant_molho+=1;
-			}
-			if(isset($_GET['maionese_cenoura'])){
-			$molho='Maionese Cenoura';
-			$quant_molho+=1;
-			}
-			if(isset($_GET['maionese_alho'])){
-			$molho='Maionese Alho';
-			$quant_molho+=1;
-			}
-			if(isset($_GET['barbecue'])){
-			$molho='barbecue';
-			$quant_molho+=1;
-			}
-			if(isset($_GET['azeitona'])){
-			$molho='Maionese Azeitona';
-			$quant_molho+=1;
-			}
-		?>
-        <!--Fila 2
+            
+            if(isset($_GET['molho_maionese'])){
+            $molho='Maionese';
+            }
+            if(isset($_GET['molho_maionese_cenoura'])){
+            $molho='Maionese de Cenoura';
+            }
+            if(isset($_GET['molho_maionese_alho'])){
+            $molho='Maionese de Alho';
+            }
+            if(isset($_GET['molho_barbecue'])){
+            $molho='Barbecue';
+            }
+            if(isset($_GET['molho_azeitona'])){
+            $molho='Molho de Azeitona';
+            }
+                                            
+        ?>
+        <!--Fila 2-->
 
         <tr>
             <td><img id="imgcard" src="imagens/img.catchup.jpg" align="center"></td>
@@ -357,26 +382,44 @@ session_start();
 
             <td><label><b>Mostarda</b></label></td>
 
-            <td><label><b>Pimenta</b></label></td>
+            <td><label><b>Molho de Pimenta</b></label></td>
 
-            <td><label><b>Parmesão</b></label></td>
+            <td><label><b>Molho Parmesão</b></label></td>
 
-            <td><label><b>Cebola agridoce</b></label></td>
+            <td><label><b>Molho Cebola agridoce</b></label></td>
 
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="submit" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_catchup" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_mostarda" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_pimenta" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="molho_parmesão" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" value="     Valor: R$ 1,00    "></td>
-
-            <td><input class="btn btn-orange" type="submit" value="     Valor: R$ 1,00    "></td>
-        </tr>-->
+            <td><input class="btn btn-orange" type="submit" name="molho_cebola_agridoce" value="     Valor: R$ 1,00    "></td>
+        </tr>
     </table>
+    <?php
+            
+            if(isset($_GET['molho_catchup'])){
+            $molho='Catchup';
+            }
+            if(isset($_GET['molho_mostarda'])){
+            $molho='Molho de Mostarda';
+            }
+            if(isset($_GET['molho_pimenta'])){
+            $molho='Molho de Pimenta';
+            }
+            if(isset($_GET['molho_parmesão'])){
+            $molho='Molho de Parmesão';
+            }
+            if(isset($_GET['molho_cebola_agridoce'])){
+            $molho='Molho Cebola Agridoce';
+            }
+                                                        
+        ?>
     <br><br>
 
     <table width=800 height=150>
@@ -409,18 +452,36 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="mussarela" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cheddar" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="coalho" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="prato" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="gorgonzola" value="     Valor: R$ 1,00    "></td>
         </tr>
-
-        <!--Fila 2
+        <?php
+            
+            if(isset($_GET['mussarela'])){
+            $frios='Queijo Mussarela';
+            }
+            if(isset($_GET['cheddar'])){
+            $frios='Queijo Cheddar';
+            }
+            if(isset($_GET['coalho'])){
+            $frios='Queijo Coalho';
+            }
+            if(isset($_GET['prato'])){
+            $frios='Queijo Prato';
+            }
+            if(isset($_GET['gorgonzola'])){
+            $frios='Queijo Gorgonzola';
+            }
+                                                        
+        ?>
+        <!--Fila 2-->
 
         <tr>
             <td><img id="imgcard" src="imagens/img.catupiry.jpg" align="center"></td>
@@ -441,13 +502,26 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" name="catupiry" type="submit" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" name="presunto" type="submit" value="     Valor: R$ 1,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 1,00    "></td>
-        </tr>-->
+            <td><input class="btn btn-orange" name="salaminho" type="submit" value="     Valor: R$ 1,00    "></td>
+        </tr>
     </table>
+    <?php
+            
+            if(isset($_GET['catupiry'])){
+            $frios='Queijo Catupiry';
+            }
+            if(isset($_GET['presunto'])){
+            $frios='Presunto';
+            }
+            if(isset($_GET['salaminho'])){
+            $frios='Salaminho';
+            }
+                                                                    
+        ?>
     <br><br>
 
     <table width=800 height=150>
@@ -480,18 +554,37 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_carne" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_soja" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_frango" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_caseiro" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_misto" value="     Valor: R$ 4,00    "></td>
         </tr>
 
     </table>
+    <?php
+            
+            if(isset($_GET['hamburguer_carne'])){
+            $recheio='Hamburguer Carne';
+            }
+            if(isset($_GET['hamburguer_soja'])){
+            $recheio='Hamburguer Soja';
+            }
+            if(isset($_GET['hamburguer_frango'])){
+            $recheio='Hamburguer Frango';
+            }
+            if(isset($_GET['hamburguer_caseiro'])){
+            $recheio='Hamburguer Caseiro';
+            }
+            if(isset($_GET['hamburguer_misto'])){
+            $recheio='Hamburguer Misto';
+            }
+                                                        
+        ?>
     <br><br>
 
     <table width=800 height=150>
@@ -524,17 +617,36 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="tomate" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="tomate_seco" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="alface" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cebola_caramelizada" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cebola" value="     Valor: R$ 4,00    "></td>
         </tr>
-<!-- Fila 2 
+        <?php
+            
+            if(isset($_GET['tomate'])){
+            $salada='Tomate';
+            }
+            if(isset($_GET['tomate_seco'])){
+            $salada='Tomate Seco';
+            }
+            if(isset($_GET['alface'])){
+            $salada='Alface';
+            }
+            if(isset($_GET['cebola_caramelizada'])){
+            $salada='Cebola Caramelizada';
+            }
+            if(isset($_GET['cebola'])){
+            $salada='Cebola';
+            }
+                                                        
+        ?>
+<!-- Fila 2 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.cenourar.jpg" align="center"></td>
 
@@ -561,18 +673,38 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cenoura" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="pepino" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="gergelim" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="rucula" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
-        </tr> -->
+            <td><input class="btn btn-orange" type="submit" name="alho_poro" value="     Valor: R$ 4,00    "></td>
+        </tr>
 
-    </table><br><br>
+    </table>
+    <?php
+            
+            if(isset($_GET['cenoura'])){
+            $salada='Cenoura';
+            }
+            if(isset($_GET['pepino'])){
+            $salada='Pepino';
+            }
+            if(isset($_GET['gergelim'])){
+            $salada='Gergelim';
+            }
+            if(isset($_GET['rucula'])){
+            $salada='Rucula';
+            }
+            if(isset($_GET['alho_poro'])){
+            $salada='Alho Poró';
+            }
+                                                        
+        ?>
+    <br><br>
 
     <table width=800 height=150>
 
@@ -604,17 +736,36 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="milho" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="ervilha" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="batata_palha" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name=azeitona"" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="queijo_ralado" value="     Valor: R$ 4,00    "></td>
         </tr>
-        <!-- Fila 2
+        <?php
+            
+            if(isset($_GET['milho'])){
+            $outros='Milho';
+            }
+            if(isset($_GET['ervilha'])){
+            $outros='Ervilha';
+            }
+            if(isset($_GET['batata_palha'])){
+            $outros='Batata Palha';
+            }
+            if(isset($_GET['azeitona'])){
+            $outros='Azeitona';
+            }
+            if(isset($_GET['queijo_ralado'])){
+            $outros='Queijo Ralado';
+            }
+                                                        
+        ?>
+        <!-- Fila 2-->
         <tr>
             <td><img id="imgcard" src="imagens/img.amendoim.jpg" align="center"></td>
 
@@ -641,30 +792,211 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="amendoim_torrado" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="requeijao" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="button" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="pimenta_cheiro" value="     Valor: R$ 4,00    "></td>
 
             <td><input class="btn btn-orange" type="submit" name="manjericão" value="     Valor: R$ 4,00    "></td>
 
-            <td><input class="btn btn-orange" type="submit" name="batata" value="     Valor: R$ 4,00    "></td>
-        </tr>-->
+            <td><input class="btn btn-orange" type="submit" name="batata_frita" value="     Valor: R$ 4,00    "></td>
+        </tr>
+
+
+        </tr>
+        <?php
+            
+            if(isset($_GET['amendoim_torrado'])){
+            $outros='Amendoim Torrado';
+            }
+            if(isset($_GET['requeijao'])){
+            $outros='Requeijão';
+            }
+            if(isset($_GET['pimenta_cheiro'])){
+            $outros='Pimenta de Cheiro';
+            }
+            if(isset($_GET['manjericao'])){
+            $outros='Manjericão';
+            }
+            if(isset($_GET['batata_frita'])){
+            $outros='Batata Frita';
+            }
+                                                        
+        ?>
 
     </table>
-	<?php 
-		if(isset($_GET['manjericão'])){
-			$recheio1='manjericão';
-			$quant1+=1;
+			
+	<?php
+	if($recheio!=NULL){
+    @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+	
+    @$query2 = ("SELECT valor FROM ingredientes WHERE ingredientes.nome='$recheio'");
+
+			@$busca2 = mysqli_query(@$link,@$query2);
+			@$dado2 = mysqli_fetch_array(@$busca2);
+			@$valor_recheio = @$dado2['valor'];
+
+        
+	
+		if(@$_SESSION['recheio1']==NULL){
+				$_SESSION['recheio1']=$recheio;
+				$_SESSION['valor_recheio1']=$valor_recheio;
 			}
-		if(isset($_GET['batata'])){
-			$recheio2='batata-frita';
-			$quant2+=1;
+			else{
+				if(@$_SESSION['recheio2']==NULL){
+					$_SESSION['recheio2']="$recheio";
+					$_SESSION['valor_recheio2']=$valor_recheio;
+				}
+				else{
+					if(@$_SESSION['recheio3']==NULL){
+					$_SESSION['recheio3']="$recheio";
+					$_SESSION['valor_recheio3']=$valor_recheio;
+				}
+					else{echo "Número máximo de recheio preenchido!";}
+				}
 			}
-			?>
-    <!--
-     </div> -->
+        }
+	   
+    	?>	
+    
+
+
+    <?php
+    if($molho!=NULL){
+    @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+    
+    @$query = ("SELECT valor FROM ingredientes WHERE ingredientes.nome='$molho'");
+
+            @$busca = mysqli_query(@$link,@$query);
+            @$dado = mysqli_fetch_array(@$busca);
+            @$valor_molho = @$dado['valor'];
+
+        
+    
+        if(@$_SESSION['molho1']==NULL){
+                $_SESSION['molho1']=@"$molho";
+                $_SESSION['valor_molho1']=@$valor_molho;
+            }
+            else{
+                if(@$_SESSION['molho2']==NULL){
+                    $_SESSION['molho2']=@"$molho";
+                    $_SESSION['valor_molho2']=@$valor_molho;
+                }
+                else{
+                    if(@$_SESSION['molho3']==NULL){
+                    $_SESSION['molho3']=@"$molho";
+                    $_SESSION['valor_molho3']=$valor_molho;
+                }
+                    else{echo "Número máximo de recheio preenchido!";}
+                }
+            }
+        }
+        ?>
+
+
+        <?php
+        if($frios!=NULL){
+    @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+    
+    @$query = ("SELECT valor FROM ingredientes WHERE ingredientes.nome='$frios'");
+
+            @$busca = mysqli_query(@$link,@$query);
+            @$dado = mysqli_fetch_array(@$busca);
+            @$valor_frios = @$dado['valor'];
+
+        
+    
+        if(@$_SESSION['frios1']==NULL){
+                $_SESSION['frios1']=@"$frios";
+                $_SESSION['valor_frios1']=@$valor_frios;
+            }
+            else{
+                if(@$_SESSION['frios2']==NULL){
+                    $_SESSION['frios2']=@"$frios";
+                    $_SESSION['valor_frios2']=@$valor_frios;
+                }
+                else{
+                    if(@$_SESSION['frios3']==NULL){
+                    $_SESSION['frios3']=@"$frios";
+                    $_SESSION['valor_frios3']=@$valor_frios;
+                }
+                    else{echo "Número máximo de recheio preenchido!";}
+                }
+            }
+        }
+        ?>
+
+
+
+        <?php
+        if($salada!=NULL){
+    @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+    
+    @$query = ("SELECT valor FROM ingredientes WHERE ingredientes.nome='$salada'");
+
+            @$busca = mysqli_query(@$link,@$query);
+            @$dado = mysqli_fetch_array(@$busca);
+            @$valor_salada = @$dado['valor'];
+
+        
+    
+        if(@$_SESSION['salada1']==NULL){
+                $_SESSION['salada1']=@"$salada";
+                $_SESSION['valor_salada1']=@$valor_salada;
+            }
+            else{
+                if(@$_SESSION['salada2']==NULL){
+                    $_SESSION['salada2']=@"$salada";
+                    $_SESSION['valor_salada2']=@$valor_salada;
+                }
+                else{
+                    if(@$_SESSION['salada3']==NULL){
+                    $_SESSION['salada3']=@"$salada";
+                    $_SESSION['valor_salada3']=@$valor_salada;
+                }
+                    else{echo "Número máximo de recheio preenchido!";}
+                }
+            }
+        }
+        ?>
+
+
+
+        <?php
+        if($outros!=NULL){
+    @$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+    
+    @$query = ("SELECT valor FROM ingredientes WHERE ingredientes.nome='$outros'");
+
+            @$busca = mysqli_query(@$link,@$query);
+            @$dado = mysqli_fetch_array(@$busca);
+            @$valor_outros = @$dado['valor'];
+
+        
+    
+        if(@$_SESSION['outros1']==NULL){
+                $_SESSION['salada1']=@"$outros";
+                $_SESSION['valor_outros1']=@$valor_outros;
+            }
+            else{
+                if(@$_SESSION['outros2']==NULL){
+                    $_SESSION['outros2']=@"$outros";
+                    $_SESSION['valor_outros2']=@$valor_outros;
+                }
+                else{
+                    if(@$_SESSION['outros3']==NULL){
+                    $_SESSION['outros3']=@"$outros";
+                    $_SESSION['valor_outros3']=@$valor_outros;
+                }
+                    else{echo "Número máximo de recheio preenchido!";}
+                }
+            }
+        }
+        ?>
+
+
+     </div> 
 
     <div id="escolhidos" align="center">
 
@@ -675,42 +1007,252 @@ session_start();
 			<td>
 				<b>Opções</b></td>
                 <td><b>Ingrediente</b></td>
-                <td><b>Quantidade</b></td>
+                <td><b>Valor(R$)</b></td>
                 <td></td>
             </tr>
+			<?php
+				if(isset($_GET['x_pao'])){
+				$_SESSION['pao']=NULL;
+                $_SESSION['valor_pao']=NULL;
+			}
+			?>
+
+            <?php
+                if(isset($_GET['cancelar'])){
+                @$_SESSION['pao']=NULL;
+                @$_SESSION['valor_pao']=NULL;
+                @$_SESSION['recheio1']=NULL;
+                @$_SESSION['valor1']=NULL;
+                @$_SESSION['recheio2']=NULL;
+                @$_SESSION['valor2']=NULL;
+                @$_SESSION['recheio3']=NULL;
+                @$_SESSION['valor3']=NULL;
+                @$_SESSION['molho1']=NULL;
+                @$_SESSION['valor_molho1']=NULL;
+                @$_SESSION['molho2']=NULL;
+                @$_SESSION['valor_molho2']=NULL;
+                @$_SESSION['molho3']=NULL;
+                @$_SESSION['valor_molho3']=NULL;
+                @$_SESSION['frios1']=NULL;
+                @$_SESSION['valor_frios1']=NULL;
+                @$_SESSION['frios2']=NULL;
+                @$_SESSION['valor_frios2']=NULL;
+                @$_SESSION['frios3']=NULL;
+                @$_SESSION['valor_frios3']=NULL;
+                @$_SESSION['salada1']=NULL;
+                @$_SESSION['valor_salada1']=NULL;
+                @$_SESSION['salada2']=NULL;
+                @$_SESSION['valor_salada2']=NULL;
+                @$_SESSION['salada3']=NULL;
+                @$_SESSION['valor_salada3']=NULL;
+
+
+                @$_SESSION['outros1']=NULL;
+                @$_SESSION['valor_outros1']=NULL;
+                @$_SESSION['outros2']=NULL;
+                @$_SESSION['valor_outros2']=NULL;
+                @$_SESSION['outros3']=NULL;
+                @$_SESSION['valor_outros3']=NULL;
+ 
+
+            }
+                ?>
             <tr>
-				<td>PÃO-</td>
-                <td size="20"><a><?php echo $pao_escolhido?></a></td>
-                <td><a><?php echo $quant_pao?></a></td>
-                <td><button class=" btn btn-red">    X   </button></td>
+				<td>Pão-</td>
+                <td size="20"><a><?php if(!isset($_SESSION['pao'])){ echo '';}else{echo $_SESSION['pao'];}?></a></td>
+                <td><a><?php echo @$_SESSION['valor_pao']?></a></td>
+                <td><button class=" btn btn-red" name="x_pao">    X   </button></td>
             </tr>
+			<?php
+				if(isset($_GET['x1'])){
+				$_SESSION['recheio1']=NULL;
+				@$_SESSION['valor_recheio1']=NULL;
+                }
+			?>
             <tr>
-				<td>RECHEIO1-</td>
-                <td><a><?php echo $recheio1?></a></td>
-                <td><a><?php echo $quant1?></a></td>
-                <td><button class=" btn btn-red">    X   </button></td>
+				<td>Recheio1-</td>
+                <td><a><?php if(!isset($_SESSION['recheio1'])){ echo "";}else{echo $_SESSION['recheio1'];}?></a></td>
+                <td><a><?php echo @$_SESSION['valor_recheio1']; ?></a></td>
+                <td><button class=" btn btn-red" name="x1" >    X   </button></td>
             </tr>
+			<?php
+				if(isset($_GET['x2'])){
+				$_SESSION['recheio2']=NULL;
+                @$_SESSION['valor_recheio2']=NULL;
+				}
+			?>
             <tr>
-				<td>RECHEIO2-</td>
-                <td><a><?php echo $recheio2?></a></td>
-                <td><a><?php echo $quant2?></a></td>                      
-                <td><button class="btn btn-red">    X   </button></td>
+				<td>Recheio2-</td>
+                <td><a><?php if(!isset($_SESSION['recheio2'])){ echo "";}else{echo $_SESSION['recheio2'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_recheio2']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x2">    X   </button></td>
             </tr>
+			<?php
+				if(isset($_GET['x3'])){
+				$_SESSION['recheio3']=NULL;
+				@$_SESSION['valor_recheio3']=NULL;
+                }
+			?>	
             <tr>
-				<td>MOLHO-</td>
-                <td><a><?php echo $molho?></a></td>
-                <td><a><?php echo $quant_molho?></a></td>
-                <td><button class=" btn btn-red">    X   </button></td>
+				<td>Recheio3-</td>
+                <td><a><?php if(!isset($_SESSION['recheio3'])){ echo "";}else{echo $_SESSION['recheio3'];}?></a></td>
+                <td><a><?php echo @$_SESSION['valor_recheio3'];?></a></td>
+                <td><button class=" btn btn-red" name="x3">    X   </button></td>
             </tr>
+            <?php
+                if(isset($_GET['x4'])){
+                $_SESSION['molho1']=NULL;
+                $_SESSION['valor_molho1']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Molho1-</td>
+                <td><a><?php if(!isset($_SESSION['molho1'])){ echo "";}else{echo $_SESSION['molho1'];}?></a></td>
+                <td><a><?php echo @$_SESSION['valor_molho1'];?></a></td>
+                <td><button class=" btn btn-red" name="x4">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x5'])){
+                $_SESSION['molho2']=NULL;
+                $_SESSION['valor_molho2']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Molho2-</td>
+                <td><a><?php if(!isset($_SESSION['molho2'])){ echo "";}else{echo $_SESSION['molho2'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_molho2'];?></a></td>
+                <td><button class=" btn btn-red" name="x5">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x6'])){
+                $_SESSION['molho3']=NULL;
+                $_SESSION['valor_molho3']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Molho3-</td>
+                <td><a><?php if(!isset($_SESSION['molho3'])){ echo "";}else{echo $_SESSION['molho3'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_molho1'];?></a></td>
+                <td><button class=" btn btn-red" name="x6">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x7'])){
+                $_SESSION['frios1']=NULL;
+                $_SESSION['valor_frios1']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Frios1-</td>
+                <td><a><?php if(!isset($_SESSION['frios1'])){ echo "";}else{echo $_SESSION['frios1'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_frios1'];?></a></td>
+                <td><button class=" btn btn-red" name="x7">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x8'])){
+                $_SESSION['frios2']=NULL;
+                $_SESSION['valor_frios2']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Frios2-</td>
+                <td><a><?php if(!isset($_SESSION['frios2'])){ echo "";}else{echo $_SESSION['frios2'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_frios2'];?></a></td>
+                <td><button class=" btn btn-red" name="x8">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x9'])){
+                $_SESSION['frios3']=NULL;
+                $_SESSION['valor_frios3']=NULL;
+                }
+            ?>  
+            <tr>
+                <td>Frios1-</td>
+                <td><a><?php if(!isset($_SESSION['frios3'])){ echo "";}else{echo $_SESSION['frios3'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_frios3'];?></a></td>
+                <td><button class=" btn btn-red" name="x9">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x10'])){
+                $_SESSION['salada1']=NULL;
+                $_SESSION['valor_salada1']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Salada1-</td>
+                <td><a><?php if(!isset($_SESSION['salada1'])){ echo "";}else{echo $_SESSION['salada1'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_salada1']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x10">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x11'])){
+                $_SESSION['salada2']=NULL;
+                $_SESSION['valor_salada2']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Salada2-</td>
+                <td><a><?php if(!isset($_SESSION['salada2'])){ echo "";}else{echo $_SESSION['salada2'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_salada2']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x11">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x12'])){
+                $_SESSION['salada3']=NULL;
+                $_SESSION['valor_salada3']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Salada3-</td>
+                <td><a><?php if(!isset($_SESSION['salada3'])){ echo "";}else{echo $_SESSION['salada3'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_salada3']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x12">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x13'])){
+                $_SESSION['outros1']=NULL;
+                $_SESSION['valor_outros1']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Outros1-</td>
+                <td><a><?php if(!isset($_SESSION['outros1'])){ echo "";}else{echo $_SESSION['outros1'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_outros1']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x13">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x14'])){
+                $_SESSION['outros2']=NULL;
+                $_SESSION['valor_outros2']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Outros2-</td>
+                <td><a><?php if(!isset($_SESSION['outros2'])){ echo "";}else{echo $_SESSION['outros2'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_outros2']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x14">    X   </button></td>
+            </tr>
+            <?php
+                if(isset($_GET['x15'])){
+                $_SESSION['outros3']=NULL;
+                $_SESSION['valor_outros3']=NULL;
+                }
+            ?>
+            <tr>
+                <td>Outros3-</td>
+                <td><a><?php if(!isset($_SESSION['outros3'])){ echo "";}else{echo $_SESSION['outros3'];}?></a></td>
+                <td><a><?php echo $_SESSION['valor_outros3']; ?></a></td>                      
+                <td><button class="btn btn-red" name="x15">    X   </button></td>
+            </tr>
+
 
             <table align="center">
                 <br>
                 <tr>
-                    <td>Valor Total</td>
-                    <td align="rigth"><input type="text" size="7" maxlength="8"></td>
+                    <td>Valor Total (R$)</td>
+                    <td align="rigth"><input type="text" size="7" maxlength="8" value="<?php echo(@$_SESSION['valor_pao']+@$_SESSION['valor_recheio1']+@$_SESSION['valor_recheio2']+@$_SESSION['valor_recheio3']+@$_SESSION['valor_molho1']+@$_SESSION['valor_molho2']+@$_SESSION['valor_molho3']+@$_SESSION['valor_frios1']+@$_SESSION['valor_frios2']+@$_SESSION['valor_frios3']+@$_SESSION['valor_salada1']+@$_SESSION['valor_salada2']+@$_SESSION['valor_salada3']+@$_SESSION['valor_outros1']+@$_SESSION['valor_outros2']+@$_SESSION['valor_outros3'])?>"></td>
                 </tr>
                 <tr>
-                    <td align="center"><input class="btn btn-red" type="button" value="Cancelar"></td>
+                    <td align="center"><input class="btn btn-red" type="submit" name="cancelar" value="Cancelar"></td>
                     <td><input class="btn btn-green" type="button"
                                onclick="window.location.href  = 'paginaPagamento.php'"
                                value="Finalizar a compra"></td>
