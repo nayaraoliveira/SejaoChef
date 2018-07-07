@@ -45,12 +45,9 @@ session_start();
                 <li>
                     <button class="btn btn-orange" type="submit" name="deslogar"> Sair</button>
                 </li>
-
             </ul>
-
         </li>
     </ul>
-
 </nav>
 
 <div id="ttmontar">
