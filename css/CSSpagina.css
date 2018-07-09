@@ -1,199 +1,184 @@
 /*altura do head*/
-head{
-	min-height: 100%;
-	position: relative;
+head {
+    min-height: 100%;
+    position: relative;
 }
-/*alterações no body por cada parte*/
-body{
-	background-repeat: repeat;
-	background-size: cover;
-	background-color: #AED581;
-	margin: 0;
-	padding: 0;
-	height: 100%;
-	font-family: arial;
-	}
-
 
 /*alterações no body por cada parte*/
+body {
+    background-repeat: repeat;
+    background-size: cover;
+    background-color: #AED581;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: arial;
+}
 
 /*alterações no ul*/
-	#div1{
-		background-color: black;
-		padding-left: 3em;
-		}
-	/*Logomarca*/
-	#imagens{
-		width: 50em;
-		height:10em;
-	}
-
-/*alterações no ul*/
-	.menu ul{
-		margin: 0;
-		background-color: #2F4F4F;
-		list-style: none;
-		text-align: left;
-		font-size: 23px;
-		font-family: arial;
-		width: 1350px;
-		display: inline-block;
-	}
-
-/*alterações no a*/
-	.menu ul li a{
-		padding: 0.2em 0.2em;
-		display: inline-block;
-		color: white;
-		text-decoration: none;
-		float: left;
-		width: 180px;
-		height: 30px;
-		line-height: 30px;
-	}
-
-	.menu ul li label{
-		display: inline-block;
-		color: white;
-		text-decoration: none;
-		float: right;
-		width: 400px;
-		height: 30px;
-		line-height: 35px;
-		text-align: left;
-		padding-right: 80px;
-	}
-
-.menu ul ul{
-	display: none;
+#div1 {
+    background-color: black;
+    padding-left: 3em;
+    padding-bottom: 5px;
 }
 
-.menu ul li:hover > ul{
-	display: block;
+/*Logomarca*/
+#imagens {
+    width: 50em;
+    height: 10em;
 }
 
-.menu ul li label ul li{
-	color: red;
+.menu ul li {
+    background-color: #2F4F4F;
+    float: left; /*para que fique lado a lado*/
+    width: 200px; /*largura de cada ABA*/
+   
+    display: inline-block; /*Tirar marcador*/
+    text-align: center; /*Centralizar texto horizontal*/
+    line-height: 40px; /*Centralizar texto vertical*/
+    font-size: 25px;
+}
+/*ajustar o submenu*/
+
+.menu ul{
+   padding: 0;
 }
 
+/*ao passar o mouse*/
+.menu ul li a:hover {
+    background-color: green;
+}
 
-/*Ao passar o mouse, mudar de cor*/
-	.menu ul li a:hover{
-		color: #8B0000;
-	}
+/*ocultar submenu*/
+.menu ul ul {
+    display: none;
+}
 
-	.menu ul li label:hover{
-		color: #8B0000;
-	}
+.menu ul li:hover > ul {
+    display: block;
+}
 
-	.menu ul li label ul li:hover{
-		color: #8B0000;
-	}
+.menu ul li a {
+    color: white;
+    text-align: right;
+    background-color: #2F4F4F;
+    text-decoration: none;
+}
+
+#um{
+    min-width: 545px;
+    text-align: left;
+}
 
 /*Configurações de botão*/
-	.btn{
-		font-family: arial;
-		text-transform: uppercase;
-		font-weight: 700;
-		font-size: 14px;
-		border: none;
-		padding: 5px;
-		cursor: pointer;
-	}
-	/*Cor de botão verde*/
-	.btn-green{
-		background: green;
-		color: #FFF;
-		box-shadow:0 5px 0 #006000;
-	}
-	/*Ao passar mouse no botão*/
-	.btn-green:hover{
-		background: #006000;
-		color: #FFF;
-		box-shadow:0 5px 0 #003f00;
-	}
-	/*Quando botão é clicado*/
-	.btn-green:active{
-		position: relative;
-		top:5px;
-		box-shadow:none;
-	}
-	/*Cor de botão amarelo*/
-
-	.btn-yellow{
-		background: yellow;
-		color: #000;
-		box-shadow: 0 5px 0 #FFCC00;
-	}
-	/*Ao passar mouse no botão*/
-	.btn-yellow:hover{
-		background: #FFCC00;
-		color: #000;
-		box-shadow:0 5px 0 #999900;
-	}
-	/*Quando botão é clicado*/
-	.btn-yellow:active{
-		position: relative;
-		top:5px;
-		box-shadow:none;
-	}
-	/*Cor de botão vermelho*/
-	.btn-red{
-		background: red;
-		color: #FFF;
-		box-shadow: 0 5px 0 #8A0808;
-	}
-
-	/*Ao passar mouse no botão*/
-	.btn-red:hover{
-		background: #8A0808;
-		color: #FFF;
-		box-shadow:0 5px 0 #DF0101;
-	}
-	/*Quando botão é clicado*/
-	.btn-red:active{
-		position: relative;
-		top:5px;
-		box-shadow:none;
-	}
-
-	.btn-orange{
-		background: orange;
-		color: #FFF;
-		/*box-shadow: 0 5px 0 #8A0808;*/
-	}
-
-	.btn-orange:hover{
-		background: green;
-		color: #FFF;
-	}
-	/*Quando botão é clicado*/
-	.btn-orange:active{
-		position: relative;
-		top:5px;
-	}
-
-	#rodape {
-		text-align: center;
-		background-color: #2F4F4F;
-		font-family: arial;
-		color: white;
-		position:absolute;
-    	bottom:0;
-    	width:100%;
-    	height: 40px;
-    	padding-top: 8px;
-    	padding-bottom: 8px;
-	}
-
-		#imgrodape{
-		text-align: right;
-		width:65px;
-		height:40px;
-		padding-bottom: 12px;
-		}
-
-#tec{
+.btn {
+    font-family: arial;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
 }
 
-	
+/*Cor de botão verde*/
+.btn-green {
+    background: green;
+    color: #FFF;
+    box-shadow: 0 5px 0 #006000;
+}
+
+/*Ao passar mouse no botão*/
+.btn-green:hover {
+    background: #006000;
+    color: #FFF;
+    box-shadow: 0 5px 0 #003f00;
+}
+
+/*Quando botão é clicado*/
+.btn-green:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+/*Cor de botão amarelo*/
+
+.btn-yellow {
+    background: yellow;
+    color: #000;
+    box-shadow: 0 5px 0 #FFCC00;
+}
+
+/*Ao passar mouse no botão*/
+.btn-yellow:hover {
+    background: #FFCC00;
+    color: #000;
+    box-shadow: 0 5px 0 #999900;
+}
+
+/*Quando botão é clicado*/
+.btn-yellow:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+/*Cor de botão vermelho*/
+.btn-red {
+    background: red;
+    color: #FFF;
+    box-shadow: 0 5px 0 #8A0808;
+}
+
+/*Ao passar mouse no botão*/
+.btn-red:hover {
+    background: #8A0808;
+    color: #FFF;
+    box-shadow: 0 5px 0 #DF0101;
+}
+
+/*Quando botão é clicado*/
+.btn-red:active {
+    position: relative;
+    top: 5px;
+    box-shadow: none;
+}
+
+.btn-orange {
+    background: orange;
+    color: #FFF;
+    /*box-shadow: 0 5px 0 #8A0808;*/
+}
+
+.btn-orange:hover {
+    background: green;
+    color: #FFF;
+}
+
+/*Quando botão é clicado*/
+.btn-orange:active {
+    position: relative;
+    top: 5px;
+}
+
+#rodape {
+    text-align: center;
+    background-color: #2F4F4F;
+    font-family: arial;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+#imgrodape {
+    text-align: right;
+    width: 65px;
+    height: 40px;
+    padding-bottom: 12px;
+}
+
