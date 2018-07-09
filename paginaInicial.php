@@ -4,12 +4,15 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
+   <head>
     <meta charset="UTF-8"/>
-    <title>Seja Chef</title>
+    
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaInicial.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 
+    <title>SejaChef</title>
+    
     <script type="text/javascript">
         function slide1() {
             document.getElementById('id').src = "imagens/img.catchup.jpg";
@@ -46,6 +49,8 @@ session_start();
 </head>
 <body onLoad="slide1()">
 
+    <div id="ttinicial">
+
 <div id="div1" align="center">
     <img id="imagens" src="imagens/img.sejaochef.png" align="center">
 </div>
@@ -56,10 +61,8 @@ session_start();
         <li><a href="paginaCardapio.php">Cardápio</a></li>
         <li><a href="paginaMontarpedido.php">Montagem</a>
         <li><a href="paginaLogin.php">Login</a></li>
-        <li>
-            <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+        <li id="um">
             <?php
-
             if (isset($_GET['deslogar'])) {
                 $_SESSION['nome'] = NULL;
             }
@@ -70,18 +73,16 @@ session_start();
                 $nome = $_SESSION['nome'];
             }
             ?>
-            <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome ?></a></i></label>
+            <input type="image" src="imagens/img.usuario.png" width="30" height="30">
+            <a href="paginaLogin.php"><i><?php echo $nome ?></i></a>
             <ul>
                 <li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
-                <li>
-                    <button class="btn btn-orange" type="submit" name="deslogar"> Sair</button>
-                </li>
+                <li><a href="deslogar" type="submit" name="deslogar">Sair</a></li>
             </ul>
         </li>
     </ul>
 </nav>
 
-<div id="ttinicial">
     <div>
         <div>
             <img id="id">

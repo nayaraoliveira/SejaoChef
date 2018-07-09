@@ -13,6 +13,7 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
+
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaMontar.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
@@ -33,10 +34,8 @@ session_start();
         <li><a href="paginaCardapio.php">Cardápio</a></li>
         <li><a href="paginaMontarpedido.php">Montagem</a>
         <li><a href="paginaLogin.php">Login</a></li>
-        <li>
-            <!--<img src="imagens/img.usuario.png" width="30" height="30" >-->
+        <li id="um">
             <?php
-
             if (isset($_GET['deslogar'])) {
                 $_SESSION['nome'] = NULL;
             }
@@ -47,12 +46,11 @@ session_start();
                 $nome = $_SESSION['nome'];
             }
             ?>
-            <label id="tec"><i><a href="paginaLogin.php"><?php echo $nome ?></a></i></label>
+            <input type="image" src="imagens/img.usuario.png" width="30" height="30">
+            <a href="paginaLogin.php"><i><?php echo $nome ?></i></a>
             <ul>
                 <li><a href="paginaMeusPedidos.php">Meus Pedidos</a></li>
-                <li>
-                    <button class="btn btn-orange" type="submit" name="deslogar"> Sair</button>
-                </li>
+                <li><a href="deslogar" type="submit" name="deslogar">Sair</a></li>
             </ul>
         </li>
     </ul>
@@ -67,7 +65,7 @@ session_start();
 
     <table width=800 height=150>
 
-        <caption><b>Tipos de pães</b></caption>
+        <label><h4><b>Tipos de Pães</b></h4></label>
         <tr>
             <td><img id="imgcard" src="imagens/img.paotrigo.jpg" align="center"></td>
 
@@ -110,9 +108,7 @@ session_start();
             <td>
                 <button class="btn btn-orange" name="paoforma"> Valor: R$ 1,00</button>
             </td>
-
     </table>
-
 
     <?php
 
@@ -121,7 +117,6 @@ session_start();
     } else {
         $pao_escolhido = $_SESSION['pao'];
     }
-
 
     if (isset($_GET['paotrigo'])) {
         $pao_escolhido = 'Pão Trigo';
@@ -146,21 +141,18 @@ session_start();
 
     $_SESSION['pao'] = $pao_escolhido;
 
-
     @$link = mysqli_connect('db4free.net:3306', 'sejaochef', '123456789', 'sejaochef');
-
 
     @$query = "SELECT valor FROM ingredientes WHERE ingredientes.nome='$pao_escolhido'";
     @$busca = mysqli_query(@$link, @$query);
     @$dado = mysqli_fetch_array(@$busca);
 
     $_SESSION['valor_pao'] = $dado['valor'];
-
     ?>
 
     <table width=800 height=150>
 
-        <caption><b>Tipos de recheio</b></caption>
+        <br><label><h4><b>Tipos de recheio</b></h4></label>
         <!-- Fila 1-->
         <tr>
             <td><img id="imgcard" src="imagens/img.carnemoida.jpg" align="center"></td>
@@ -184,7 +176,6 @@ session_start();
             <td><label><b>Atum</b></label></td>
 
             <td><label><b>Camarão</b></label></td>
-
         </tr>
 
         <tr>
@@ -203,7 +194,6 @@ session_start();
             <td>
                 <button class="btn btn-orange" name="camarao"> Valor: R$ 2,00</button>
             </td>
-
         </tr>
         <br><br>
         <?php
@@ -223,8 +213,6 @@ session_start();
         if (isset($_GET['camarao'])) {
             $recheio = 'Camarão';
         }
-
-
         ?>
         <!-- Fila 2-->
         <tr>
@@ -249,7 +237,6 @@ session_start();
             <td><label><b>Bacon</b></label></td>
 
             <td><label><b>Ovo</b></label></td>
-
         </tr>
 
         <tr>
@@ -268,10 +255,9 @@ session_start();
             <td>
                 <button class="btn btn-orange" name="ovo"> Valor: R$ 2,00</button>
             </td>
-
         </tr>
-        <?php
 
+        <?php
         if (isset($_GET['alcatra'])) {
             $recheio = 'Alcatra';
         }
@@ -312,7 +298,6 @@ session_start();
             <td><label><b>Peru</b></label></td>
 
             <td><label><b>Charque</b></label></td>
-
         </tr>
 
         <tr>
@@ -351,12 +336,11 @@ session_start();
         $recheio = 'Charque';
     }
 
-    ?>
-    <br><br>
+    ?> <br><br>
 
     <table width=800 height=150>
 
-        <caption><b>Tipos de molhos</b></caption>
+        <label><h4><b>Tipos de molhos</b></h4></label>
         <!--Fila 1 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.maionese.jpg" align="center"></td>
@@ -380,7 +364,6 @@ session_start();
             <td><label><b>Barbecue</b></label></td>
 
             <td><label><b>Azeitona</b></label></td>
-
         </tr>
 
         <tr>
@@ -447,7 +430,6 @@ session_start();
             <td><label><b>Molho Parmesão</b></label></td>
 
             <td><label><b>Molho Cebola agridoce</b></label></td>
-
         </tr>
 
         <tr>
@@ -494,7 +476,7 @@ session_start();
 
     <table width=800 height=150>
 
-        <caption><b>Frios</b></caption>
+        <label><h4><b>Frios</b></h4></label>
         <!--Fila 1 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.mussarela.jpg" align="center"></td>
@@ -518,7 +500,6 @@ session_start();
             <td><label><b>Prato</b></label></td>
 
             <td><label><b>Gorgonzola</b></label></td>
-
         </tr>
 
         <tr>
@@ -569,7 +550,6 @@ session_start();
             <td><img id="imgcard" src="imagens/img.presunto.jpg" align="center"></td>
 
             <td><img id="imgcard" src="imagens/img.salaminho.jpg" align="center"></td>
-
         </tr>
 
         <tr class="color">
@@ -578,7 +558,6 @@ session_start();
             <td><label><b>Presunto</b></label></td>
 
             <td><label><b>Salaminho</b></label></td>
-
         </tr>
 
         <tr>
@@ -613,7 +592,7 @@ session_start();
 
     <table width=800 height=150>
 
-        <caption><b>Hamburguer</b></caption>
+        <label><h4><b>Hamburguer</b></h4></label>
         <!--Fila 1 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.hcarne.jpg" align="center"></td>
@@ -685,7 +664,7 @@ session_start();
 
     <table width=800 height=150>
 
-        <caption><b>Salada</b></caption>
+        <label><h4><b>Salada</b></h4></label>
         <!--Fila 1 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.tomate.jpg" align="center"></td>
@@ -821,7 +800,7 @@ session_start();
 
     <table width=800 height=150>
 
-        <caption><b>Outros</b></caption>
+        <label><h4><b>Outros</b></h4></label>
         <!--Fila 1 -->
         <tr>
             <td><img id="imgcard" src="imagens/img.milho1.jpg" align="center"></td>
@@ -950,9 +929,7 @@ session_start();
         if (isset($_GET['batata_frita'])) {
             $outros = 'Batata Frita';
         }
-
         ?>
-
     </table>
 
     <?php
@@ -1109,7 +1086,7 @@ session_start();
 <div id="escolhidos" align="center">
 
     <table width=130 height=50 border="1">
-        <caption><b>Ingredientes Escolhidos</b></caption>
+        <label><b>Ingredientes Escolhidos</b></label>
         <br>
         <tr>
             <td><b>Opções</b></td>
@@ -1471,6 +1448,7 @@ session_start();
     <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
     <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
 </div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
