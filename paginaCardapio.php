@@ -9,6 +9,7 @@ session_start();
     <title>Seja Chef</title>
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaCardapio.css">
+	<form id="formulario" name="atualizar" action="paginaCardapio.php" method="GET">
 </head>
 <body>
 
@@ -59,12 +60,33 @@ session_start();
                         calabresa,
                         queijo e presunto</label>
                 </td>
+				<!-- Botões + e -    -->
+				
+				<?php
+					
+					if($_SESSION['mais1']==NULL){
+						$_SESSION['mais1']=0;
+					}
+										
+					if(isset($_GET['mais1'])){
+						$_SESSION['mais1']+=1;
+					}
+					if(isset($_GET['menos1'])){
+						if($_SESSION['mais1']==0){
+							$_SESSION['mais1']=0;
+						}
+						else{
+							$_SESSION['mais1']-=1;
+						}
+					}
+				?>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais1'] ?>" size="4"><br>
+					<input class="btn btn-yellow" type="submit" name="mais1" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos1" value="  -  ">
                 </td>
+				
             </tr>
         </table>
         <br>
