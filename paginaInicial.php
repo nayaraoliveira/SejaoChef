@@ -20,17 +20,17 @@ session_start();
         }
 
         function slide2() {
-            document.getElementById('id').src = "imagens/banner_pães.png";
+            document.getElementById('id').src = "imagens/banner_paes.png";
             setTimeout("slide3()", 3000)
         }
 
         function slide3() {
-            document.getElementById('id').src = "imagens/banner_camarão.png";
+            document.getElementById('id').src = "imagens/banner_camarao.png";
             setTimeout("slide4()", 3000)
         }
 
         function slide4() {
-            document.getElementById('id').src = "imagens/banner_hortaliças.jpg";
+            document.getElementById('id').src = "imagens/banner_hortalicas.jpg";
             setTimeout("slide5()", 3000)
         }
 
