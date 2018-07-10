@@ -15,28 +15,28 @@ session_start();
     
     <script type="text/javascript">
         function slide1() {
-            document.getElementById('id').src = "imagens/banner_logo.png";
-            setTimeout("slide2()", 3000)
+            document.getElementById('id').src = "imagens/bannerlogo.png";
+            setTimeout("slide2()", 6000)
         }
 
         function slide2() {
             document.getElementById('id').src = "imagens/banner_paes.png";
-            setTimeout("slide3()", 3000)
+            setTimeout("slide3()", 6000)
         }
 
         function slide3() {
             document.getElementById('id').src = "imagens/banner_camarao.png";
-            setTimeout("slide4()", 3000)
+            setTimeout("slide4()", 6000)
         }
 
         function slide4() {
             document.getElementById('id').src = "imagens/banner_hortalicas.png";
-            setTimeout("slide5()", 3000)
+            setTimeout("slide5()", 6000)
         }
 
         function slide5() {
             document.getElementById('id').src = "imagens/banner_catchup.png";
-            setTimeout("slide6()", 3000)
+            setTimeout("slide1()", 6000)
         }
 
     </script>
