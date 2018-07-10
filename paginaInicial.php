@@ -15,34 +15,30 @@ session_start();
     
     <script type="text/javascript">
         function slide1() {
-            document.getElementById('id').src = "imagens/img.catchup.jpg";
+            document.getElementById('id').src = "imagens/banner_logo.png";
             setTimeout("slide2()", 3000)
         }
 
         function slide2() {
-            document.getElementById('id').src = "imagens/img.camarao.jpg";
+            document.getElementById('id').src = "imagens/banner_pães.png";
             setTimeout("slide3()", 3000)
         }
 
         function slide3() {
-            document.getElementById('id').src = "imagens/img.azeitona1.jpg";
+            document.getElementById('id').src = "imagens/banner_camarão.png";
             setTimeout("slide4()", 3000)
         }
 
         function slide4() {
-            document.getElementById('id').src = "imagens/img.milho1.jpg";
+            document.getElementById('id').src = "imagens/banner_hortaliças.jpg";
             setTimeout("slide5()", 3000)
         }
 
         function slide5() {
-            document.getElementById('id').src = "imagens/img.hfrango.jpg";
+            document.getElementById('id').src = "imagens/banner_catchup.jpg";
             setTimeout("slide6()", 3000)
         }
 
-        function slide6() {
-            document.getElementById('id').src = "imagens/img.cheddar.jpg";
-            setTimeout("slide1()", 3000)
-        }
     </script>
     </div>
 
