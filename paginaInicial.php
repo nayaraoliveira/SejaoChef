@@ -30,12 +30,12 @@ session_start();
         }
 
         function slide4() {
-            document.getElementById('id').src = "imagens/banner_hortalicas.jpg";
+            document.getElementById('id').src = "imagens/banner_hortalicas.png";
             setTimeout("slide5()", 3000)
         }
 
         function slide5() {
-            document.getElementById('id').src = "imagens/banner_catchup.jpg";
+            document.getElementById('id').src = "imagens/banner_catchup.png";
             setTimeout("slide6()", 3000)
         }
 
