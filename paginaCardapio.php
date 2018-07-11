@@ -1,27 +1,21 @@
 <?php
 session_start();
+
+
+        if(isset($_GET['limpar'])){
+                    session_destroy();
+				session_start();	
+                }
+        
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
-          integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-            crossorigin="anonymous"></script>
-    
+    <meta charset="UTF-8"/>
+    <title>Seja Chef</title>
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
-    <link rel="stylesheet" type="text/css" href="css/CSSpaginaInicial.css">
-    <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
-
-
-
-    <title>SejaChef</title>
+    <link rel="stylesheet" type="text/css" href="css/CSSpaginaCardapio.css">
 	<form id="formulario" name="atualizar" action="paginaCardapio.php" method="GET">
 </head>
 <body>
@@ -76,21 +70,93 @@ session_start();
 				<!-- Botões + e -    -->
 				
 				<?php
-					
-					if($_SESSION['mais1']==NULL){
-						$_SESSION['mais1']=0;
-					}
-										
-					if(isset($_GET['mais1'])){
-						$_SESSION['mais1']+=1;
-					}
-					if(isset($_GET['menos1'])){
-						if($_SESSION['mais1']==0){
-							$_SESSION['mais1']=0;
-						}
-						else{
-							$_SESSION['mais1']-=1;
-						}
+
+                    if(isset($_GET['menos1'])){
+                        if($_SESSION['mais1']==0){
+                            
+                            @$_SESSION['sanduiche1']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais1']-=1;
+                            if($_SESSION['mais1']==0){
+                            $_SESSION['mais1']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais1'])){
+                        @$_SESSION['sanduiche1']='X-CALABRESA';
+                        if (@$_SESSION['mais1']==NULL or @$_SESSION['mais1']==0) {
+                            @$_SESSION['mais1']=1;
+                            }
+                        else{
+                            @$_SESSION['mais1']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais1']) or isset($_GET['menos1'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche1']){
+                            $_SESSION['quantidade1']=$_SESSION['mais1'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche1']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais1'];
+								@$verificador=1;  
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche1']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais1'];
+								@$verificador=1;                                 
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche1']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais1'];
+								@$verificador=1; 
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche5']==$_SESSION['sanduiche1']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais1'];
+								@$verificador=1; 
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche1'];
+                            $_SESSION['quantidade1']=$_SESSION['mais1'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche1'];
+                            $_SESSION['quantidade2']=$_SESSION['mais1'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche1'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais1'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche1'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais1'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche5']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche5']=@$_SESSION['sanduiche1'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais1'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
 					}
 				?>
                 <td width="100" height="100" align="center">
@@ -105,6 +171,98 @@ session_start();
         <br>
         <table class="tab" width="600" height="90">
             <tr>
+                <?php
+
+                    if(isset($_GET['menos2'])){
+                        if($_SESSION['mais2']==0){
+                            
+                            @$_SESSION['sanduiche2']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais2']-=1;
+                            if($_SESSION['mais2']==0){
+                            $_SESSION['mais2']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais2'])){
+                        @$_SESSION['sanduiche2']='X-BACON';
+                        if (@$_SESSION['mais2']==NULL or @$_SESSION['mais2']==0) {
+                            @$_SESSION['mais2']=1;
+                            }
+                        else{
+                            @$_SESSION['mais2']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais2']) or isset($_GET['menos2'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche2']){
+                            $_SESSION['quantidade1']=$_SESSION['mais2'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche2']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais2'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche2']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais2'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche2']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais2'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche5']==$_SESSION['sanduiche2']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais2'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche2'];
+                            $_SESSION['quantidade1']=$_SESSION['mais2'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche2'];
+                            $_SESSION['quantidade2']=$_SESSION['mais2'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche2'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais2'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche2'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais2'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche5']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche5']=@$_SESSION['sanduiche2'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais2'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
                 <td>
                     <img id="ima" src="imagens/img.xbacon.jpg" width="130" height="100">
                 </td>
@@ -113,11 +271,14 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão bola, hamburguer, tomate, alface,
                         bacon, queijo e presunto</label>
                 </td>
+                <!-- Botões + e -    -->
+                
+               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais2'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais2" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos2" value="  -  ">
                 </td>
             </tr>
         </table>
@@ -132,15 +293,203 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão bola, hamburguer, tomate, alface,
                         frango, queijo e presunto</label>
                 </td>
+                <!-- Botões + e -    -->
+                <?php
+
+                    if(isset($_GET['menos3'])){
+                        if($_SESSION['mais3']==0){
+                            
+                            @$_SESSION['sanduiche3']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais3']-=1;
+                            if($_SESSION['mais3']==0){
+                            $_SESSION['mais3']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais3'])){
+                        @$_SESSION['sanduiche3']='X-FRANGO';
+                        if (@$_SESSION['mais3']==NULL or @$_SESSION['mais3']==0) {
+                            @$_SESSION['mais3']=1;
+                            }
+                        else{
+                            @$_SESSION['mais3']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais3']) or isset($_GET['menos3'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche3']){
+                            $_SESSION['quantidade1']=$_SESSION['mais3'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche3']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais3'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche3']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais3'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche3']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais3'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche5']==$_SESSION['sanduiche3']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais3'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche3'];
+                            $_SESSION['quantidade1']=$_SESSION['mais3'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche3'];
+                            $_SESSION['quantidade2']=$_SESSION['mais3'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche3'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais3'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche3'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais3'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche5']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche5']=@$_SESSION['sanduiche3'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais3'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
+
+               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais3'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais3" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos3" value="  -  ">
                 </td>
             </tr>
         </table>
         <br>
+		<?php
+
+                    if(isset($_GET['menos4'])){
+                        if($_SESSION['mais4']==0){
+                            
+                            @$_SESSION['sanduiche4']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais4']-=1;
+                            if($_SESSION['mais4']==0){
+                            $_SESSION['mais4']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais4'])){
+                        @$_SESSION['sanduiche4']='X-CARNE DE SOL';
+                        if (@$_SESSION['mais4']==NULL or @$_SESSION['mais4']==0) {
+                            @$_SESSION['mais4']=1;
+                            }
+                        else{
+                            @$_SESSION['mais4']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais4']) or isset($_GET['menos4'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche4']){
+                            $_SESSION['quantidade1']=$_SESSION['mais4'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche4']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais4'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche4']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais4'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche4']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais4'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche5']==$_SESSION['sanduiche4']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais4'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche4'];
+                            $_SESSION['quantidade1']=$_SESSION['mais4'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche4'];
+                            $_SESSION['quantidade2']=$_SESSION['mais4'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche4'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais4'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche4'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais4'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche5']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche5']=@$_SESSION['sanduiche4'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais4'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
+
         <table class="tab" width="600" height="90">
             <tr>
                 <td>
@@ -152,15 +501,109 @@ session_start();
                         sol, queijo e presunto
                     </label>
                 </td>
+                <!-- Botões + e -    -->
+               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais4'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais4" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos4" value="  -  ">
                 </td>
             </tr>
         </table>
         <br>
+		<?php
+
+                    if(isset($_GET['menos5'])){
+                        if($_SESSION['mais5']==0){
+                            
+                            @$_SESSION['sanduiche5']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais5']-=1;
+                            if($_SESSION['mais5']==0){
+                            $_SESSION['mais5']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais5'])){
+                        @$_SESSION['sanduiche5']='X-TANAJURA';
+                        if (@$_SESSION['mais5']==NULL or @$_SESSION['mais5']==0) {
+                            @$_SESSION['mais5']=1;
+                            }
+                        else{
+                            @$_SESSION['mais5']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais5']) or isset($_GET['menos5'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche5']){
+                            $_SESSION['quantidade1']=$_SESSION['mais5'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche5']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais5'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche5']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais5'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche5']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais5'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche5']==$_SESSION['sanduiche5']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais5'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche5'];
+                            $_SESSION['quantidade1']=$_SESSION['mais5'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche5'];
+                            $_SESSION['quantidade2']=$_SESSION['mais5'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche5'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais5'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche5'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais5'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche5']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche5']=@$_SESSION['sanduiche5'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais5'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
         <table class="tab" width="600" height="90">
             <tr>
                 <td>
@@ -171,17 +614,111 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão bola, hamburguer, tomate, alface, tanajura,
                         queijo e presunto</label>
                 </td>
+                <!-- Botões + e -    -->
+                
+               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais5'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais5" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos5" value="  -  ">
                 </td>
             </tr>
         </table>
 
         <br>
+		<?php
 
+                    if(isset($_GET['menos6'])){
+                        if($_SESSION['mais6']==0){
+                            
+                            @$_SESSION['sanduiche6']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais6']-=1;
+                            if($_SESSION['mais6']==0){
+                            $_SESSION['mais6']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais6'])){
+                        @$_SESSION['sanduiche6']='PASSAPORTE DE CARNE';
+                        if (@$_SESSION['mais6']==NULL or @$_SESSION['mais6']==0) {
+                            @$_SESSION['mais6']=1;
+                            }
+                        else{
+                            @$_SESSION['mais6']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais6']) or isset($_GET['menos6'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche6']){
+                            $_SESSION['quantidade1']=$_SESSION['mais6'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche6']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais6'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche6']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais6'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche6']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais6'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche6']==$_SESSION['sanduiche6']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais6'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche6'];
+                            $_SESSION['quantidade1']=$_SESSION['mais6'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche6'];
+                            $_SESSION['quantidade2']=$_SESSION['mais6'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche6'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais6'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche6'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais6'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche6']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche6']=@$_SESSION['sanduiche6'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais6'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
         <table class="tab" width="600" height="90">
             <tr>
                 <td>
@@ -192,16 +729,110 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão seda, salsicha,
                         tomate, ervilha, carne moída, milho, catchup, maionese</label>
                 </td>
+                <!-- Botões + e -    -->
+                
+               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais6'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais6" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos6" value="  -  ">
                 </td>
             </tr>
         </table>
         <br>
+		<?php
 
+                    if(isset($_GET['menos7'])){
+                        if($_SESSION['mais7']==0){
+                            
+                            @$_SESSION['sanduiche7']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais7']-=1;
+                            if($_SESSION['mais7']==0){
+                            $_SESSION['mais7']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais7'])){
+                        @$_SESSION['sanduiche7']='PASSAPORTE DE FRANGO';
+                        if (@$_SESSION['mais7']==NULL or @$_SESSION['mais7']==0) {
+                            @$_SESSION['mais7']=1;
+                            }
+                        else{
+                            @$_SESSION['mais7']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais7']) or isset($_GET['menos7'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche7']){
+                            $_SESSION['quantidade1']=$_SESSION['mais7'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche7']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais7'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche7']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais7'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche7']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais7'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche7']==$_SESSION['sanduiche7']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais7'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche7'];
+                            $_SESSION['quantidade1']=$_SESSION['mais7'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche7'];
+                            $_SESSION['quantidade2']=$_SESSION['mais7'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche7'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais7'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche7'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais7'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche7']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche7']=@$_SESSION['sanduiche7'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais7'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>
         <table class="tab" width="600" height="90">
             <tr>
                 <td>
@@ -212,11 +843,105 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão seda, salsicha,
                         tomate, ervilha, frango desfiado, milho, catchup, maionese</label>
                 </td>
+                <!-- Botões + e -    -->
+                
+		<?php
+
+                    if(isset($_GET['menos8'])){
+                        if($_SESSION['mais8']==0){
+                            
+                            @$_SESSION['sanduiche8']=NULL;
+                        }
+                        else{
+                            $_SESSION['mais8']-=1;
+                            if($_SESSION['mais8']==0){
+                            $_SESSION['mais8']=0;
+                        }
+                        }
+                         }
+                    
+
+                    if(isset($_GET['mais8'])){
+                        @$_SESSION['sanduiche8']='PASSAPORTE DE CHARQUE';
+                        if (@$_SESSION['mais8']==NULL or @$_SESSION['mais8']==0) {
+                            @$_SESSION['mais8']=1;
+                            }
+                        else{
+                            @$_SESSION['mais8']+=1;
+                           
+                        }
+                    }
+                        
+
+                    if(isset($_GET['mais8']) or isset($_GET['menos8'])){
+                        if(@$_SESSION['nome_sanduiche1']==$_SESSION['sanduiche8']){
+                            $_SESSION['quantidade1']=$_SESSION['mais8'];
+							@$verificador=1;
+                        }
+                        else{
+                            if (@$_SESSION['nome_sanduiche2']==$_SESSION['sanduiche8']) {
+                                $_SESSION['quantidade2']=$_SESSION['mais8'];
+								@$verificador=1;
+                               
+                            }
+                            else{
+                                if (@$_SESSION['nome_sanduiche3']==$_SESSION['sanduiche8']) {
+                                $_SESSION['quantidade3']=$_SESSION['mais8'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche4']==$_SESSION['sanduiche8']) {
+                                $_SESSION['quantidade4']=$_SESSION['mais8'];
+								@$verificador=1;
+                               
+                                }
+                                else{
+                                    if (@$_SESSION['nome_sanduiche8']==$_SESSION['sanduiche8']) {
+                                $_SESSION['quantidade5']=$_SESSION['mais8'];
+								@$verificador=1;
+                               
+                            }
+                                }
+                                }
+                            }
+                        }
+
+                        if(@$_SESSION['nome_sanduiche1']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche1']=@$_SESSION['sanduiche8'];
+                            $_SESSION['quantidade1']=$_SESSION['mais8'];
+                        }
+                        else{
+                            if(@$_SESSION['nome_sanduiche2']==NULL and @$verificador!=1){
+                            $_SESSION['nome_sanduiche2']=@$_SESSION['sanduiche8'];
+                            $_SESSION['quantidade2']=$_SESSION['mais8'];
+                            }
+                            else{   
+                                if(@$_SESSION['nome_sanduiche3']==NULL and @$verificador!=1){
+                                    $_SESSION['nome_sanduiche3']=@$_SESSION['sanduiche8'];
+                                    $_SESSION['quantidade3']=$_SESSION['mais8'];
+                                }
+                                else{   if(@$_SESSION['nome_sanduiche4']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche4']=@$_SESSION['sanduiche8'];
+                                        $_SESSION['quantidade4']=$_SESSION['mais8'];
+                                    }
+                                    else{
+                                        if(@$_SESSION['nome_sanduiche8']==NULL and @$verificador!=1){
+                                        $_SESSION['nome_sanduiche8']=@$_SESSION['sanduiche8'];
+                                        $_SESSION['quantidade5']=$_SESSION['mais8'];
+                                    }
+                                    }
+                                }
+                            }
+                            }
+                    
+					}
+				?>               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais7'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais7" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos7" value="  -  ">
                 </td>
             </tr>
         </table>
@@ -232,11 +957,13 @@ session_start();
                     <label id="textocardapio"><b><i>Ingredientes:</i></b>Pão seda, salsicha,
                         tomate, ervilha, charque desfiado, milho, catchup, maionese</label>
                 </td>
+                <!-- Botões + e -    -->
+                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" size="4"><br>
-                    <input class="btn btn-yellow" type="button" value="  +  ">
-                    <input class="btn btn-red" type="button" value="  -  ">
+                    <input type="text" value="<?php echo @$_SESSION['mais8'] ?>" size="4"><br>
+                    <input class="btn btn-yellow" type="submit" name="mais8" value="  +  ">
+                    <input class="btn btn-red" type="submit" name="menos8" value="  -  ">
                 </td>
             </tr>
         </table>
@@ -251,69 +978,80 @@ session_start();
 
             <tr>
                 <td>Sanduiches</td>
-                <td width=10 height=10>Ingredientes</td>
+                <td width=10 height=10>Quantidade</td>
+				<td> Valor</td>
             </tr>
 
             <tr>
-                <td><input type="text" name="tipopao"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" value="<?php if(@$_SESSION['quantidade1']==NULL or @$_SESSION['quantidade1']==0){
+                                                                                echo "-"; $_SESSION['nome_sanduiche1']=NULL; } 
+                                                                                else{echo $_SESSION['nome_sanduiche1'];}?>"></td>
+                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade1']==0){
+																				echo "-";} 
+																				else{echo $_SESSION['quantidade1'];}?>"></td>
+				<td><input type="text" value="<?php echo @$_SESSION['valor1'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" name="tiporecheio"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" value="<?php if(@$_SESSION['quantidade2']==NULL or @$_SESSION['quantidade2']==0){
+                                                                                echo "-"; $_SESSION['nome_sanduiche2']=NULL; } 
+                                                                                else{echo $_SESSION['nome_sanduiche2'];}?>"></td>
+                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade2']==0){
+                                                                                echo "-";} 
+                                                                                else{echo $_SESSION['quantidade2'];}?>"></td>
+                <td><input type="text" value="<?php echo @$_SESSION['valor2'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" name="tipomolho"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" value="<?php if(@$_SESSION['quantidade3']==NULL or @$_SESSION['quantidade3']==0){
+                                                                                echo "-"; $_SESSION['nome_sanduiche3']=NULL; } 
+                                                                                else{echo $_SESSION['nome_sanduiche3'];}?>"></td>
+                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade3']==0){
+																				echo "-";} 
+																				else{echo $_SESSION['quantidade3'];}?>"></td>
+				<td><input type="text" value="<?php echo @$_SESSION['valor3'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" name="bebida"></td>
-                <td width=10 height=10><input type="text"></td>
+                <td><input type="text" value="<?php if(@$_SESSION['quantidade4']==NULL or @$_SESSION['quantidade4']==0){
+                                                                                echo "-"; $_SESSION['nome_sanduiche4']=NULL; } 
+                                                                                else{echo $_SESSION['nome_sanduiche4'];}?>"></td>
+                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade4']==0){
+																				echo "-";} 
+																				else{echo $_SESSION['quantidade4'];}?>"></td>
+				<td><input type="text" value="<?php echo @$_SESSION['valor4'] ?> ">
             </tr>
+			
+			<tr>
+                <td><input type="text" value="<?php if(@$_SESSION['quantidade5']==NULL or @$_SESSION['quantidade5']==0){
+                                                                                echo "-"; $_SESSION['nome_sanduiche5']=NULL; } 
+                                                                                else{echo $_SESSION['nome_sanduiche5'];}?>"></td>
+                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade5']==0){
+																				echo "-";} 
+																				else{echo $_SESSION['quantidade5'];}?>"></td>
+				<td><input type="text" value="<?php echo @$_SESSION['valor5'] ?> ">
+            </tr>
+			
+			<tr>
+				<td>Valor Total</td>
+				<td><input type="text" name=""></td></td>
+			</tr>
+			
+			</table>
+            
+                   <input class="btn btn-yellow" type="submit" name="limpar" value="Limpar"></input>
+                   <input class="btn btn-green" type="button"
+                               onclick="window.location.href  = 'paginaPagamento.php'" value="Finalizar a compra"></input>
+            
 
-            <table align="center"><br>
-
-                <tr>
-                    <td align="center"><input class="btn btn-yellow" type="button" value="Limpar"></td>
-                    <td><input class="btn btn-green" type="button" onclick="" value="Finalizar a compra"></td>
-                </tr>
-
-            </table>
-
-        </table>
 
     </div>
 
- <div class="container-fluid" id="rodape">
-        <div class=" container">
-            <div class="row">
-                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
-                    <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
-                </div>
-
-                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
-                    <p><span class=" glyphicon glyphicon-bishop"><b> CONTATOS: (82) 91111 - 2222</b></span></p>
-                </div>
-
-                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
-                    <p>&reg; copyright 2018 - Seja Chef</p>
-                </div>
-            </div>
-        </div>
+    <div id="rodape">
+        <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+        <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
     </div>
-	
-	    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
+
 
 </div>
 
