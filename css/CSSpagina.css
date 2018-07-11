@@ -33,15 +33,16 @@ body {
     float: left; /*para que fique lado a lado*/
     width: 200px; /*largura de cada ABA*/
    
-    display: inline-block; /*Tirar marcador*/
+    display: inline; /*Tirar marcador*/
     text-align: center; /*Centralizar texto horizontal*/
     line-height: 40px; /*Centralizar texto vertical*/
     font-size: 25px;
 }
 /*ajustar o submenu*/
 
-.menu ul{
+.menu ul li a{
    padding: 0;
+
 }
 
 /*ao passar o mouse*/
@@ -54,7 +55,7 @@ body {
     display: none;
 }
 
-.menu ul li:hover > ul {
+.menu ul li:hover > ul{
     display: block;
 }
 
@@ -166,7 +167,7 @@ body {
     text-align: center;
     background-color: #2F4F4F;
     font-family: arial;
-    color: white;
+    color: black;
     position: absolute;
     bottom: 0;
     width: 100%;

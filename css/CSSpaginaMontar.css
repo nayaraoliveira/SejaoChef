@@ -24,11 +24,11 @@
     float: left;
     background: #8FBC8F;
     box-shadow: 0 0 12px rgba(0, 2, 2, 2);
-    border: 1px solid;
-    width: 30em;
+    border: 1px solid white;
+    width: 28em;
     height: 40em;
     position: absolute;
-   top: 10em;
+    top: 25em;
     right: 1em;
     font-family: arial;
 }
@@ -41,7 +41,7 @@
 }
 
 #ttmontar {
-    width: 1350px;
+    width: 1400px;
     height: 4000px;
     margin-right: 70px;
     min-height: 100%;
