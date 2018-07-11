@@ -17,6 +17,7 @@ $con = $link->query($consulta) or die($link->error);
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>SejaChef</title>
 
     <script src="js/bootstrap.min.js"></script>
@@ -141,12 +142,23 @@ $con = $link->query($consulta) or die($link->error);
 
         </div>
 
+        <div class="container-fluid" id="rodape">
+        <div class=" container">
+            <div class="row">
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+                </div>
 
-        <div id="rodape">
-            <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
-            <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p><span class=" glyphicon glyphicon-bishop"><b> CONTATOS: (82) 91111 - 2222</b></span></p>
+                </div>
+
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p>&reg; copyright 2018 - Seja Chef</p>
+                </div>
+            </div>
         </div>
-
+    </div>
 
     </div>
 
