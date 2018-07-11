@@ -144,10 +144,23 @@ session_start();
             </div>
         </div>
 
-        <div id="rodape">
-            <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
-            <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
+ <div class="container-fluid" id="rodape">
+        <div class=" container">
+            <div class="row">
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+                </div>
+
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p><span class=" glyphicon glyphicon-bishop"><b> CONTATOS: (82) 91111 - 2222</b></span></p>
+                </div>
+
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p>&reg; copyright 2018 - Seja Chef</p>
+                </div>
+            </div>
         </div>
+    </div>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
