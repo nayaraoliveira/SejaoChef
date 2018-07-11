@@ -1048,7 +1048,7 @@ session_start();
             
                    <input class="btn btn-yellow" type="submit" name="limpar" value="Limpar"></input>
                    <input class="btn btn-green" type="button"
-                               onclick="window.location.href  = 'paginaPagamento.php'" value="Finalizar a compra"></input>
+                               onclick="" value="Finalizar a compra"></input>
             
 
 
