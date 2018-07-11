@@ -132,7 +132,7 @@ session_start();
                 <tr>
                     <td>Confirmar Senha</td>
                     <td align="left"><input type="password" size="10" maxlength="9" pattern=".{9,}" title="Escolha uma senha com no máximo 9 dígitos." name="senhaok"
-                                            required>
+                                            >
                     </td>
                 </tr>
 
