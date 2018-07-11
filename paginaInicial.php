@@ -6,7 +6,7 @@ session_start();
 <head>
    <head>
     <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
      <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -14,10 +14,17 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
+    <link rel="stylesheet" type="text/css" href="css/CSSpaginaInicial.css">
+    <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+
+
+
     <title>SejaChef</title>
     
     <script type="text/javascript">
-        function slide1() {
+       function slide1() {
             document.getElementById('id').src = "imagens/bannerlogo.png";
             setTimeout("slide2()", 6000)
         }
@@ -137,6 +144,8 @@ session_start();
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
         integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
         crossorigin="anonymous"></script>
+
 </div>
+
 </body>
 </html>
