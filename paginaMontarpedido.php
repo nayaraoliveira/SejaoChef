@@ -1256,9 +1256,7 @@ session_start();
                 </tr>
                 <tr>
                     <td align="center"><input class="btn btn-red" type="submit" name="cancelar" value="Cancelar"></td>
-                    <td><input class="btn btn-green" type="button"
-                               onclick="window.location.href  = 'paginaPagamento.php'"
-                               value="Finalizar a compra"></td>
+                    <td><input class="btn btn-green" type="button" onclick="" value="Finalizar a compra"></td>
                 </tr>
             </table>
 
