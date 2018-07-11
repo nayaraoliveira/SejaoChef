@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
           integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
     <title>SejaChef</title>
@@ -51,11 +52,33 @@
         <input type="email" size="30" maxlength="30">
         <button class="btn btn-green">Enviar</button>
     </div>
+ <div class="container-fluid" id="rodape">
+        <div class=" container">
+            <div class="row">
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
+                </div>
 
-    <div id="rodape">
-        <img id="imgrodape" src="imagens/img.sejaochef.png" align="center">
-        <b>CONTATOS: (82) 91111 - 2222 / sejachef@gmail.com</b>
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p><span class=" glyphicon glyphicon-bishop"><b> CONTATOS: (82) 91111 - 2222</b></span></p>
+                </div>
+
+                <div class="col-xs-12 col-sn-12 col-md-4 col-lg-4">
+                    <p>&reg; copyright 2018 - Seja Chef</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
 
 </div>
 
