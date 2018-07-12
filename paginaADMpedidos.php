@@ -146,7 +146,7 @@ $con = $link->query($consulta) or die($link->error);
     </div><br>
 
        <div align="center">
-            <button class="btn btn-orange" name="excluir">Administrativo - Ingredientes</button>
+            <button class="btn btn-orange" onclick="window.location.href ='paginaADM.php'" >Administrativo - Ingredientes</button>
         </div>
 
         <div class="container-fluid" id="rodape">
