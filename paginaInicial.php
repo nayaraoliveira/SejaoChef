@@ -112,9 +112,7 @@ session_start();
 
     <!--video da página inicial -->
     <div id="videoinicial" align="left">
-        <video width="600px" height="400px" controls>
-            <source src="video.comida.mp4" type="video/mp4">
-        </video>
+
     </div>
 
  <div class="container-fluid" id="rodape">
