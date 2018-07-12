@@ -1,12 +1,10 @@
 <?php
 session_start();
 
-
         if(isset($_GET['limpar'])){
                     session_destroy();
 				session_start();	
-                }
-        
+                }      
 ?>
 
 <!DOCTYPE html>
@@ -16,17 +14,17 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>SejaChef</title>
 
-    <script src="js/bootstrap.min.js"></script>
+   
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
           integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-            integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-            crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
+    
+
+    <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaCardapio.css">
 	<form id="formulario" name="atualizar" action="paginaCardapio.php" method="GET">
 </head>
 <body>
+    <div id="ttcardapio">
 
 <div id="div1" align="center">
     <img id="imagens" src="imagens/img.sejaochef.png" align="center">
@@ -62,7 +60,6 @@ session_start();
 <br><br><br>
 
 <br><br><br>
-<div id="ttcardapio">
     <div id="listacardapio" align=left>
         <table class="tab" width="600" height="90">
             <tr>
@@ -169,7 +166,7 @@ session_start();
 				?>
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais1'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais1'] ?>" size="4"><br>
 					<input class="btn btn-yellow" type="submit" name="mais1" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos1" value="  -  ">
                 </td>
@@ -284,7 +281,7 @@ session_start();
                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais2'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais2'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais2" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos2" value="  -  ">
                 </td>
@@ -398,7 +395,7 @@ session_start();
                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais3'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais3'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais3" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos3" value="  -  ">
                 </td>
@@ -513,7 +510,7 @@ session_start();
                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais4'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais4'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais4" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos4" value="  -  ">
                 </td>
@@ -627,7 +624,7 @@ session_start();
                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais5'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais5'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais5" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos5" value="  -  ">
                 </td>
@@ -636,7 +633,6 @@ session_start();
 
         <br>
 		<?php
-
                     if(isset($_GET['menos6'])){
                         if($_SESSION['mais6']==0){
                             
@@ -724,8 +720,7 @@ session_start();
                                 }
                             }
                             }
-                    
-					}
+                    }
 				?>
         <table class="tab" width="600" height="90">
             <tr>
@@ -742,7 +737,7 @@ session_start();
                
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais6'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais6'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais6" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos6" value="  -  ">
                 </td>
@@ -750,7 +745,6 @@ session_start();
         </table>
         <br>
 		<?php
-
                     if(isset($_GET['menos7'])){
                         if($_SESSION['mais7']==0){
                             
@@ -947,7 +941,7 @@ session_start();
 				?>               
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais7'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais7'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais7" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos7" value="  -  ">
                 </td>
@@ -969,7 +963,7 @@ session_start();
                 
                 <td width="100" height="100" align="center">
                     <label><b>R$ 15,00</b></label><BR>
-                    <input type="text" value="<?php echo @$_SESSION['mais8'] ?>" size="4"><br>
+                    <input disabled value="<?php echo @$_SESSION['mais8'] ?>" size="4"><br>
                     <input class="btn btn-yellow" type="submit" name="mais8" value="  +  ">
                     <input class="btn btn-red" type="submit" name="menos8" value="  -  ">
                 </td>
@@ -980,80 +974,80 @@ session_start();
 
 
     <div id="escolhidoscardapio" align="center">
-        <table width=200 height=50 border="1">
-            <caption><b>Ingredientes Escolhidos</b></caption>
+        <table width=300 height=50>
+            <label><b>Ingredientes Escolhidos</b></label>
             <br>
 
             <tr>
-                <td>Sanduiches</td>
-                <td width=10 height=10>Quantidade</td>
-				<td> Valor</td>
+                <th>Sanduiches</th>
+                <th>Quantidade</th>
+				<th width="4">Valor</th>
             </tr>
 
             <tr>
-                <td><input type="text" value="<?php if(@$_SESSION['quantidade1']==NULL or @$_SESSION['quantidade1']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade1']==NULL or @$_SESSION['quantidade1']==0){
                                                                                 echo "-"; $_SESSION['nome_sanduiche1']=NULL; } 
                                                                                 else{echo $_SESSION['nome_sanduiche1'];}?>"></td>
-                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade1']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade1']==0){
 																				echo "-";} 
 																				else{echo $_SESSION['quantidade1'];}?>"></td>
-				<td><input type="text" value="<?php echo @$_SESSION['valor1'] ?> ">
+				<td><input disabled value="<?php echo @$_SESSION['valor1'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" value="<?php if(@$_SESSION['quantidade2']==NULL or @$_SESSION['quantidade2']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade2']==NULL or @$_SESSION['quantidade2']==0){
                                                                                 echo "-"; $_SESSION['nome_sanduiche2']=NULL; } 
                                                                                 else{echo $_SESSION['nome_sanduiche2'];}?>"></td>
-                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade2']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade2']==0){
                                                                                 echo "-";} 
                                                                                 else{echo $_SESSION['quantidade2'];}?>"></td>
-                <td><input type="text" value="<?php echo @$_SESSION['valor2'] ?> ">
+                <td><input disabled value="<?php echo @$_SESSION['valor2'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" value="<?php if(@$_SESSION['quantidade3']==NULL or @$_SESSION['quantidade3']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade3']==NULL or @$_SESSION['quantidade3']==0){
                                                                                 echo "-"; $_SESSION['nome_sanduiche3']=NULL; } 
                                                                                 else{echo $_SESSION['nome_sanduiche3'];}?>"></td>
-                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade3']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade3']==0){
 																				echo "-";} 
 																				else{echo $_SESSION['quantidade3'];}?>"></td>
-				<td><input type="text" value="<?php echo @$_SESSION['valor3'] ?> ">
+				<td><input disabled value="<?php echo @$_SESSION['valor3'] ?> ">
             </tr>
 
             <tr>
-                <td><input type="text" value="<?php if(@$_SESSION['quantidade4']==NULL or @$_SESSION['quantidade4']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade4']==NULL or @$_SESSION['quantidade4']==0){
                                                                                 echo "-"; $_SESSION['nome_sanduiche4']=NULL; } 
                                                                                 else{echo $_SESSION['nome_sanduiche4'];}?>"></td>
-                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade4']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade4']==0){
 																				echo "-";} 
 																				else{echo $_SESSION['quantidade4'];}?>"></td>
-				<td><input type="text" value="<?php echo @$_SESSION['valor4'] ?> ">
+				<td><input disabled value="<?php echo @$_SESSION['valor4'] ?> ">
             </tr>
 			
 			<tr>
-                <td><input type="text" value="<?php if(@$_SESSION['quantidade5']==NULL or @$_SESSION['quantidade5']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade5']==NULL or @$_SESSION['quantidade5']==0){
                                                                                 echo "-"; $_SESSION['nome_sanduiche5']=NULL; } 
                                                                                 else{echo $_SESSION['nome_sanduiche5'];}?>"></td>
-                <td width=10 height=10><input type="text" value="<?php if(@$_SESSION['quantidade5']==0){
+                <td><input disabled value="<?php if(@$_SESSION['quantidade5']==0){
 																				echo "-";} 
 																				else{echo $_SESSION['quantidade5'];}?>"></td>
-				<td><input type="text" value="<?php echo @$_SESSION['valor5'] ?> ">
+				<td><input disabled value="<?php echo @$_SESSION['valor5'] ?> ">
             </tr>
 			
 			<tr>
-				<td>Valor Total</td>
-				<td><input type="text" name=""></td></td>
+				<td><b>Valor Total</b></td>
+				<td><input disabled name=""></td></td>
 			</tr>
 			
-			</table>
+			</table><br>
             
                    <input class="btn btn-yellow" type="submit" name="limpar" value="Limpar"></input>
                    <input class="btn btn-green" type="button"
                                onclick="" value="Finalizar a compra"></input>
             
-
-
     </div>
+
+
  <div class="container-fluid" id="rodape">
         <div class=" container">
             <div class="row">
@@ -1071,17 +1065,6 @@ session_start();
             </div>
         </div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-        crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-        integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-        crossorigin="anonymous"></script>
-
 
 </div>
 
