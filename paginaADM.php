@@ -66,14 +66,14 @@ $con = $link->query($consulta) or die($link->error);
             </ul>
         </li>
     </ul>
-</nav><br><br>
+</nav><br><br><br><br>
 
     <div id="add">
         <table height=50>
             <label>Adicionar Ingredientes</label>
             <tr>
                 <td>Ingrediente</td>
-                <td>Quantidade</td>
+                <td>Quant</td>
                 <td>Tipo</td>
                 <td>Valor</td>
             </tr>
@@ -125,7 +125,7 @@ $con = $link->query($consulta) or die($link->error);
         <tr>
             <p>
                 <button class="btn btn-green" name="ingrediente" value="1">Cadastrar</button>
-                <button class="btn btn-green" name="atualizar">Atualizar</button>
+                <button class="btn btn-default" name="atualizar">Atualizar</button>
             </p>
         </tr>
     </div>
@@ -138,24 +138,23 @@ $con = $link->query($consulta) or die($link->error);
             <label>Gerenciamento dos Ingredientes</label>
             <tr>
                 <td>Nome</td>
-                <td>Quantidade</td>
+                <td>Quant</td>
                 <td>Tipo</td>
                 <td>Valor</td>
 
             </tr>
             <?php while ($dado = $con->fetch_array()) { ?>
                 <tr>
-                    <td align="left"><input type="text" size="11" maxlength="15" name="nome"
+                    <td align="left"><input type="text" size="20" maxlength="15" name="nome"
                                             value="<?php echo $dado['nome'] ?>"></td>
-                    <td align="left"><input type="passaword" size="4" maxlength="15" name="quantidade"
+                    <td align="left"><input type="text" size="4" maxlength="15" name="quantidade"
                                             value="<?php echo $dado['quantidade'] ?>"></td>
-                    <td align="left"><input type="passaword" size="10" maxlength="15" name="tipo"
+                    <td align="left"><input type="text" size="10" maxlength="15" name="tipo"
                                             value="<?php echo $dado['tipo'] ?>"></td>
-                    <td align="left"><input type="passaword" size="4" maxlength="15" name="valor"
+                    <td align="left"><input type="text" size="4" maxlength="15" name="valor"
                                             value="<?php echo $dado['valor'] ?>"></td>
-
-                   
-                   
+                
+                
                     <td>
                         <a href="paginaCadastro.php?codigo=<?php echo $dado['nome'] ?>">
                             <button class="btn btn-red" name="excluir">Excluir</button>
@@ -164,7 +163,13 @@ $con = $link->query($consulta) or die($link->error);
                 </tr>
             <?php } ?>
         </table>
-    </div>
+    </div><br><br><br><br>
+
+    <div id="bo"align="center">
+
+     <button class="btn btn-orange" name="excluir">Administrativo - Pedidos</button>
+
+     </div>
 
     <div class="container-fluid" id="rodape">
         <div class=" container">
