@@ -32,7 +32,7 @@ body {
     background-color: #2F4F4F;
     float: left; /*para que fique lado a lado*/
     width: 200px; /*largura de cada ABA*/
-   
+    color: white;
     display: inline; /*Tirar marcador*/
     text-align: center; /*Centralizar texto horizontal*/
     line-height: 40px; /*Centralizar texto vertical*/
@@ -42,12 +42,13 @@ body {
 
 .menu ul li a{
    padding: 0;
-
+   color: white;
 }
 
 /*ao passar o mouse*/
 .menu ul li a:hover {
     background-color: green;
+    color: white;
 }
 
 /*ocultar submenu*/
@@ -60,14 +61,12 @@ body {
 }
 
 .menu ul li a {
-    color: white;
     text-align: right;
-    background-color: #2F4F4F;
     text-decoration: none;
 }
 
 #um{
-    min-width: 545px;
+    min-width: 480px;
     text-align: left;
 }
 
@@ -163,6 +162,21 @@ body {
     top: 5px;
 }
 
+.btn-default{
+     box-shadow: 0 5px 0 #8A0808;
+}
+.btn-default:active{
+    position: relative;
+    top: 5px;
+}
+
+.btn-default:hover {
+    background: black;
+    color: red;
+}
+
+
+
 #rodape {
     text-align: center;
     background-color: #2F4F4F;
@@ -183,3 +197,19 @@ body {
     padding-bottom: 12px;
 }
 
+
+.navbar-outro{
+    color: #fff;
+    background-color: #2F4F4F;
+    font-size: 25px;
+     
+}
+
+.navbar-link .navbar-header{
+font-size: 25px;
+
+}
+
+.navbar-outro:hover {
+    background-color: green;
+}
