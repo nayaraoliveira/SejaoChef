@@ -25,13 +25,12 @@
     background: #8FBC8F;
     box-shadow: 0 0 12px rgba(0, 2, 2, 2);
     border: 1px solid white;
-    width: 20em;
-    height: 50em;
+    width: 23em;
+    height: 60em;
     position: absolute;
     top: 25em;
     right: 4em;
     font-family: arial;
-    margin-right: 40px;
 }
 
 /*Configurações da imagem */

@@ -1,10 +1,14 @@
 
 #ttmeuspedidos{
 	width: 1400px;
-  height: 800px;
+  height: 450px;
   margin-right: 70px;
   min-height:100%;
   position:relative;
   margin: 0;
   text-align: left;
+}
+
+#pedidos{
+	margin-top: 1000px;
 }
