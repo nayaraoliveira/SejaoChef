@@ -8,7 +8,7 @@ if (!$link) {
     die('Não foi possível conectar:' . mysqli_connect_error());
 }
 // caminho do seu arquivo de conexão ao banco de dados
-$consulta = "SELECT * FROM ingredientes";
+$consulta = "SELECT * FROM ingredientes WHERE ingredientes.quantidade<6";
 $con = $link->query($consulta) or die($link->error);
 ?>
 
