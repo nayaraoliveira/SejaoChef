@@ -221,7 +221,7 @@ session_start();
 
         <tr>
             <td>
-                <button class="btn btn-orange" name="alcatra"> Valor: R$ 2,00</button>
+                <button class="btn btn-orange" name="alcatra"> Valor: R$ 1,50</button>
             </td>
             <td>
                 <button class="btn btn-orange" name="calabresa"> Valor: R$ 2,00</button>
@@ -326,14 +326,14 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="submit" name="hamburguer_carne" value="     Valor: R$ 4,00    ">
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_carne" value="     Valor: R$ 1,00    ">
             </td>
-            <td><input class="btn btn-orange" type="submit" name="hamburguer_soja" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="hamburguer_frango" value="     Valor: R$ 4,00    ">
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_soja" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_frango" value="     Valor: R$ 1,00    ">
             </td>
-            <td><input class="btn btn-orange" type="submit" name="hamburguer_caseiro" value="     Valor: R$ 4,00    ">
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_caseiro" value="     Valor: R$ 1,00    ">
             </td>
-            <td><input class="btn btn-orange" type="submit" name="hamburguer_misto" value="     Valor: R$ 4,00    ">
+            <td><input class="btn btn-orange" type="submit" name="hamburguer_misto" value="     Valor: R$ 1,00    ">
             </td>
         </tr>
     </table>
@@ -557,11 +557,11 @@ session_start();
 
         <tr>
             <td><input class="btn btn-orange" type="submit" name="tomate" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="tomate_seco" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="alface" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="cebola_caramelizada" value="     Valor: R$ 4,00    ">
+            <td><input class="btn btn-orange" type="submit" name="tomate_seco" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="alface" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cebola_caramelizada" value="     Valor: R$ 1,00    ">
             </td>
-            <td><input class="btn btn-orange" type="submit" name="cebola" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cebola" value="     Valor: R$ 1,00    "></td>
         </tr>
 
         <?php
@@ -599,11 +599,11 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="submit" name="cenoura" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="pepino" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="gergelim" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="rucula" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="alho_poro" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="cenoura" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="pepino" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="gergelim" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="rucula" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="alho_poro" value="     Valor: R$ 1,00    "></td>
         </tr>
     </table>
 
@@ -646,11 +646,11 @@ session_start();
         </tr>
 
         <tr>
-            <td><input class="btn btn-orange" type="submit" name="milho" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="ervilha" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="batata_palha" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name=azeitona"" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="queijo_ralado" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="milho" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="ervilha" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="batata_palha" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="azeitona" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="queijo_ralado" value="     Valor: R$ 1,00    "></td>
         </tr>
         <?php
         if (isset($_GET['milho'])) {
@@ -689,10 +689,10 @@ session_start();
         <tr>
             <td><input class="btn btn-orange" type="submit" name="amendoim_torrado" value="     Valor: R$ 4,00    ">
             </td>
-            <td><input class="btn btn-orange" type="submit" name="requeijao" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="pimenta_cheiro" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="manjericão" value="     Valor: R$ 4,00    "></td>
-            <td><input class="btn btn-orange" type="submit" name="batata_frita" value="     Valor: R$ 4,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="requeijao" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="pimenta_cheiro" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="manjericão" value="     Valor: R$ 1,00    "></td>
+            <td><input class="btn btn-orange" type="submit" name="batata_frita" value="     Valor: R$ 1,00    "></td>
         </tr>
 
         <?php
