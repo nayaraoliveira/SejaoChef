@@ -28,6 +28,7 @@ $con = $link->query($consulta) or die($link->error);
             crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaADM.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
+    <form id="formulario" name="Cadastrar" action="paginaCadastro.php" method="GET">
 
 </head>
 <body>
@@ -122,7 +123,8 @@ $con = $link->query($consulta) or die($link->error);
 
         <tr>
             <p>
-                <button href="paginaCadastro.php" class="btn btn-green" name="ingrediente" value="1">Cadastrar</button>
+                <button class="btn btn-green" name="ingrediente" value="1">Cadastrar</button>
+                <button class="btn btn-green" name="atualizar">Atualizar</button>
             </p>
         </tr>
     </div>
@@ -151,14 +153,11 @@ $con = $link->query($consulta) or die($link->error);
                     <td align="left"><input type="passaword" size="4" maxlength="15" name="valor"
                                             value="<?php echo $dado['valor'] ?>"></td>
 
+                   
+                   
                     <td>
-                        <a href="usu_editar.php?codigo=<?php echo $dado['nome'] ?>">
-                            <button class="btn btn-yellow">Atualizar</button>
-                        </a>
-                    </td>
-                    <td>
-                        <a href="excluir_usuario.php?codigo=<?php echo $dado['nome'] ?>">
-                            <button class="btn btn-red">Excluir</button>
+                        <a href="paginaCadastro.php?codigo=<?php echo $dado['nome'] ?>">
+                            <button class="btn btn-red" name="excluir">Excluir</button>
                         </a>
                     </td>
                 </tr>

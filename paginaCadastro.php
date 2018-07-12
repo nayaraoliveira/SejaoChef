@@ -85,8 +85,8 @@ if (isset($_GET['ingrediente'])) {
     if (!$link) {
         die('Não foi possível conectar INGREDIENTES:' . mysqli_connect_error());
     }
-    if ($nome1 != null and $quantidade1 != null and $tipo1 != null and $valor1 != null) {
-        $cadastra = mysqli_query($link, "INSERT INTO ingredientes (nome, quantidade, tipo, valor) VALUES('$nome1','$quantidade1', '$tipo1', '$valor1')");
+    
+      $cadastra = mysqli_query($link, "INSERT INTO ingredientes (nome, quantidade, tipo, valor) VALUES('$nome1','$quantidade1', '$tipo1', '$valor1')");
 
         if ($cadastra == TRUE) {
             echo "Cadastrado!";
@@ -121,9 +121,85 @@ if (isset($_GET['ingrediente'])) {
         echo "Linha 3 não preenchida corretamente!";
     }
 
-    header("Location:http://localhost/sejaochef-master/paginaADM_test.php");
+    header("Location:http://localhost/sejachef-master/paginaADM.php");
     mysqli_close($link);
+
+////////////ATUALIZAR INGREDIENTES//////////
+
+if (isset($_GET['atualizar'])) {
+    $nome1 = $_GET['ingrediente1'];
+    $quantidade1 = $_GET['quantidade1'];
+    $tipo1 = $_GET['tipo1'];
+    $valor1 = $_GET['valor1'];
+    $nome2 = $_GET['ingrediente2'];
+    $quantidade2 = $_GET['quantidade2'];
+    $tipo2 = $_GET['tipo2'];
+    $valor2 = $_GET['valor2'];
+    $nome3 = $_GET['ingrediente3'];
+    $quantidade3 = $_GET['quantidade3'];
+    $tipo3 = $_GET['tipo3'];
+    $valor3 = $_GET['valor3'];
+
+        $link = mysqli_connect('db4free.net:3306', 'sejaochef', '123456789', 'sejaochef');
+
+    if ($nome1 != null and $quantidade1 != null and $tipo1 != null and $valor1 != null) {    
+     $atualiza1 = mysqli_query($link,"UPDATE ingredientes SET ingredientes.valor='$valor1',ingredientes.quantidade='$quantidade1',ingredientes.tipo='$tipo1' WHERE ingredientes.nome='$nome1'");
+ }
+ if ($nome2 != null and $quantidade2 != null and $tipo2 != null and $valor2 != null) {    
+     $atualiza2 = mysqli_query($link,"UPDATE ingredientes SET ingredientes.valor='$valor2',ingredientes.quantidade='$quantidade2',ingredientes.tipo='$tipo2' WHERE ingredientes.nome='$nome2'");
+ }
+ if ($nome3 != null and $quantidade3 != null and $tipo3 != null and $valor3 != null) {    
+     $atualiza3 = mysqli_query($link,"UPDATE ingredientes SET ingredientes.valor='$valor3',ingredientes.quantidade='$quantidade3',ingredientes.tipo='$tipo3' WHERE ingredientes.nome='$nome3'");
+ }
+    
+if($atualiza1){
+     echo "<h1>Campo 1 atualizado com sucesso!</h1>";
+     mysql_close($dbhandle);
+
+}else{
+echo "Houve um erro ao atualizar Campo 1: " . mysql_error();
+    }
+
+if($atualiza2){
+     echo "<h1>Campo 2 atualizado com sucesso!</h1>";
+     mysql_close($dbhandle);
+
+}else{
+echo "Houve um erro ao atualizar Campo 2: " . mysql_error();
+    }
+
+if($atualiza3){
+     echo "<h1>Campo 3 atualizado com sucesso!</h1>";
+     mysql_close($dbhandle);
+
+}else{
+echo "Houve um erro ao atualizar Campo 3: " . mysql_error();
+    }
 }
+header("Location:http://localhost/sejachef-master/paginaADM.php");
+    mysqli_close($link);
+
+///////EXCLUIR INGREDIENTES/////////
+
+ if (isset($_GET['excluir'])) {
+    $excluir= $_GET['codigo'];
+$link=mysqli_connect('db4free.net:3306','sejaochef','123456789','sejaochef');
+
+if(!$link){ 
+    die('Não foi possível conectar:'.mysqli_connect_error());
+} 
 
 
+$result = mysqli_query($link,"DELETE FROM ingredientes WHERE nome='$excluir'");
+
+// e testando  1) se a query foi executada  2) se deletou algo de fato
+if(!$result) {
+    echo 'houve um problema na query'; 
+    } elseif( mysqli_affected_rows($link) > 0 ) {
+   echo 'deletou um ou mais registros';
+  // header("Location:http://localhost/sejachef-master/paginaADM.php");
+} else {
+   echo 'a query foi realizada, mas nao foi deletado nenhum registro';
+}
+}
 ?>
