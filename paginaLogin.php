@@ -4,7 +4,7 @@ session_start();
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8"/>
+  <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <script src="js/bootstrap.min.js"></script>
@@ -13,7 +13,7 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
+    <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">  
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaCadastro.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
 
@@ -67,13 +67,13 @@ session_start();
             <table width="100px" class="bordasimples">
                 <tr>
                     <td>CPF</td>
-                    <td align="left"><input type="text" size="11" pattern="[0-9]+$.{11,}" minlength="11" name="cpf2" title="Preencha o campo somente com números.">
+                    <td align="left"><input type="text" size="11" pattern="[0-9]+$" maxlength="11" name="cpf2" title="Preencha o campo somente com números.">
                     </td>
                 </tr>
 
                 <tr>
                     <td>Senha</td>
-                    <td align="left"><input type="password" size="10" maxlength="9" minlenfth="2" maxlength="9" name="senha2" title="Preencha o campo somente com números."></td>
+                    <td align="left"><input type="password" size="10" maxlength="9" minlength="2" maxlength="9" name="senha2" title="Preencha o campo somente com números."></td>
                 </tr>
 
             </table>
@@ -126,12 +126,12 @@ session_start();
 
                 <tr>
                     <td>Senha</td>
-                    <td><input type="password" size="10" maxlength="9" minlenfth="2" name="senha" title="Escolha uma senha com no máximo 9 dígitos."></td>
+                    <td><input type="password" size="10" maxlength="9" minlength="2"  name="senha" title="Escolha uma senha com no mínimo 2 dígitos."></td>
                 </tr>
 
                 <tr>
                     <td>Confirmar Senha</td>
-                    <td align="left"><input type="password" size="10" maxlength="9" pattern=".{9,}" title="Escolha uma senha com no máximo 9 dígitos." name="senhaok"
+                    <td align="left"><input type="password" size="10" maxlength="9"  title="Escolha uma senha com no mínimo 2 dígitos." name="senhaok"
                                             >
                     </td>
                 </tr>
