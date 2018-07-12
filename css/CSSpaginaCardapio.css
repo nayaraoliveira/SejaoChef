@@ -27,14 +27,15 @@
 }
 
 #listacardapio {
-    margin-left: 3%;
+display: block;
+float: left;
+padding-right: 60px;
 }
 
 #ttcardapio {
-    width: 1400px;
-    height: 76rem;
+    width: 1350px;
+    height:1500px;
     margin-right: 70px;
-    /*min-height: 100%;*/
     position: relative;
     margin: 0;
     text-align: left;
@@ -42,15 +43,15 @@
 
 #escolhidoscardapio {
     display: block;
+    float: left;
     background: #8FBC8F;
     box-shadow: 0 0 12px rgba(0, 2, 2, 2);
-    width: 25em;
-    height: 18em;
-    position: fixed;
+    width: 34em;
+    height: 21em;
     top: 20em;
-    right: 2em;
-    bottom: 40em;
     font-family: arial;
-    margin-right: 10%;
     }
+
+  
+
 		
