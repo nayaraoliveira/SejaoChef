@@ -65,3 +65,46 @@ caption{
     font-family: Arial;
     font-size: 20px;
 }
+
+
+.menu ul li {
+    background-color: #2F4F4F;
+    float: left; /*para que fique lado a lado*/
+    width: 200px; /*largura de cada ABA*/
+    color: white;
+    display: inline; /*Tirar marcador*/
+    text-align: center; /*Centralizar texto horizontal*/
+    line-height: 40px; /*Centralizar texto vertical*/
+    font-size: 25px;
+}
+/*ajustar o submenu*/
+
+.menu ul li a{
+   padding: 0;
+   color: white;
+}
+
+/*ao passar o mouse*/
+.menu ul li a:hover {
+    background-color: green;
+    color: white;
+}
+
+/*ocultar submenu*/
+.menu ul ul {
+    display: none;
+}
+
+.menu ul li:hover > ul{
+    display: block;
+}
+
+.menu ul li a {
+    text-align: right;
+    text-decoration: none;
+}
+
+#um{
+    min-width: 480px;
+    text-align: left;
+}
