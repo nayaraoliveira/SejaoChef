@@ -1043,7 +1043,18 @@ session_start();
             
                    <input class="btn btn-yellow" type="submit" name="limpar" value="Limpar"></input>
                    <input class="btn btn-green" type="button"
-                               onclick="" value="Finalizar a compra"></input>
+                               onclick="" value="Confirmar"></input>
+
+                               <br><br>
+
+
+            <div>
+                <label>Escolha um metodo de pagamento: </label><br>
+                <input type="radio" value="pag1"><b>Cartão</b></input>
+                <input type="radio" value="pag1"><b>Á vista</b></input>
+                <input class="btn btn-green" type="button"
+                               onclick="window.location.href  = 'paginaMeusPedidos.php'"  value="Finalizar compra"></input>
+            </div>
             
     </div>
 

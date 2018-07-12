@@ -7,6 +7,7 @@ session_start();
 
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     <title>SejaChef</title>
 
     <script src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
@@ -14,12 +15,12 @@ session_start();
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
             integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
             crossorigin="anonymous"></script>
-    <title>SejaChef</title>
+
     <link rel="stylesheet" type="text/css" href="css/CSSpagina.css">
     <link rel="stylesheet" type="text/css" href="css/CSSpaginaMontar.css">
     <link rel="shortcut icon" type="image/x-icon" href="imagens/favicon.ico">
     <form id="formulario" name="entrar" action="paginaMontarpedido.php" method="GET">
-        </head>
+</head>
 <body>
 
 <div id="div1" align="center">
@@ -861,7 +862,7 @@ session_start();
 
 <div id="escolhidos" align="center">
 
-    <table width=130 height=50 border="1">
+    <table width=200 height=50 border="1">
         <label><b>Ingredientes Escolhidos</b></label>
         <br>
         <tr>
@@ -918,8 +919,8 @@ session_start();
 
         <!-- Parte do pão-->
         <tr>
-            <td>Pão</td>
-            <td size="20"><a><?php if (!isset($_SESSION['pao'])) {
+            <td width="50">Pão</td>
+            <td><a><?php if (!isset($_SESSION['pao'])) {
                         echo '';
                     } else {
                         echo $_SESSION['pao'];
@@ -937,7 +938,7 @@ session_start();
         ?>
         <!-- Parte do recheio-->
         <tr>
-            <td rowspan="3">Recheio</td>
+            <td rowspan="3">Recheios</td>
             <td><a><?php if (!isset($_SESSION['recheio1'])) {
                         echo "";
                     } else {
@@ -990,7 +991,7 @@ session_start();
         ?>
         <!-- Parte do molho-->
         <tr>
-            <td rowspan="3">Molho-</td>
+            <td rowspan="3">Molhos</td>
             <td><a><?php if (!isset($_SESSION['molho1'])) {
                         echo "";
                     } else {
@@ -1043,7 +1044,7 @@ session_start();
         ?>
         <!-- Parte do frios-->
         <tr>
-            <td rowspan="3">Frios-</td>
+            <td rowspan="3">Frios</td>
             <td><a><?php if (!isset($_SESSION['frios1'])) {
                         echo "";
                     } else {
@@ -1096,7 +1097,7 @@ session_start();
         ?>
         <!-- Parte do salada-->
         <tr>
-            <td rowspan="3">Salada-</td>
+            <td rowspan="3">Salada</td>
             <td><a><?php if (!isset($_SESSION['salada1'])) {
                         echo "";
                     } else {
@@ -1149,7 +1150,7 @@ session_start();
         }
         ?>
         <tr>
-            <td rowspan="3">Outros-</td>
+            <td rowspan="3">Outros</td>
             <td><a><?php if (!isset($_SESSION['outros1'])) {
                         echo "";
                     } else {
@@ -1200,17 +1201,27 @@ session_start();
             <br>
             <tr>
                 <td>Valor Total (R$)</td>
-                <td align="rigth"><input type="text" size="7" maxlength="8"
+                <td align="rigth"><input disabled size="7" maxlength="8"
                                          value="<?php echo(@$_SESSION['valor_pao'] + @$_SESSION['valor_recheio1'] + @$_SESSION['valor_recheio2'] + @$_SESSION['valor_recheio3'] + @$_SESSION['valor_molho1'] + @$_SESSION['valor_molho2'] + @$_SESSION['valor_molho3'] + @$_SESSION['valor_frios1'] + @$_SESSION['valor_frios2'] + @$_SESSION['valor_frios3'] + @$_SESSION['valor_salada1'] + @$_SESSION['valor_salada2'] + @$_SESSION['valor_salada3'] + @$_SESSION['valor_outros1'] + @$_SESSION['valor_outros2'] + @$_SESSION['valor_outros3']) ?>">
                 </td>
             </tr>
             <tr>
-                <td align="center"><input class="btn btn-red" type="submit" name="cancelar" value="Cancelar"></td>
-                <td><input class="btn btn-green" type="button" onclick="" value="Finalizar a compra"></td>
+                <td align="center"><input class="btn btn-yellow" type="submit" name="cancelar" value="Limpar"></td>
+                <td><input class="btn btn-green" type="button" onclick="" value="Confirmar"></td>
             </tr>
         </table>
 
-    </table>
+    </table> <br><br>
+
+            <div>
+                <label>Escolha um metodo de pagamento: </label><br>
+                <input type="radio" value="pag"><b>Cartão</b></input>
+                <input type="radio" value="pag"><b>Á vista</b></input>
+                <input class="btn btn-green" type="button"
+                               onclick="window.location.href='paginaMeusPedidos.php'"  value="Finalizar compra"></input>
+
+                              <!-- <input type="button" onclick="alert('Hello World!')" value="Click Me!">-->
+            </div>
 
 </div>
 
